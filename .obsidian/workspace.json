@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Eshari.md",
-                "mode": "source",
+                "file": "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Lethari.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Eshari"
+              "title": "Lethari"
             }
           }
         ]
@@ -373,10 +373,10 @@
             "id": "b6731626c2466893",
             "type": "leaf",
             "state": {
-              "type": "graph-analysis",
+              "type": "empty",
               "state": {},
-              "icon": "GA-ICON",
-              "title": "Graph Analysis"
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           },
           {
@@ -388,9 +388,19 @@
               "icon": "GA-ICON",
               "title": "Graph Analysis"
             }
+          },
+          {
+            "id": "8d119bb19ea31dbe",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "GA-ICON",
+              "title": "Graph Analysis"
+            }
           }
         ],
-        "currentTab": 26
+        "currentTab": 27
       }
     ],
     "direction": "horizontal",
@@ -418,8 +428,15 @@
   },
   "active": "c17cbfdccf7f02aa",
   "lastOpenFiles": [
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Eiran.md",
+    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Eshari.md",
+    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Lethari.md",
+    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Kaëlion.md",
+    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Haldris.md",
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Dovharen.md",
+    "Historia y Mitología/Historia y Mitología.md",
+    "Terminología/Veladores.md",
+    "Cronología/Cronología.md",
+    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Eiran.md",
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Corvion.md",
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Segunda Generación de Dioses.md",
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Zailyn.md",
@@ -427,10 +444,6 @@
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Vaëlor.md",
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Thyria.md",
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Malvior.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Lethari.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Kaëlion.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Haldris.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Eshari.md",
     "Historia y Mitología/Los Dominios/Vida.md",
     "Historia y Mitología/Los Dominios/Tiempo.md",
     "Historia y Mitología/Los Dominios/Sueños.md",
@@ -441,9 +454,6 @@
     "Historia y Mitología/Los Dominios/Juicio.md",
     "Historia y Mitología/Los Dominios/Dolor.md",
     "Historia y Mitología/Los Dominios/Destino.md",
-    "Historia y Mitología/Los Dominios/Conocimiento.md",
-    "Historia y Mitología/Los Dominios/Caos.md",
-    "Historia y Mitología/Los Dominios/Los Dominios.md",
     "Historia y Mitología/Los Dominios",
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses",
     "Historia y Mitología/Las Edades de Aedhyr/(5) Quinta Edad",

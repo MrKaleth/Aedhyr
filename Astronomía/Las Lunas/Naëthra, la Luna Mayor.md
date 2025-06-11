@@ -1,0 +1,1 @@
+Antigua, majestuosa, con cicatrices visibles como mares oscuros. Se la conoce como *la Testigo de [[Ori]].* Asociada al destino, a la memoria y a la magia ancestral.

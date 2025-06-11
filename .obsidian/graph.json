@@ -1,0 +1,107 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:Astronomía  ",
+      "color": {
+        "a": 1,
+        "rgb": 8070180
+      }
+    },
+    {
+      "query": "path:\"Cronología\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "path:\"Cuentos y Leyendas\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    },
+    {
+      "query": "path:\"Cultura, Usos y Costumbres\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
+      }
+    },
+    {
+      "query": "path:\"Fauna y Flora\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 3888739
+      }
+    },
+    {
+      "query": "path:Geografía  ",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    },
+    {
+      "query": "path:\"Historia y Mitología\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 11621088
+      }
+    },
+    {
+      "query": "path:\"Personajes Célebres\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 14701233
+      }
+    },
+    {
+      "query": "path:\"Razas Inteligentes\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 15245729
+      }
+    },
+    {
+      "query": "path:Religión  ",
+      "color": {
+        "a": 1,
+        "rgb": 7496518
+      }
+    },
+    {
+      "query": "path:Terminología  ",
+      "color": {
+        "a": 1,
+        "rgb": 5905210
+      }
+    },
+    {
+      "query": "path:Aedhyr  ",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.885498954315054,
+  "close": true
+}

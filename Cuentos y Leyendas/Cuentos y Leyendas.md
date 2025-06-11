@@ -1,0 +1,4 @@
+En [[Aedhyr]], los relatos míticos son algo más que ficción. Desde tiempos inmemoriales, los diferentes pueblos [[Aedhyrios]] han tratado de explicar su pasado por medio de bellísimas leyendas que se han relatado de madres a hijas, de abuelos a nietos, generación tras generación; que se han difundido por los rincones más recónditos del mundo gracias a los cantores de noticias, o que han sido minuciosamente recogidas y anotadas por sabios y eruditos para la posteridad. Algunas de estas historias reflejan hechos pasados; otras, solo los recrean, embelleciéndolos o exagerándolos, y otras, por último, son completamente ficticias. Pero... ¿Cómo distinguirlas? Tal vez la lectura atenta de estos evocadores cuentos nos ayude a conocer mejor la historia aedhyrnita[^1]... o tal vez no.
+
+[^1]: [[Aedhyrios]]
+[^2]: [[Cuentos y Leyendas]]

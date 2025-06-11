@@ -1,0 +1,5 @@
+[^1]: [[Ori]]
+[^2]: [[Omhyr]]
+[^3]: [[Ridah]]
+[^4]: [[Los Dioses]]
+[^8]: [[Historia y Mitología]]

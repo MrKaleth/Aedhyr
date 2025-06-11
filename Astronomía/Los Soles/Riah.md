@@ -1,0 +1,1 @@
+Recibe su nombre como derivación de [[Ridah]]

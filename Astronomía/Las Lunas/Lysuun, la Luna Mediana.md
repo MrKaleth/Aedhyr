@@ -1,0 +1,1 @@
+Brillante y cambiante. Refleja la luz de ambos soles con un tono plateado azulado. Se la llama _la Soñadora_, vinculada a las visiones, los sueños y la hechicería lunar.

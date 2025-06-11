@@ -1,0 +1,1 @@
+Pequeña y rápida. En algunas noches ni siquiera se ve. Se la considera _la Guardiana de los Secretos_. Asociada al sigilo, a los augurios y a la locura sagrada.

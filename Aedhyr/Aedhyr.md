@@ -1,0 +1,1 @@
+Extenso mundo creado por [[La Tríada]], un grupo de la [[Primera Generación de Dioses]]. Se trata de un mundo ubicado en un sistema solar binario y con tres satélites naturales, dando lugar a [[Los Soles]] y [[Las Lunas]].

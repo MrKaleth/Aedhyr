@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "path:Astronomía  ",
@@ -94,14 +94,14 @@
   ],
   "collapse-display": true,
   "showArrow": false,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
+  "textFadeMultiplier": -0.2,
+  "nodeSizeMultiplier": 1.00085910652921,
+  "lineSizeMultiplier": 0.579896907216495,
   "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
+  "centerStrength": 0.489690721649485,
   "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.4505081176757891,
+  "linkStrength": 0.503436426116839,
+  "linkDistance": 500,
+  "scale": 0.751434232227761,
   "close": true
 }

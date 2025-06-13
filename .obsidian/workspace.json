@@ -383,10 +383,10 @@
             "id": "6f23171985ce62a4",
             "type": "leaf",
             "state": {
-              "type": "graph-analysis",
+              "type": "empty",
               "state": {},
-              "icon": "GA-ICON",
-              "title": "Graph Analysis"
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           },
           {
@@ -398,9 +398,19 @@
               "icon": "GA-ICON",
               "title": "Graph Analysis"
             }
+          },
+          {
+            "id": "290677617869c0e0",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "GA-ICON",
+              "title": "Graph Analysis"
+            }
           }
         ],
-        "currentTab": 27
+        "currentTab": 28
       }
     ],
     "direction": "horizontal",
@@ -421,12 +431,12 @@
       "rpg-manager:RPG Manager": false,
       "juggl:Juggl global graph": false,
       "fantasy-content-generator:Fantasy Generators": false,
-      "calendarium:Open Calendarium": false,
       "smart-connections:Open: View Smart Connections": false,
-      "smart-connections:Open: Smart Chat Conversation": false
+      "smart-connections:Open: Smart Chat Conversation": false,
+      "calendarium:Open Calendarium": false
     }
   },
-  "active": "c17cbfdccf7f02aa",
+  "active": "290677617869c0e0",
   "lastOpenFiles": [
     "Personajes Célebres/Personajes Célebres.md",
     "Historia y Mitología/Los Dominios/Los Dominios.md",

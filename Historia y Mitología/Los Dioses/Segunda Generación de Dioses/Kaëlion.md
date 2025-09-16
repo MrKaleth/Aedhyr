@@ -39,3 +39,4 @@ Se dice que [[Kaëlion]] no tiene principio ni fin. No porque sea eterno, sino p
 [^1]: [[Los Dioses]]
 [^2]: [[Segunda Generación de Dioses]]
 [^3]: [[Los 12 Patrones]]
+[^999]: [[Aedhyr]]

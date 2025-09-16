@@ -6,3 +6,5 @@
 [^4]: [[(3) Tercera Edad]]
 [^5]: [[(4) Cuarta Edad]]
 [^6]: [[(5) Quinta Edad]]
+[^7]: [[Cronología]]
+[^999]: [[Aedhyr]]

@@ -3,3 +3,4 @@ Se dice que fue una de las 2 primeras entidades en existir en el universo Primit
 [^1]: [[Las Tres Entidades]]
 [^2]: [[Los Dioses]]
 [^8]: [[Historia y Mitología]]
+[^999]: [[Aedhyr]]

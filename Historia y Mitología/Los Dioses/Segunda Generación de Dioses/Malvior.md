@@ -44,3 +44,4 @@ Pero todos —incluso quienes no lo invocan— han sido tocados por él alguna v
 [^1]: [[Los Dioses]]
 [^2]: [[Segunda Generación de Dioses]]
 [^3]: [[Los 12 Patrones]]
+[^999]: [[Aedhyr]]

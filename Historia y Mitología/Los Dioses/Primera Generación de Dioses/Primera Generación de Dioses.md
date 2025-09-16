@@ -5,3 +5,4 @@ A diferencia de las generaciones de Dioses posteriores, no se encuentran vincula
 [^1]: [[Las Tres Entidades]]
 [^2]: [[Los Dioses]]
 [^8]: [[Historia y Mitología]]
+[^999]: [[Aedhyr]]

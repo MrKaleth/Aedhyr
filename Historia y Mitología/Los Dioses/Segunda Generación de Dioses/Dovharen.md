@@ -27,3 +27,4 @@ Para algunos, es el dios de la liberación. Para otros, el portador de la desgra
 [^1]: [[Los Dioses]]
 [^2]: [[Segunda Generación de Dioses]]
 [^3]: [[Los 12 Patrones]]
+[^999]: [[Aedhyr]]

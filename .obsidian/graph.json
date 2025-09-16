@@ -90,6 +90,13 @@
         "a": 1,
         "rgb": 16777215
       }
+    },
+    {
+      "query": "path:\"Objetos Mágicos\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 3999348
+      }
     }
   ],
   "collapse-display": true,
@@ -102,6 +109,6 @@
   "repelStrength": 10,
   "linkStrength": 0.503436426116839,
   "linkDistance": 500,
-  "scale": 0.751434232227761,
-  "close": true
+  "scale": 0.751434232227766,
+  "close": false
 }

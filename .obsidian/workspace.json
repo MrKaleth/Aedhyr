@@ -4,31 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c2b50864e98b6954",
+        "id": "82412a21d5afe7f3",
         "type": "tabs",
         "children": [
           {
-            "id": "c17cbfdccf7f02aa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Razas Inteligentes/Razas Inteligentes.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Razas Inteligentes"
-            }
-          }
-        ]
-      },
-      {
-        "id": "276a780c0ae21062",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "32714cd5abab5268",
+            "id": "37a80b304028cd9f",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -69,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "campa",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 243.5
+    "width": 261.5
   },
   "right": {
     "id": "1c1c71481194654c",
@@ -110,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mundo Principal/Religión Y Cosmología/Panteón/Dioses Mayores/Aeterys, el Origen.md",
+                "file": "Astronomía/Las Lunas/Las Lunas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +100,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de Aeterys, el Origen"
+              "title": "Enlaces entrantes de Las Lunas"
             }
           },
           {
@@ -175,8 +155,8 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Complemento no activo"
+              "icon": "lucide-ghost",
+              "title": "smart-connections-view"
             }
           },
           {
@@ -185,8 +165,8 @@
             "state": {
               "type": "smart-chat-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Complemento no activo"
+              "icon": "smart-chat",
+              "title": "Smart Chat"
             }
           },
           {
@@ -220,23 +200,13 @@
             }
           },
           {
-            "id": "8ab7f62e5a523f93",
-            "type": "leaf",
-            "state": {
-              "type": "DICE_ROLLER_VIEW",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Complemento no activo"
-            }
-          },
-          {
             "id": "b92d50a3b163daf2",
             "type": "leaf",
             "state": {
               "type": "BC-matrix",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Complemento no activo"
+              "icon": "lucide-ghost",
+              "title": "BC-matrix"
             }
           },
           {
@@ -245,8 +215,8 @@
             "state": {
               "type": "BC-tree",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Complemento no activo"
+              "icon": "lucide-ghost",
+              "title": "BC-tree"
             }
           },
           {
@@ -307,16 +277,6 @@
               "state": {},
               "icon": "lucide-file",
               "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "17d8ca8c49d362d1",
-            "type": "leaf",
-            "state": {
-              "type": "DICE_ROLLER_VIEW",
-              "state": {},
-              "icon": "dices",
-              "title": "Dice Tray"
             }
           },
           {
@@ -393,14 +353,124 @@
             "id": "8d119bb19ea31dbe",
             "type": "leaf",
             "state": {
-              "type": "graph-analysis",
+              "type": "empty",
               "state": {},
-              "icon": "GA-ICON",
-              "title": "Graph Analysis"
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           },
           {
             "id": "290677617869c0e0",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "7c1fc2cdb9ac63c8",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "f518adafc16faa2c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "8945a0a120c79ba5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "24e537ccef357e88",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "8d08577b1327e246",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "35b988393757ce4e",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "2bfbc7dedfa09bcd",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "f7389ca88b5217ed",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "d60088b324890d72",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "864cfef496cde24d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "25334b87f1bdc6d4",
             "type": "leaf",
             "state": {
               "type": "graph-analysis",
@@ -408,9 +478,49 @@
               "icon": "GA-ICON",
               "title": "Graph Analysis"
             }
+          },
+          {
+            "id": "bbb6154fdabfd4df",
+            "type": "leaf",
+            "state": {
+              "type": "DICE_ROLLER_VIEW",
+              "state": {},
+              "icon": "dices",
+              "title": "Dice Tray"
+            }
+          },
+          {
+            "id": "4177c2e668fa8706",
+            "type": "leaf",
+            "state": {
+              "type": "CALENDARIUM",
+              "state": {},
+              "icon": "CALENDARIUM",
+              "title": "Calendarium"
+            }
+          },
+          {
+            "id": "21f831146058bbb6",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "GA-ICON",
+              "title": "Graph Analysis"
+            }
+          },
+          {
+            "id": "4997825e18ff30da",
+            "type": "leaf",
+            "state": {
+              "type": "rpg-manager-options",
+              "state": {},
+              "icon": "d20",
+              "title": "RPG Manager"
+            }
           }
         ],
-        "currentTab": 28
+        "currentTab": 41
       }
     ],
     "direction": "horizontal",
@@ -419,60 +529,64 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Crear nueva base": false,
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
       "canvas:Crear nuevo lienzo": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
       "media-extended:Open media": false,
       "templater-obsidian:Templater": false,
       "rpg-manager:RPG Manager": false,
       "juggl:Juggl global graph": false,
       "fantasy-content-generator:Fantasy Generators": false,
-      "smart-connections:Open: View Smart Connections": false,
-      "smart-connections:Open: Smart Chat Conversation": false,
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
+      "smart-connections:Open: Smart Chat": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Smart Connections: Open random connection": true,
       "calendarium:Open Calendarium": false
     }
   },
-  "active": "290677617869c0e0",
+  "active": "37a80b304028cd9f",
   "lastOpenFiles": [
-    "Personajes Célebres/Personajes Célebres.md",
-    "Historia y Mitología/Los Dominios/Los Dominios.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Segunda Generación de Dioses.md",
-    "Historia y Mitología/Los Dioses/Primera Generación de Dioses/Primera Generación de Dioses.md",
-    "Historia y Mitología/Los Dioses/Las Tres Entidades/Las Tres Entidades.md",
-    "Historia y Mitología/Los Dioses/Los Dioses.md",
-    "Historia y Mitología/Las Edades de Aedhyr/Las Edades de Aedhyr.md",
-    "Historia y Mitología/Las Edades de Aedhyr/(5) Quinta Edad/(5) Quinta Edad.md",
-    "Historia y Mitología/Las Edades de Aedhyr/(4) Cuarta Edad/(4) Cuarta Edad.md",
-    "Historia y Mitología/Las Edades de Aedhyr/(3) Tercera Edad/(3) Tercera Edad.md",
-    "Historia y Mitología/Las Edades de Aedhyr/(2) Segunda Edad/(2) Segunda Edad.md",
-    "Historia y Mitología/Las Edades de Aedhyr/(1) Primera Edad/(1) Primera Edad.md",
-    "Historia y Mitología/Las Edades de Aedhyr/(0) Prehistoria/(0) Prehistoria.md",
-    "Historia y Mitología/Historia y Mitología.md",
-    "Geografía/Geografía.md",
-    "Fauna y Flora/Fauna y Flora.md",
-    "Cultura, Usos y Costumbres/Cultura, Usos y Costumbres.md",
-    "Cuentos y Leyendas/Cuentos y Leyendas.md",
-    "Cronología/Cronología.md",
-    "Aedhyr/Aedhyr.md",
+    "Astronomía/Las Lunas/Las Lunas.md",
+    "Campaña/Campaña.md",
+    "Campaña",
+    "Imágenes/Qirathi.png",
+    "Astronomía/Calendario Aedhyrio/Calendario Aedhyrio.md",
+    "Astronomía/Los Soles/Los Soles.md",
+    "Objetos Mágicos/Objetos Mágicos.md",
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Zailyn.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Ysvarel.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Vaëlor.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Eshari.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Haldris.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Thyria.md",
+    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Malvior.md",
+    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Dovharen.md",
+    "Astronomía/Los Soles/Oren.md",
+    "Cronología/Cronología.md",
+    "Cuentos y Leyendas/Cuentos y Leyendas.md",
+    "Cultura, Usos y Costumbres/Cultura, Usos y Costumbres.md",
+    "Fauna y Flora/Fauna y Flora.md",
+    "Geografía/Geografía.md",
+    "Historia y Mitología/El Origen del Mundo/El Origen del Mundo.md",
+    "Historia y Mitología/Las Edades de Aedhyr/Las Edades de Aedhyr.md",
+    "Historia y Mitología/Los Dioses/Primera Generación de Dioses/La Tríada.md",
+    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Corvion.md",
+    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Segunda Generación de Dioses.md",
+    "Historia y Mitología/Los Dioses/Los Dioses.md",
+    "Historia y Mitología/Los Dominios/Vida.md",
+    "Historia y Mitología/Los Dominios/Los Dominios.md",
+    "Historia y Mitología/Historia y Mitología.md",
+    "Razas Inteligentes/Las 11 Originales/Qirathi.md",
+    "Objetos Mágicos/Cristales de Memoria.md",
+    "Razas Inteligentes/Las 11 Originales/Las 11 Originales.md",
+    "Objetos Mágicos",
+    "Razas Inteligentes/Qirathi",
+    "Razas Inteligentes/Las 11 Originales",
+    "Fauna y Flora/Planta",
+    "Imágenes",
+    "Imágenes/Alaini.png",
+    "Fauna y Flora/Bestia",
     "Historia y Mitología/Los Dominios",
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses",
-    "Historia y Mitología/Las Edades de Aedhyr/(5) Quinta Edad",
-    "Historia y Mitología/Las Edades de Aedhyr/(4) Cuarta Edad",
-    "Historia y Mitología/Las Edades de Aedhyr/(3) Tercera Edad",
-    "Historia y Mitología/Las Edades de Aedhyr/(2) Segunda Edad",
-    "Historia y Mitología/Las Edades de Aedhyr/(0) Prehistoria",
-    "Historia y Mitología/El Origen del Mundo",
-    "Historia y Mitología/Las Edades de Aedhyr",
-    "Historia y Mitología/Los Dioses"
+    "Historia y Mitología/Las Edades de Aedhyr/(5) Quinta Edad"
   ]
 }

@@ -4,3 +4,4 @@ Por todos estos motivos, no es posible hablar de la historia de [[Aedhyr]]sin ha
 
 [^1]: [[Aedhyrios]]
 [^8]: [[Historia y Mitología]]
+[^999]: [[Aedhyr]]

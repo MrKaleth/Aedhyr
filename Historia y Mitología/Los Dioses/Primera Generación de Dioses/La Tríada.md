@@ -15,3 +15,4 @@ Lo que si sabemos con certeza es que de alguna forma, a pesar de probablemente n
 [^4]: [[Los Soles]]
 [^5]: [[Los Dominios]]
 [^8]: [[Historia y Mitología]]
+[^999]: [[Aedhyr]]

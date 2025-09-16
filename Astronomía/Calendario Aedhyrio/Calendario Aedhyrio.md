@@ -48,3 +48,6 @@ Los meses en Aedhyr no tienen nombre. Parece ser que, en tiempos remotos, en cad
 [^1]: [[Ezkira, la Luna Menor]]
 [^2]: [[Lysuun, la Luna Mediana]]
 [^3]: [[Naëthra, la Luna Mayor]] 
+[^4]: [[Calendario Aedhyrio]]
+[^5]: [[Astronomía]]
+[^999]: [[Aedhyr]]

@@ -25,3 +25,4 @@ En muchas culturas de [[Aedhyr]], se le invoca en momentos de duda: antes de una
 [^1]: [[Los Dioses]]
 [^2]: [[Segunda Generación de Dioses]]
 [^3]: [[Los 12 Patrones]]
+[^999]: [[Aedhyr]]

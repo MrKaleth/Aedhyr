@@ -31,3 +31,4 @@ Los nombres de los dioses que conforman [[Los 12 Patrones]] son:
 [^1]: [[Historia y Mitología]]
 [^2]: [[Los Dioses]]
 [^3]: [[La Tríada]]
+[^999]: [[Aedhyr]]

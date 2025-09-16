@@ -3,3 +3,4 @@ Se considera la Entidad más poderosa de la existencia, sumando el Pensamiento d
 [^1]: [[Las Tres Entidades]]
 [^2]: [[Los Dioses]]
 [^8]: [[Historia y Mitología]]
+[^999]: [[Aedhyr]]

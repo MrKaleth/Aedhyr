@@ -1,5 +1,4 @@
 {
-  "new_user": false,
   "legacy_transformers": false,
   "enable_mobile": true,
   "actions": {
@@ -17,5 +16,7 @@
   "show_full_path": false,
   "expanded_view": true,
   "language": "en",
-  "version": "2.5.0"
+  "version": "2.5.0",
+  "installed_at": 1740326383459,
+  "last_version": "3.0.79"
 }

@@ -36,3 +36,4 @@ Se dice que el día que incluso Ysvarel vacile en su juicio, el equilibrio del m
 [^1]: [[Los Dioses]]
 [^2]: [[Segunda Generación de Dioses]]
 [^3]: [[Los 12 Patrones]]
+[^999]: [[Aedhyr]]

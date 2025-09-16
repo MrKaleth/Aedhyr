@@ -43,3 +43,4 @@ Y allí donde florece algo por primera vez, **[[Thyria]] ya ha pasado**.
 [^1]: [[Los Dioses]]
 [^2]: [[Segunda Generación de Dioses]]
 [^3]: [[Los 12 Patrones]]
+[^999]: [[Aedhyr]]

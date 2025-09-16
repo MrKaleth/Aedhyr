@@ -44,3 +44,4 @@ Se dice que **una de sus primeras llaves** aún permanece clavada en el corazón
 [^1]: [[Los Dioses]]
 [^2]: [[Segunda Generación de Dioses]]
 [^3]: [[Los 12 Patrones]]
+[^999]: [[Aedhyr]]

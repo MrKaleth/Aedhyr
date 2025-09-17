@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "82412a21d5afe7f3",
+        "id": "cfb1453a450aadcc",
         "type": "tabs",
         "children": [
           {
-            "id": "37a80b304028cd9f",
+            "id": "4aa236e12874e5cf",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -145,8 +145,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Complemento no activo"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           },
           {
@@ -165,8 +165,8 @@
             "state": {
               "type": "smart-chat-view",
               "state": {},
-              "icon": "smart-chat",
-              "title": "Smart Chat"
+              "icon": "lucide-ghost",
+              "title": "smart-chat-view"
             }
           },
           {
@@ -175,8 +175,8 @@
             "state": {
               "type": "juggl_nodes",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Complemento no activo"
+              "icon": "lucide-ghost",
+              "title": "juggl_nodes"
             }
           },
           {
@@ -185,8 +185,8 @@
             "state": {
               "type": "juggl_style",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Complemento no activo"
+              "icon": "lucide-ghost",
+              "title": "juggl_style"
             }
           },
           {
@@ -255,8 +255,8 @@
             "state": {
               "type": "juggl_nodes",
               "state": {},
-              "icon": "ag-node-list",
-              "title": "Juggl nodes"
+              "icon": "lucide-ghost",
+              "title": "juggl_nodes"
             }
           },
           {
@@ -265,8 +265,8 @@
             "state": {
               "type": "juggl_style",
               "state": {},
-              "icon": "ag-style",
-              "title": "Juggl style"
+              "icon": "lucide-ghost",
+              "title": "juggl_style"
             }
           },
           {
@@ -295,8 +295,8 @@
             "state": {
               "type": "CALENDARIUM",
               "state": {},
-              "icon": "CALENDARIUM",
-              "title": "Calendarium"
+              "icon": "lucide-ghost",
+              "title": "CALENDARIUM"
             }
           },
           {
@@ -305,8 +305,8 @@
             "state": {
               "type": "CALENDARIUM",
               "state": {},
-              "icon": "CALENDARIUM",
-              "title": "Calendarium"
+              "icon": "lucide-ghost",
+              "title": "CALENDARIUM"
             }
           },
           {
@@ -475,8 +475,8 @@
             "state": {
               "type": "graph-analysis",
               "state": {},
-              "icon": "GA-ICON",
-              "title": "Graph Analysis"
+              "icon": "lucide-ghost",
+              "title": "graph-analysis"
             }
           },
           {
@@ -485,8 +485,8 @@
             "state": {
               "type": "DICE_ROLLER_VIEW",
               "state": {},
-              "icon": "dices",
-              "title": "Dice Tray"
+              "icon": "lucide-ghost",
+              "title": "DICE_ROLLER_VIEW"
             }
           },
           {
@@ -495,12 +495,52 @@
             "state": {
               "type": "CALENDARIUM",
               "state": {},
-              "icon": "CALENDARIUM",
-              "title": "Calendarium"
+              "icon": "lucide-ghost",
+              "title": "CALENDARIUM"
             }
           },
           {
             "id": "21f831146058bbb6",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "graph-analysis"
+            }
+          },
+          {
+            "id": "4997825e18ff30da",
+            "type": "leaf",
+            "state": {
+              "type": "rpg-manager-options",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "rpg-manager-options"
+            }
+          },
+          {
+            "id": "8aa4738b64f2c2af",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_nodes",
+              "state": {},
+              "icon": "ag-node-list",
+              "title": "Juggl nodes"
+            }
+          },
+          {
+            "id": "9b757f8bb4b4a187",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_style",
+              "state": {},
+              "icon": "ag-style",
+              "title": "Juggl style"
+            }
+          },
+          {
+            "id": "e894439fce665cad",
             "type": "leaf",
             "state": {
               "type": "graph-analysis",
@@ -510,17 +550,17 @@
             }
           },
           {
-            "id": "4997825e18ff30da",
+            "id": "18a1ed5f01dc3a52",
             "type": "leaf",
             "state": {
-              "type": "rpg-manager-options",
+              "type": "DICE_ROLLER_VIEW",
               "state": {},
-              "icon": "d20",
-              "title": "RPG Manager"
+              "icon": "dices",
+              "title": "Dice Tray"
             }
           }
         ],
-        "currentTab": 41
+        "currentTab": 44
       }
     ],
     "direction": "horizontal",
@@ -536,19 +576,20 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
       "media-extended:Open media": false,
       "templater-obsidian:Templater": false,
-      "rpg-manager:RPG Manager": false,
-      "juggl:Juggl global graph": false,
-      "fantasy-content-generator:Fantasy Generators": false,
-      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
       "smart-connections:Open: Smart Chat": false,
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Connections: Open random connection": true,
-      "calendarium:Open Calendarium": false
+      "rpg-manager:RPG Manager": false,
+      "juggl:Juggl global graph": false,
+      "fantasy-content-generator:Fantasy Generators": false,
+      "calendarium:Open Calendarium": false,
+      "media-extended:Open external media": false
     }
   },
-  "active": "37a80b304028cd9f",
+  "active": "4aa236e12874e5cf",
   "lastOpenFiles": [
     "Astronomía/Las Lunas/Las Lunas.md",
     "Campaña/Campaña.md",

@@ -1,4 +1,4 @@
-/*! obsidian-smart-connections v3.0.79 | (c) 2025 🌴 Brian (Brian Petro) */
+/*! obsidian-smart-connections v3.0.80 | (c) 2025 🌴 Brian (Brian Petro) */
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -3972,6 +3972,7 @@ var DefaultEntitiesVectorAdapter = class extends EntitiesVectorAdapter {
         await this.collection.embed_model.load();
       }
     } catch (e) {
+      this.collection.emit_event("embed_model:load_failed");
       this.notices?.show("Failed to load embed_model");
       return;
     }
@@ -4053,6 +4054,12 @@ Please set the API key in the settings.`);
     if (!this.should_show_embed_progress_notice) return;
     this.last_notice_time = Date.now();
     this.last_notice_embedded_total = this.embedded_total;
+    this.collection.emit_event("embedding:progress_reported", {
+      progress: this.embedded_total,
+      total: embed_queue_length,
+      tokens_per_second: this._calculate_embed_tokens_per_second(),
+      model_name: this.collection.embed_model_key
+    });
     this.notices?.show("embedding_progress", {
       progress: this.embedded_total,
       total: embed_queue_length,
@@ -4068,6 +4075,11 @@ Please set the API key in the settings.`);
   _show_embed_completion_notice() {
     this.notices?.remove("embedding_progress");
     if (this.embedded_total > 100) {
+      this.collection.emit_event("embedding:completed", {
+        total_embeddings: this.embedded_total,
+        tokens_per_second: this._calculate_embed_tokens_per_second(),
+        model_name: this.collection.embed_model_key
+      });
       this.notices?.show("embedding_complete", {
         total_embeddings: this.embedded_total,
         tokens_per_second: this._calculate_embed_tokens_per_second(),
@@ -4083,6 +4095,12 @@ Please set the API key in the settings.`);
     this.is_queue_halted = true;
     console.log("Embed queue processing halted");
     this.notices?.remove("embedding_progress");
+    this.collection.emit_event("embedding:paused", {
+      progress: this.embedded_total,
+      total: this.collection._embed_queue.length,
+      tokens_per_second: this._calculate_embed_tokens_per_second(),
+      model_name: this.collection.embed_model_key
+    });
     this.notices?.show("embedding_paused", {
       progress: this.embedded_total,
       total: this.collection._embed_queue.length,
@@ -5059,6 +5077,14 @@ ${content}`.substring(0, max_chars);
     if (limit && this.collection.search_results_ct >= limit) return 0;
     const lowercased_keywords = keywords.map((keyword) => keyword.toLowerCase());
     const content = await this.read();
+    if (!content || typeof content !== "string" || !content.length) {
+      if (content.mime_type) {
+        console.warn(`Entity.search: No content available for searching: ${this.path}, mime_type: ${content.mime_type}`);
+      } else {
+        console.warn(`Entity.search: No content available for searching: ${this.path}, content: ${content ? JSON.stringify(content) : "empty"}`);
+      }
+      return 0;
+    }
     const lowercased_content = content.toLowerCase();
     const lowercased_path = this.path.toLowerCase();
     const matching_keywords = lowercased_keywords.filter(
@@ -5480,6 +5506,7 @@ var SmartSources = class extends SmartEntities {
    * @returns {Promise<void>}
    */
   async init_items() {
+    this.emit_event("source:initial_scan_started");
     this.show_process_notice("initial_scan");
     for (const AdapterClass of Object.values(this.source_adapters)) {
       if (typeof AdapterClass.init_items === "function") {
@@ -5487,6 +5514,7 @@ var SmartSources = class extends SmartEntities {
       }
     }
     this.clear_process_notice("initial_scan");
+    this.emit_event("source:initial_scan_completed");
     this.notices?.show("done_initial_scan", { collection_key: this.collection_key });
   }
   /**
@@ -6197,6 +6225,7 @@ var AjsonMultiFileCollectionDataAdapter = class extends FileCollectionDataAdapte
    * @returns {Promise<void>}
    */
   async process_load_queue() {
+    this.collection.emit_event("collection:load_started");
     this.collection.show_process_notice("loading_collection");
     if (!await this.fs.exists(this.collection.data_dir)) {
       await this.fs.mkdir(this.collection.data_dir);
@@ -6220,6 +6249,7 @@ var AjsonMultiFileCollectionDataAdapter = class extends FileCollectionDataAdapte
     }
     this.collection.loaded = load_queue.length;
     this.collection.clear_process_notice("loading_collection");
+    this.collection.emit_event("collection:load_completed");
   }
   /**
    * Process any queued save operations.
@@ -6227,6 +6257,7 @@ var AjsonMultiFileCollectionDataAdapter = class extends FileCollectionDataAdapte
    * @returns {Promise<void>}
    */
   async process_save_queue() {
+    this.collection.emit_event("collection:save_started");
     this.collection.show_process_notice("saving_collection");
     const save_queue = Object.values(this.collection.items).filter((item) => item._queue_save);
     console.log(`Saving ${this.collection.collection_key}: ${save_queue.length} items`);
@@ -6250,6 +6281,7 @@ var AjsonMultiFileCollectionDataAdapter = class extends FileCollectionDataAdapte
     }
     console.log(`Saved ${this.collection.collection_key} in ${Date.now() - time_start}ms`);
     this.collection.clear_process_notice("saving_collection");
+    this.collection.emit_event("collection:save_completed");
   }
   get_item_data_path(key) {
     return [
@@ -7890,6 +7922,7 @@ var AjsonMultiFileBlocksDataAdapter = class extends AjsonMultiFileCollectionData
    * @returns {Promise<void>}
    */
   async process_save_queue() {
+    this.collection.emit_event("collection:save_started");
     this.collection.show_process_notice("saving_collection");
     const save_queue = Object.values(this.collection.items).filter((item) => item._queue_save);
     console.log(`Saving ${this.collection.collection_key}: ${save_queue.length} items`);
@@ -7910,6 +7943,7 @@ var AjsonMultiFileBlocksDataAdapter = class extends AjsonMultiFileCollectionData
     }
     console.log(`Saved ${this.collection.collection_key} in ${Date.now() - time_start}ms`);
     this.collection.clear_process_notice("saving_collection");
+    this.collection.emit_event("collection:save_completed");
   }
   process_load_queue() {
     console.log(`Skipping loading ${this.collection.collection_key}...`);
@@ -8377,6 +8411,7 @@ var SmartModel = class {
           this.reload_model_timeout = null;
           await this.load();
           this.set_state("loaded");
+          this.env?.events?.emit("model:loaded", { model_key: this.model_key });
           this.notices?.show("Loaded model: " + this.model_key);
         }, 6e4);
       }
@@ -9215,6 +9250,23 @@ var SmartEmbedModelApiAdapter = class extends SmartEmbedAdapter {
   async validate_api_key() {
     const resp = await this.embed_batch([{ embed_input: "test" }]);
     return Array.isArray(resp) && resp.length > 0 && resp[0].vec !== null;
+  }
+  /**
+   * Trim input text to satisfy `max_tokens`.
+   * @private
+   * @param {string} embed_input - Input text
+   * @param {number} tokens_ct - Existing token count
+   * @returns {Promise<string|null>} Trimmed text
+   */
+  async trim_input_to_max_tokens(embed_input, tokens_ct) {
+    const reduce_ratio = (tokens_ct - this.max_tokens) / tokens_ct;
+    const new_length = Math.floor(embed_input.length * (1 - reduce_ratio));
+    let trimmed_input = embed_input.slice(0, new_length);
+    const last_space_index = trimmed_input.lastIndexOf(" ");
+    if (last_space_index > 0) trimmed_input = trimmed_input.slice(0, last_space_index);
+    const prepared = await this.prepare_embed_input(trimmed_input);
+    if (prepared === null) return null;
+    return prepared;
   }
 };
 var SmartEmbedModelRequestAdapter = class {
@@ -10482,6 +10534,165 @@ var SmartEmbedGeminiResponseAdapter = class extends SmartEmbedModelResponseAdapt
   }
 };
 
+// node_modules/obsidian-smart-env/node_modules/smart-embed-model/adapters/lm_studio.js
+function parse_lm_studio_models(list, adapter_key = "lm_studio") {
+  if (list.object !== "list" || !Array.isArray(list.data)) {
+    return { _: { id: "No models found." } };
+  }
+  console.log("LM Studio models", list);
+  return list.data.filter((m) => m.id && m.type === "embeddings").reduce((acc, m) => {
+    acc[m.id] = {
+      id: m.id,
+      model_name: m.id,
+      max_tokens: m.loaded_context_length || 512,
+      description: `LM Studio model: ${m.id}`,
+      adapter: adapter_key
+    };
+    return acc;
+  }, {});
+}
+var LmStudioEmbedModelAdapter = class extends SmartEmbedModelApiAdapter {
+  static key = "lm_studio";
+  static defaults = {
+    description: "LM Studio",
+    type: "API",
+    host: "http://localhost:1234",
+    // endpoint: "/v1/embeddings",
+    endpoint: "/api/v0/embeddings",
+    models_endpoint: "/api/v0/models",
+    default_model: "",
+    // user picks from dropdown
+    streaming: false,
+    api_key: "na",
+    // not used
+    batch_size: 10,
+    max_tokens: 512
+  };
+  get req_adapter() {
+    return LmStudioEmbedModelRequestAdapter;
+  }
+  get res_adapter() {
+    return LmStudioEmbedModelResponseAdapter;
+  }
+  get endpoint() {
+    return `${this.model_config.host}${this.model_config.endpoint}`;
+  }
+  get models_endpoint() {
+    return `${this.model_config.host}${this.model_config.models_endpoint}`;
+  }
+  get settings_config() {
+    const cfg = { ...super.settings_config };
+    delete cfg["[ADAPTER].api_key"];
+    cfg["[ADAPTER].refresh_models"] = {
+      name: "Refresh Models",
+      type: "button",
+      description: "Refresh the list of available models.",
+      callback: "adapter.refresh_models"
+    };
+    cfg["[ADAPTER].current_model"] = {
+      type: "html",
+      value: `<p>Embedding Model Max Tokens: ${this.max_tokens} (may be configured in LM Studio)</p>`
+    };
+    cfg["[ADAPTER].batch_size"] = {
+      name: "Embedding Batch Size",
+      type: "number",
+      description: "Number of embeddings to process in parallel. Adjusting this may improve performance.",
+      value: this.batch_size,
+      default: this.constructor.defaults.batch_size
+    };
+    cfg["[ADAPTER].cors_note"] = {
+      name: "CORS required",
+      type: "html",
+      // The renderer treats `value` as innerHTML.
+      value: `<p>Before you can use LM Studio you must <strong>Enable CORS</strong> inside LM Studio \u2192 Developer \u2192 Settings</p>`
+    };
+    return cfg;
+  }
+  async get_models(refresh = false) {
+    if (!refresh && this.adapter_settings.models) return this.adapter_settings.models;
+    const resp = await this.http_adapter.request({
+      url: this.models_endpoint,
+      method: "GET"
+    });
+    const raw = await resp.json();
+    const parsed = this.parse_model_data(raw);
+    this.adapter_settings.models = parsed;
+    this.model.re_render_settings();
+    return parsed;
+  }
+  parse_model_data(list) {
+    return parse_lm_studio_models(list, this.constructor.key);
+  }
+  async count_tokens(input) {
+    return { tokens: this.estimate_tokens(input) };
+  }
+  validate_config() {
+    if (!this.adapter_config.model_key) {
+      return { valid: false, message: "No model selected." };
+    }
+    return { valid: true, message: "Configuration is valid." };
+  }
+  /**
+   * Prepare input text and ensure it fits within `max_tokens`.
+   * @param {string} embed_input - Raw input text
+   * @returns {Promise<string|null>} Processed input text
+   */
+  async prepare_embed_input(embed_input) {
+    if (typeof embed_input !== "string") throw new TypeError("embed_input must be a string");
+    if (embed_input.length === 0) return null;
+    const { tokens } = await this.count_tokens(embed_input);
+    if (tokens <= this.max_tokens) return embed_input;
+    return await this.trim_input_to_max_tokens(embed_input, tokens);
+  }
+  /**
+   * Refresh available models.
+   */
+  refresh_models() {
+    console.log("refresh_models");
+    this.get_models(true);
+  }
+  // no usaqge stats from LM Studio so need to estimate tokens
+  async embed_batch(inputs) {
+    const token_cts = inputs.map((item) => this.estimate_tokens(item.embed_input));
+    const resp = await super.embed_batch(inputs);
+    resp.forEach((item, idx) => {
+      item.tokens = token_cts[idx];
+    });
+    return resp;
+  }
+};
+var LmStudioEmbedModelRequestAdapter = class extends SmartEmbedModelRequestAdapter {
+  /**
+   * Prepare request body for LM Studio API
+   * @returns {Object} Request body for API
+   */
+  prepare_request_body() {
+    const body = {
+      model: this.adapter.model_config.id,
+      input: this.embed_inputs
+    };
+    return body;
+  }
+};
+var LmStudioEmbedModelResponseAdapter = class extends SmartEmbedModelResponseAdapter {
+  /**
+   * Parse LM Studio API response
+   * @returns {Array<Object>} Parsed embedding results
+   */
+  parse_response() {
+    const resp = this.response;
+    if (!resp || !resp.data) {
+      console.error("Invalid response format", resp);
+      return [];
+    }
+    return resp.data.map((item) => ({
+      vec: item.embedding,
+      tokens: null
+      // LM Studio doesn't provide token usage
+    }));
+  }
+};
+
 // node_modules/obsidian-smart-env/node_modules/smart-chat-model/smart_chat_model.js
 var SmartChatModel = class extends SmartModel {
   scope_name = "smart_chat_model";
@@ -11003,11 +11214,12 @@ var SmartChatModelApiAdapter = class extends SmartChatModelAdapter {
   async get_models(refresh = false) {
     if (!refresh && this.valid_model_data()) return this.model_data;
     if (this.api_key) {
+      let response;
       try {
-        const response = await this.http_adapter.request(this.models_request_params);
+        response = await this.http_adapter.request(this.models_request_params);
         this.model_data = this.parse_model_data(await response.json());
       } catch (error) {
-        console.error("Failed to fetch model data:", error);
+        console.error("Failed to fetch model data:", { error, response });
       }
     }
     this.model_data = await this.get_enriched_model_data();
@@ -12911,7 +13123,7 @@ var SmartChatModelLmStudioAdapter = class extends SmartChatModelApiAdapter {
         /* visible only when this adapter is selected */
         name: "CORS required",
         type: "html",
-        value: "<p>Before sending requests from the browser you must enable CORS inside LM Studio:</p><p>Open the LM Studio application, choose <strong>Settings > OpenAI API Compatible</strong> and enable <strong>Allow Cross\u2011Origin Requests (CORS)</strong>. Restart the server afterwards.</p><p>With CORS enabled the local endpoint <code>http://localhost:1234</code> becomes reachable from web contexts.</p>"
+        value: `<p>Before you can use LM Studio you must <strong>Enable CORS</strong> inside LM Studio \u2192 Developer \u2192 Settings</p>`
       }
     };
   }
@@ -13653,6 +13865,9 @@ var SmartChatModelDeepseekAdapter = class extends SmartChatModelApiAdapter {
   get res_adapter() {
     return SmartChatModelDeepseekResponseAdapter;
   }
+  get models_endpoint_method() {
+    return "GET";
+  }
   /**
    * Parse the raw model data from DeepSeek's /v1/models endpoint
    * into a structured map of model objects keyed by model ID.
@@ -13726,6 +13941,7 @@ var import_obsidian13 = require("obsidian");
 
 // node_modules/obsidian-smart-env/node_modules/smart-completions/smart_completions.js
 var SmartCompletions = class extends Collection {
+  static version = 0.1;
   /**
    * Lazily instantiates and returns a chat_model. Similar to how
    * SmartEntities implements embed_model. You can adapt this
@@ -13771,6 +13987,12 @@ var SmartCompletions = class extends Collection {
     if (!this._completion_adapters) {
       this._completion_adapters = {};
       Object.entries(this.opts.completion_adapters).forEach(([key, adapter]) => {
+        if (this._completion_adapters[adapter.property_name || key]) {
+          const existing = this._completion_adapters[adapter.property_name || key];
+          const existing_version = existing.version || 0;
+          const new_version = adapter.version || 0;
+          if (new_version < existing_version) return;
+        }
         this._completion_adapters[adapter.property_name || key] = adapter;
       });
     }
@@ -14315,6 +14537,7 @@ var AjsonSingleFileCollectionDataAdapter = class extends AjsonMultiFileCollectio
    * @returns {Promise<void>}
    */
   async process_load_queue() {
+    this.collection.emit_event("collection:load_started");
     this.collection.show_process_notice("loading_collection");
     if (!await this.fs.exists(this.collection.data_dir)) {
       await this.fs.mkdir(this.collection.data_dir);
@@ -14327,6 +14550,7 @@ var AjsonSingleFileCollectionDataAdapter = class extends AjsonMultiFileCollectio
         }
       }
       this.collection.clear_process_notice("loading_collection");
+      this.collection.emit_event("collection:load_halted");
       return;
     }
     const raw_data = await this.fs.read(path, "utf-8", { no_cache: true });
@@ -14337,6 +14561,7 @@ var AjsonSingleFileCollectionDataAdapter = class extends AjsonMultiFileCollectio
         }
       }
       this.collection.clear_process_notice("loading_collection");
+      this.collection.emit_event("collection:load_halted");
       return;
     }
     const { rewrite, file_data } = this.parse_single_file_ajson(raw_data);
@@ -14352,6 +14577,7 @@ var AjsonSingleFileCollectionDataAdapter = class extends AjsonMultiFileCollectio
       item.loaded_at = Date.now();
     }
     this.collection.clear_process_notice("loading_collection");
+    this.collection.emit_event("collection:load_completed");
   }
   /**
    * Helper to parse single-file .ajson content, distributing states to items.
@@ -14432,6 +14658,7 @@ var AjsonSingleFileCollectionDataAdapter = class extends AjsonMultiFileCollectio
    * @returns {Promise<void>}
    */
   async process_save_queue() {
+    this.collection.emit_event("collection:save_started");
     this.collection.show_process_notice("saving_collection");
     const save_queue = Object.values(this.collection.items).filter((item) => item._queue_save);
     const time_start = Date.now();
@@ -14454,6 +14681,7 @@ var AjsonSingleFileCollectionDataAdapter = class extends AjsonMultiFileCollectio
     }
     console.log(`Saved (single-file) ${this.collection.collection_key} in ${Date.now() - time_start}ms`);
     this.collection.clear_process_notice("saving_collection");
+    this.collection.emit_event("collection:save_completed");
   }
 };
 
@@ -15304,6 +15532,7 @@ async function post_process5(env, container, opts = {}) {
       await env.load_collections();
       await env.smart_sources.process_embed_queue();
       const end = Date.now();
+      env.events?.emit("sources:reloaded", { time_ms: end - start });
       env.main.notices?.show("reload_sources", { time_ms: end - start });
     });
   }
@@ -15856,7 +16085,8 @@ var smart_env_config2 = {
         transformers: SmartEmbedTransformersIframeAdapter,
         openai: SmartEmbedOpenAIAdapter,
         ollama: SmartEmbedOllamaAdapter,
-        gemini: GeminiEmbedModelAdapter
+        gemini: GeminiEmbedModelAdapter,
+        lm_studio: LmStudioEmbedModelAdapter
       }
     },
     smart_chat_model: {
@@ -17356,6 +17586,7 @@ var AjsonMultiFileCollectionDataAdapter2 = class extends FileCollectionDataAdapt
    * @returns {Promise<void>}
    */
   async process_load_queue() {
+    this.collection.emit_event("collection:load_started");
     this.collection.show_process_notice("loading_collection");
     if (!await this.fs.exists(this.collection.data_dir)) {
       await this.fs.mkdir(this.collection.data_dir);
@@ -17379,6 +17610,7 @@ var AjsonMultiFileCollectionDataAdapter2 = class extends FileCollectionDataAdapt
     }
     this.collection.loaded = load_queue.length;
     this.collection.clear_process_notice("loading_collection");
+    this.collection.emit_event("collection:load_completed");
   }
   /**
    * Process any queued save operations.
@@ -17386,6 +17618,7 @@ var AjsonMultiFileCollectionDataAdapter2 = class extends FileCollectionDataAdapt
    * @returns {Promise<void>}
    */
   async process_save_queue() {
+    this.collection.emit_event("collection:save_started");
     this.collection.show_process_notice("saving_collection");
     const save_queue = Object.values(this.collection.items).filter((item) => item._queue_save);
     console.log(`Saving ${this.collection.collection_key}: ${save_queue.length} items`);
@@ -17409,6 +17642,7 @@ var AjsonMultiFileCollectionDataAdapter2 = class extends FileCollectionDataAdapt
     }
     console.log(`Saved ${this.collection.collection_key} in ${Date.now() - time_start}ms`);
     this.collection.clear_process_notice("saving_collection");
+    this.collection.emit_event("collection:save_completed");
   }
   get_item_data_path(key) {
     return [
@@ -19973,6 +20207,7 @@ var SmartModel2 = class {
           this.reload_model_timeout = null;
           await this.load();
           this.set_state("loaded");
+          this.env?.events?.emit("model:loaded", { model_key: this.model_key });
           this.notices?.show("Loaded model: " + this.model_key);
         }, 6e4);
       }
@@ -20948,11 +21183,12 @@ var SmartChatModelApiAdapter2 = class extends SmartChatModelAdapter2 {
   async get_models(refresh = false) {
     if (!refresh && this.valid_model_data()) return this.model_data;
     if (this.api_key) {
+      let response;
       try {
-        const response = await this.http_adapter.request(this.models_request_params);
+        response = await this.http_adapter.request(this.models_request_params);
         this.model_data = this.parse_model_data(await response.json());
       } catch (error) {
-        console.error("Failed to fetch model data:", error);
+        console.error("Failed to fetch model data:", { error, response });
       }
     }
     this.model_data = await this.get_enriched_model_data();
@@ -22856,7 +23092,7 @@ var SmartChatModelLmStudioAdapter2 = class extends SmartChatModelApiAdapter2 {
         /* visible only when this adapter is selected */
         name: "CORS required",
         type: "html",
-        value: "<p>Before sending requests from the browser you must enable CORS inside LM Studio:</p><p>Open the LM Studio application, choose <strong>Settings > OpenAI API Compatible</strong> and enable <strong>Allow Cross\u2011Origin Requests (CORS)</strong>. Restart the server afterwards.</p><p>With CORS enabled the local endpoint <code>http://localhost:1234</code> becomes reachable from web contexts.</p>"
+        value: `<p>Before you can use LM Studio you must <strong>Enable CORS</strong> inside LM Studio \u2192 Developer \u2192 Settings</p>`
       }
     };
   }
@@ -23525,6 +23761,9 @@ var SmartChatModelDeepseekAdapter2 = class extends SmartChatModelApiAdapter2 {
    */
   get res_adapter() {
     return SmartChatModelDeepseekResponseAdapter2;
+  }
+  get models_endpoint_method() {
+    return "GET";
   }
   /**
    * Parse the raw model data from DeepSeek's /v1/models endpoint
@@ -24697,6 +24936,7 @@ var DefaultEntitiesVectorAdapter2 = class extends EntitiesVectorAdapter2 {
         await this.collection.embed_model.load();
       }
     } catch (e) {
+      this.collection.emit_event("embed_model:load_failed");
       this.notices?.show("Failed to load embed_model");
       return;
     }
@@ -24778,6 +25018,12 @@ Please set the API key in the settings.`);
     if (!this.should_show_embed_progress_notice) return;
     this.last_notice_time = Date.now();
     this.last_notice_embedded_total = this.embedded_total;
+    this.collection.emit_event("embedding:progress_reported", {
+      progress: this.embedded_total,
+      total: embed_queue_length,
+      tokens_per_second: this._calculate_embed_tokens_per_second(),
+      model_name: this.collection.embed_model_key
+    });
     this.notices?.show("embedding_progress", {
       progress: this.embedded_total,
       total: embed_queue_length,
@@ -24793,6 +25039,11 @@ Please set the API key in the settings.`);
   _show_embed_completion_notice() {
     this.notices?.remove("embedding_progress");
     if (this.embedded_total > 100) {
+      this.collection.emit_event("embedding:completed", {
+        total_embeddings: this.embedded_total,
+        tokens_per_second: this._calculate_embed_tokens_per_second(),
+        model_name: this.collection.embed_model_key
+      });
       this.notices?.show("embedding_complete", {
         total_embeddings: this.embedded_total,
         tokens_per_second: this._calculate_embed_tokens_per_second(),
@@ -24808,6 +25059,12 @@ Please set the API key in the settings.`);
     this.is_queue_halted = true;
     console.log("Embed queue processing halted");
     this.notices?.remove("embedding_progress");
+    this.collection.emit_event("embedding:paused", {
+      progress: this.embedded_total,
+      total: this.collection._embed_queue.length,
+      tokens_per_second: this._calculate_embed_tokens_per_second(),
+      model_name: this.collection.embed_model_key
+    });
     this.notices?.show("embedding_paused", {
       progress: this.embedded_total,
       total: this.collection._embed_queue.length,
@@ -25784,6 +26041,14 @@ ${content}`.substring(0, max_chars);
     if (limit && this.collection.search_results_ct >= limit) return 0;
     const lowercased_keywords = keywords.map((keyword) => keyword.toLowerCase());
     const content = await this.read();
+    if (!content || typeof content !== "string" || !content.length) {
+      if (content.mime_type) {
+        console.warn(`Entity.search: No content available for searching: ${this.path}, mime_type: ${content.mime_type}`);
+      } else {
+        console.warn(`Entity.search: No content available for searching: ${this.path}, content: ${content ? JSON.stringify(content) : "empty"}`);
+      }
+      return 0;
+    }
     const lowercased_content = content.toLowerCase();
     const lowercased_path = this.path.toLowerCase();
     const matching_keywords = lowercased_keywords.filter(
@@ -26205,6 +26470,7 @@ var SmartSources2 = class extends SmartEntities2 {
    * @returns {Promise<void>}
    */
   async init_items() {
+    this.emit_event("source:initial_scan_started");
     this.show_process_notice("initial_scan");
     for (const AdapterClass of Object.values(this.source_adapters)) {
       if (typeof AdapterClass.init_items === "function") {
@@ -26212,6 +26478,7 @@ var SmartSources2 = class extends SmartEntities2 {
       }
     }
     this.clear_process_notice("initial_scan");
+    this.emit_event("source:initial_scan_completed");
     this.notices?.show("done_initial_scan", { collection_key: this.collection_key });
   }
   /**
@@ -32091,6 +32358,7 @@ var AjsonMultiFileCollectionDataAdapter3 = class extends FileCollectionDataAdapt
    * @returns {Promise<void>}
    */
   async process_load_queue() {
+    this.collection.emit_event("collection:load_started");
     this.collection.show_process_notice("loading_collection");
     if (!await this.fs.exists(this.collection.data_dir)) {
       await this.fs.mkdir(this.collection.data_dir);
@@ -32114,6 +32382,7 @@ var AjsonMultiFileCollectionDataAdapter3 = class extends FileCollectionDataAdapt
     }
     this.collection.loaded = load_queue.length;
     this.collection.clear_process_notice("loading_collection");
+    this.collection.emit_event("collection:load_completed");
   }
   /**
    * Process any queued save operations.
@@ -32121,6 +32390,7 @@ var AjsonMultiFileCollectionDataAdapter3 = class extends FileCollectionDataAdapt
    * @returns {Promise<void>}
    */
   async process_save_queue() {
+    this.collection.emit_event("collection:save_started");
     this.collection.show_process_notice("saving_collection");
     const save_queue = Object.values(this.collection.items).filter((item) => item._queue_save);
     console.log(`Saving ${this.collection.collection_key}: ${save_queue.length} items`);
@@ -32144,6 +32414,7 @@ var AjsonMultiFileCollectionDataAdapter3 = class extends FileCollectionDataAdapt
     }
     console.log(`Saved ${this.collection.collection_key} in ${Date.now() - time_start}ms`);
     this.collection.clear_process_notice("saving_collection");
+    this.collection.emit_event("collection:save_completed");
   }
   get_item_data_path(key) {
     return [
@@ -32377,6 +32648,7 @@ var AjsonSingleFileCollectionDataAdapter2 = class extends AjsonMultiFileCollecti
    * @returns {Promise<void>}
    */
   async process_load_queue() {
+    this.collection.emit_event("collection:load_started");
     this.collection.show_process_notice("loading_collection");
     if (!await this.fs.exists(this.collection.data_dir)) {
       await this.fs.mkdir(this.collection.data_dir);
@@ -32389,6 +32661,7 @@ var AjsonSingleFileCollectionDataAdapter2 = class extends AjsonMultiFileCollecti
         }
       }
       this.collection.clear_process_notice("loading_collection");
+      this.collection.emit_event("collection:load_halted");
       return;
     }
     const raw_data = await this.fs.read(path, "utf-8", { no_cache: true });
@@ -32399,6 +32672,7 @@ var AjsonSingleFileCollectionDataAdapter2 = class extends AjsonMultiFileCollecti
         }
       }
       this.collection.clear_process_notice("loading_collection");
+      this.collection.emit_event("collection:load_halted");
       return;
     }
     const { rewrite, file_data } = this.parse_single_file_ajson(raw_data);
@@ -32414,6 +32688,7 @@ var AjsonSingleFileCollectionDataAdapter2 = class extends AjsonMultiFileCollecti
       item.loaded_at = Date.now();
     }
     this.collection.clear_process_notice("loading_collection");
+    this.collection.emit_event("collection:load_completed");
   }
   /**
    * Helper to parse single-file .ajson content, distributing states to items.
@@ -32494,6 +32769,7 @@ var AjsonSingleFileCollectionDataAdapter2 = class extends AjsonMultiFileCollecti
    * @returns {Promise<void>}
    */
   async process_save_queue() {
+    this.collection.emit_event("collection:save_started");
     this.collection.show_process_notice("saving_collection");
     const save_queue = Object.values(this.collection.items).filter((item) => item._queue_save);
     const time_start = Date.now();
@@ -32516,6 +32792,7 @@ var AjsonSingleFileCollectionDataAdapter2 = class extends AjsonMultiFileCollecti
     }
     console.log(`Saved (single-file) ${this.collection.collection_key} in ${Date.now() - time_start}ms`);
     this.collection.clear_process_notice("saving_collection");
+    this.collection.emit_event("collection:save_completed");
   }
 };
 var AjsonSingleFileItemDataAdapter = class extends AjsonMultiFileItemDataAdapter3 {
@@ -33147,6 +33424,7 @@ var smart_chat_threads_default = {
 
 // node_modules/smart-chat-obsidian/node_modules/smart-completions/smart_completions.js
 var SmartCompletions2 = class extends Collection3 {
+  static version = 0.1;
   /**
    * Lazily instantiates and returns a chat_model. Similar to how
    * SmartEntities implements embed_model. You can adapt this
@@ -33192,6 +33470,12 @@ var SmartCompletions2 = class extends Collection3 {
     if (!this._completion_adapters) {
       this._completion_adapters = {};
       Object.entries(this.opts.completion_adapters).forEach(([key, adapter]) => {
+        if (this._completion_adapters[adapter.property_name || key]) {
+          const existing = this._completion_adapters[adapter.property_name || key];
+          const existing_version = existing.version || 0;
+          const new_version = adapter.version || 0;
+          if (new_version < existing_version) return;
+        }
         this._completion_adapters[adapter.property_name || key] = adapter;
       });
     }
@@ -34215,6 +34499,7 @@ var smart_completions_default_config2 = {
 
 // node_modules/smart-chat-obsidian/src/adapters/smart-completions/thread.js
 var ThreadCompletionAdapter = class extends SmartCompletionAdapter2 {
+  static version = 0.1;
   static order = -1;
   /**
    * @returns {string}
@@ -38152,14 +38437,19 @@ async function post_process36(chat_thread, thread_container, opts = {}) {
   input_el.addEventListener("keyup", () => {
     input_el.dataset.hasContent = input_el.textContent.trim().length > 0;
   });
-  input_el.addEventListener("paste", (e) => {
+  function handle_paste(e) {
     e.preventDefault();
-    const text = e.clipboardData.getData("text/plain");
+    const text = e.clipboardData?.getData("text/plain");
     if (text) {
-      insert_text_in_chunks(input_el, text, { chunk_size: 2048 });
-      input_el.dataset.hasContent = true;
+      const target = e.currentTarget;
+      insert_text_in_chunks(target, text, { chunk_size: 2048 });
+      target.dataset.hasContent = true;
     }
-  });
+  }
+  if (!input_el._scPasteHandler) {
+    input_el._scPasteHandler = handle_paste;
+    input_el.addEventListener("paste", input_el._scPasteHandler);
+  }
   const sc_thread_el = chat_thread.container;
   if (sc_thread_el) {
     sc_thread_el.addEventListener("dragover", (ev) => ev.preventDefault());
@@ -40174,7 +40464,7 @@ var SmartChatSettingTab = class extends import_obsidian57.PluginSettingTab {
 var import_obsidian58 = require("obsidian");
 
 // releases/latest_release.md
-var latest_release_default = '> [!NOTE] Patch v3.0.79\n> - Added: built-in local model: EmbeddingGemma-300M\n> - Added: Export data: Status bar context menu can export Smart Env data\n> - Added: Source inspector: toggle showing exact text used in embeddings (embed input)\n> - Fixed: Smart Chat: re-opening thread should not create additional completions (appearing as additional context components)\n\n> [!NOTE]- Previous patches\n> > [!NOTE]- v3.0.78\n> > - Fixed: Smart Chat: threads should save when renamed before the first message is sent\n> \n> > [!NOTE]- v3.0.77\n> > - Improved: Reduced/removed embedding progress notifications during real-time processing\n> > 	- Only shows if more than 100 items were embedded\n> > - Fixed: Lookup view: toggle expand/collapse all should work to collapse all results\n> \n> > [!NOTE]- v3.0.76\n> > - Fixed: Connections view: should update number of connections when setting is changed and refresh button is clicked\n> \n> > [!NOTE]- v3.0.75\n> > - Fixed: Connections codeblock: Exclude filter should work as expected\n> \n> > [!NOTE]- v3.0.74\n> > - Fix: Smart Chat: Ollama API endpoint\n> \n> > [!NOTE]- v3.0.73\n> > - Fixed: Smart Chat: LM Studio model loading in settings\n> \n> > [!NOTE]- v3.0.71\n> > - Added: Command: `Insert connections codeblock`\n> > - Added: Smart Chat: Ollama settings now includes host configuration\n> > - Added: Smart Chat: Deepseek API models\n> > - Added: Smart Chat: Enriched model data via models.dev\n> > - Improved: removed redundant command for opening connections views\n> >   - updated command names for clarity and adjust display text\n> > - Fixed: Lookup should include blocks in results when blocks are enabled\n> \n> > [!NOTE]- v3.0.70\n> > - Improved: Random connection logic to better handle when no connections are available\n> > - Fixed: Lookup should work with Gemini embeddings\n> \n> > [!NOTE]- v3.0.69\n> > - Improved: Smart Chat: Streaming UX should not prevent scrolling while streaming\n> > - Improved: Smart Random Note command weights selection by connection score\n> > - Improved: Simplified commands for connections view\n> \n> > [!NOTE]- v3.0.68\n> > - Added: Context selector: Folder support\n> > 	- folders included in suggestions\n> > 	- select all files in a folder using `\u2318/Ctrl + Click`\n> > 	- use `Enter` or `ArrowRight` scopes suggestions to files within a folder\n> > - Added: Context selector: Block-level scoping\n> > 	- allows selecting a specific block within a note\n> > 	- use `ArrowRight` to view blocks within a note\n> > - Added: Context selector: Tag support\n> > 	- tags included in suggestions\n> > 	- select all files with a tag using `\u2318/Ctrl + Click`\n> > 	- use `Enter` or `ArrowRight` scopes suggestions to files within a tag\n> > - Added: Google Gemini API as embedding model\n> > - Added: Smart Chat: Anthropic Claude Opus 4.1 model now available\n> > - Added: control display of ribbon icons in the settings\n> > - Added: "Open random connection" ribbon icon\n> > - Added: "Open connections view" command to replace two deprecated commands\n> > 	- "Removing soon" label added to deprecated commands\n> > - Improved: Context selector: UX more predictable when using `Ctrl/\u2318`\n> > 	- fixes some scenarios when `Ctrl/\u2318` was not being detected correctly\n> > - Fixed: Random note command\n> \n> > [!NOTE]- v3.0.67\n> > - Added: `smart-connections` codeblock: dedicated connections settings stored in codeblock\n> > - Smart Chat:\n> > 	- Improved: prevent redundant inclusion of context in subsequent completions\n> > 		- should only include a context once in the most recent completion\n> > 	- Fixed: Anthropic models failing after messages that utilize tool calling (context)\n> > 	- Fixed: user instruction should always be provided before and after compiled context\n> \n> > [!NOTE]- v3.0.65\n> > - Added: Smart Chat: button to insert variables into user message\n> > - Patched: Smart Chat: should handle chats that were saved with new name prior to improved thread name handling ([commit 542e1706](https://github.com/brianpetro/smart-chat-obsidian/commit/542e17064f5e3ff0fce7d30583ba472e09bd0b43))\n> \n> > [!NOTE]- v3.0.64\n> > - Added: Smart Chat: support for additional variables in messages\n> > 	- more details and UI coming soon\n> > - Fixed: Smart Chat: should not throw error when thread is missing\n> \n> > [!NOTE]- v3.0.63\n> > - Added: Connections view: handle dragging blocks\n> > 	- creates link to most block types\n> > 		- some exceptions including frontmatter blocks and line-specific blocks\n> \n> > [!NOTE]- v3.0.62\n> > - add option to exclude frontmatter blocks from source connections\n> > - move "Hide blocks from connections results" setting implementation into `find_connections` method instead of relying on passing parameters (respects setting across implementations)\n> > - fix: Ollama custom endpoint: should use custom endpoint when retrieving model-specific information ([commit 2a791aa](https://github.com/brianpetro/jsbrains/commit/2a791aa0df9bb8e130ac6246f8a583624c276b8a))\n> \n> > [!NOTE]- v3.0.61\n> > - Added: Status bar: context menu\n> > 	- inspect source and blocks for current note\n> > 	- view Smart Environment stats\n> > - Added: Connections view setting: to only show sources (notes) in connections results\n> \n> > [!NOTE]- v3.0.60\n> > - Smart Chat: bug fixes\n> > 	- improve chat thread name handling\n> > 	- prevent errors when chat is open onload\n> \n> > [!NOTE]- v3.0.59\n> > - Added: Smart Chat: xAI Grok adapter\n> > 	- allows using xAI Grok models in Smart Chat\n> > 	- requires xAI Grok API key to be set in the settings\n> > - Added: Excalidraw source adapter\n> > 	- allows Excalidraw files to be used as sources in Smart Connections\n> > 	- supports Excalidraw files with `.excalidraw.md` extension\n> > - Added: Source inspector: source-level information\n> > 	- shows whether the source should be embedded based on the settings and current content\n> > 	- shows whether the source has been embedded (vectorized)\n> > 	- added button to show the full surce data object\n> > - Improved: Connections view: improved messaging when connections results cannot be returned\n> > 	- added more detailed error messages for different failure scenarios\n> \n> > [!NOTE]- v3.0.58\n> > - Improved: Smart Connections dynamic codeblock:  filter options passed to connections and lookup components; adjust styles for better layout\n> > - Fixed: Smart Chat: should always have a `current_completion` instance (prevent failing to send subsequent messages)\n> \n> > [!NOTE]- v3.0.57\n> > - Improved: Smart Chat: date format in default thread name\n> > - Fixed: Smart Chat: message copy button should copy message to the clipboard\n> \n> > [!NOTE]- v3.0.56\n> > - Added: Smart Chat: Improved message link interactions\n> >   - hover-preview: hold cmd/ctrl while hovering to preview the link\n> > 	- drag: click and hold the link, dragging it to create a link in the active note, or dragging to the chat window to add as context\n> > 	- click: hold cmd/ctrl while clicking to open the link in a new tab, cmd/ctrl+alt click to open in split view\n> > - Fixed: Smart Chat: new threads should save after the first message\n> \n> > [!NOTE]- v3.0.55\n> > - Fixed: Smart Chat `@` should open context selector modal on subsequent messages\n> \n> > [!NOTE]- v3.0.54\n> > - Fixed: Smart Chat: Context selector: "Done" button should not cause crash\n> > - Added discussion template for Smart Connections workflows and button to open it\n> > 	- encourages users to share their workflows with the community\n> > 	- button opens the discussion template in a new tab\n> > 	- discussion template includes instructions for sharing workflows\n> \n> > [!NOTE]- v3.0.53\n> > - Improved: Smart Chat: opening logic (prevent splitting sidebar)\n> > 	- now opens in new tab in main workspace by default\n> > 	- tab may still be dragged to the sidebar\n> > - Fixed: Smart Chat: Context selector should open when Smart Context plugin is not installed\n> > 	- should now open the context selector modal instead of throwing an error\n> \n> > [!NOTE]- v3.0.52\n> > - Fixed: Initial import should not embed blocks where `should_embed` is false\n> >   - see #1077 for details\n> > 	- improves performance and decreases embedding time by reducing total number of blocks\n> > 	- may require "Clear sources data" and "Reload sources" to be run in the settings to take effect\n> \n> > [!NOTE]- v3.0.51\n> > - Fixed: Connections view: Include/Exclude filters should allow multiple comma-separated values\n> \n> > [!NOTE]- v3.0.50\n> > - Added: Smart Chat: Latest OpenAI chat models (removed incompatible models)\n> > 	- o3 and o4 class models now available in the settingsa\n> \n> > [!NOTE]- v3.0.47\n> > - Added: Hide connections in connections view\n> > 	- Right-click on a connection result to open the new context menu\n> > 	- Select "Hide" to hide the connection result\n> > 	- Select "Unhide All" to unhide all hidden connections for the current item\n> > - Updated: Smart Contexts to use new ContextItem architecture\n> > 	- The new architecture allows for more flexibility and better performance\n> \n> > [!NOTE]- v3.0.46\n> > - Added: Smart Chat: Include relevance score for item in context tree if retrieved from a lookup\n> > 	- allows users to see how relevant the item is to the current chat context\n> > - Added: Snowflake Arctic Embed models to the built-in embedding adapter (transformers)\n> > 	- Snowflake/snowflake-arctic-embed-xs\n> > 	- Snowflake/snowflake-arctic-embed-s\n> > 	- Snowflake/snowflake-arctic-embed-m\n> > - Added: Report a bug and Request a feature buttons to the settings\n> > - Fixed: Smart Context: Tree should not split paths with slashes or hashtags within wikilinks\n> > 	- ex. `[[some/path.md#subpath]]` should not be split into `some/path.md` and `subpath`\n> > - Improved: Smart Chat: Prevent trying to use folder scope in lookup when the folder provided by the AI does not exist\n> \n> > [!NOTE]- v3.0.45\n> > - Added: Status element for indicating embedding queue for changed notes\n> > 	- click to begin embedding otherwise waits until `re_import_wait_time` has passed\n> > - Fixed: Smart Environment: only changed blocks should re-embed when the note is modified\n> > 	- Adds block has check to parse_blocks to prevent `queue_embed` from being called on blocks that haven\'t changed\n> > - Fixed: Release notes should open in a new tab instead of relpacing the current tab\n> > - Moved: Smart Plugins access to the obsidian-smart-env module\n> \n> > [!NOTE]- v3.0.44\n> > - Improved: Settings descriptions for the Connections view\n> > - Changed: Moved "muted notices" settings to the obsidian-smart-env module\n> \n> > [!NOTE]- v3.0.43\n> > - Fixed: Smart Chat: Context tree connections icon should show connections in the suggestions when clicked\n> \n> > [!NOTE]- v3.0.42\n> > - Added: `re_import_wait_time` setting to Smart Environment settings\n> > 	- allows setting the time to wait before re-importing and embedding a note after it has been modified\n> > 	- WHY: improves real-time nature of the connections\n> > - Improved: Connections view: Handling when current note hasn\'t been imported\n> > 	- removed notification\n> > 	- added refresh instructions to the connections view\n> > - Improved: Connections view when no results are found\n> >  - added "No connections found" message\n> >  - added instructions for reloading sources from the settings\n> > - Reduced size of bundled plugin from ~6.5MB to ~1MB (>80% reduction)\n> >  - removed tokenizer that\'s only used by OpenAI embedding models\n> >  - removed sourcemap since it\'s removed by Obsidian anyway\n> >  - WHY: make the code easier to read (trust through transparency)\n> > - Fixed: Embeddings should update when file is changed\n> \n> > [!NOTE]- v3.0.41\n> > - Fix: Bug in outlinks parsing was preventing embedding processing in some cases\n> \n> > [!NOTE]- v3.0.40\n> > - Added: Smart Chat: Support for PDFs as context in compatible models\n> > 	- Currently works with Anthropic, Google Gemini, and OpenAI models\n> > 	- PDFs must be manually added to the chat context. The context lookup action will not surface the PDFs because they are not embedded.\n> > - Improved: Smart Chat: LM Studio settings\n> > 	- Added: Instructions for setting up LM Studio (CORS)\n> > 	- Removed: Unecessary API key setting\n> \n> > [!NOTE]- v3.0.39\n> > - Improved: Release notes user experience to use the same as the native Obsidian release notes\n> > 	- Now uses new tab instead of modal to display the release notes\n> > - Fixed: Reduced vector length OpenAI embedding models should be selectable in the settings\n> \n> > [!NOTE]- v3.0.38\n> > - Fixed: Smart Chat LM Studio models handling of `tool_choice` parameter\n> \n> > [!NOTE]- v3.0.37\n> > - Fixed: Ollama `max_tokens` parameter should accurately reflect the model\'s max tokens\n> > - Fixed: Getting Started slideshow should only show automatically for new users\n> \n> > [!NOTE]- v3.0.34\n> > - Added: Multi-modal support (images as context) using Ollama models\n> > 	- requires Ollama models that support multi-modal input like `gemma3:4b`\n> \n> > [!NOTE]- v3.0.33\n> > - Improved: Context Tree styles improved by samhiatt (PR #1091)\n> > - Improved: Smart Chat message should be full width if container is less than 600px\n> > - Fixed: Smart Chat model selection should handle when Ollama is available but no models are installed\n> \n> > [!NOTE]- v3.0.32\n> > - Added: Anthropic Claude Sonnet 4 & Opus 4 to Smart Chat\n> > - Improved: Smart Chat new note button no longer automatically addes open notes as context \n> > 	- Added: "Add visible" and "Add open" notes options to Smart Context selector \n> > 	- Added: "Add context" button above chat input on new chat for quick access to context selector\n> > - Fixed: Removing an item in the context selector updates the stats\n> > - Fixed: Smart Chat system message should render no more than once per turn\n> \n> > [!NOTE]- v3.0.31\n> > - Added: Smart Chat: "Retrieve more" button in lookup results\n> > 	- allows retrieving more results from the lookup\n> > 	- includes retrieved context in subsequent lookup to provide more context to the model\n> > - Improved: Smart Chat: prior message handling in subsequent completions\n> \n> > [!NOTE]- v3.0.30\n> > - Added: Drag multiple files into the Smart Chat window to add as context\n> > - Fixed: Smart Connections results remain stable when dragging connection from bottom of the list\n> \n> > [!NOTE]- v3.0.29\n> > - Fixed: prevented regex special characters from throwing error when excluded file/folder contains them\n> > - Fixed: Smart Chat should return lookup context results when Smart Blocks are disabled\n> \n> > [!NOTE]- v3.0.28\n> > Fixed: Getting Started slideshow UX on mobile.\n> \n> > [!NOTE]- v3.0.27\n> > - Added: Smart Chat lookup now supports folder-based filtering\n> > 	- mention a folder when requesting a lookup using self-referential pronoun (no special folder syntax required)\n> > 		- ex. "Summarize my thoughts on this topic based on notes in my Content folder"\n> > - Added: Smart Chat system prompt now allows `{{folder_tree}}` variable\n> > 	- this variable will be replaced with the folder tree of the current vault\n> > 	- useful for providing context about the vault structure to the model\n> > - Improved: Smart Chat system message UI\n> > 	- now collapses when longer than 10 lines\n> \n> > [!NOTE]- v3.0.26\n> > Temp disable bases integration since Obsidian changed how the integration works and there is currently no clear path to updating.\n> \n> > [!NOTE]- v3.0.25\n> > Fixed connections view help button failing to open\n> \n> > [!NOTE]- v3.0.24\n> > Fix Lookup tab not displaying.\n> \n> > [!NOTE]- v3.0.23\n> > - Added Getting Started guide\n> > 	- opens automatically for new users\n> > 	- can be opened manually via command `Show getting started`\n> > 	- can be opened from the connections view "Help" icon\n> > 	- can be opened from the main settings "Open getting started guide" button\n> \n> > [!NOTE]- v3.0.22\n> > - Improved connections view event handling\n> > 	- prevent throwing error when no view container is present on iOS\n> \n> > [!NOTE]- v3.0.21\n> > - Implemented Smart Completions fallback to Smart Chat configuration\n> > 	- WHY: enables use via global `smart_env` instance without requiring `chat_model` parameters in every request\n> \n> > [!NOTE]- v3.0.20\n> > - Fixed: Smart Environment settings tab should be visible during "loading" and "loaded" states\n> > - Fixed: Open URL externally should use window.open with "_external" if webviewer plugin is installed\n> \n> > [!NOTE]- v3.0.19\n> > - Added: model info to Smart Chat view\n> > 	- shows before the first message and anytime the model changes since the last message\n> > - Fixed: ChatGPT sign-in with Google account\n> > 	- should now work as expected\n> > 	- will require re-signing in to ChatGPT after update\n> > - Fixed: Smart Chat thread adapter should better handle past completions to prevent unexpected behavior\n> > 	- prevented `build_request` from outputting certain request content unless the completion is the current completion\n> > 		- logic is specific to completion adapters (actions, actions_xml, thread)\n> \n> > [!NOTE]- v3.0.18\n> > - Fixed: Smart Connections view rendering on mobile\n> > 	- should render when opening the view from the sidebar\n> > 	- should update the results to the currently active file\n> \n> > [!NOTE]- v3.0.17\n> > - Improved embedding processing UX\n> > 	- show notification immediately to allow pausing sooner\n> > 	- show notification every 30 seconds in addition to every 100 embeddings\n> > - Fixed: Smart Environment settings tab should be visible during "loading" state\n> > 	- prevents "Loading Obsidian Smart Environment..." message from appearing indefinitely in instances where the environment fails to load from errors related to specific embedding models\n> \n> > [!NOTE]- v3.0.16\n> > - Fixed: no models available in Ollama should no longer cause issues in the settings\n> \n> > [!NOTE]- v3.0.15\n> > - Fixed: some Ollama embedding models triggering re-embedding every restart\n> \n> > [!NOTE]- v3.0.14\n> > - Improved hover popover for blocks in connections results and context builder\n> > - Refactored `context_builder` component to extract `context_tree` component and prevent passing UI components\n> >   - these components are frequently re-used, the updated architecture should make it easier to maintain and extend\n> > - Fixed: should not embed blocks with size less than `min_chars`\n> > - Fixed: Smart Chat completion requests should have a properly ordered `messages` array\n> \n> > [!NOTE]- v3.0.13\n> > - Prevents trying to process embed queue if embed model is not loaded\n> > 	- Particularly for Ollama which may not be turned on when Obsidian starts\n> > 	- Re-checks for Ollama server in intervals of a minute\n> > 	- Embed queue can be restarted by clicking "Reload sources" in the Smart Environment settings\n> \n> > [!NOTE]- v3.0.12\n> > Fixes pasted text: should paste lines in correct order (no longer reversed)\n> \n> > [!NOTE]- v3.0.11\n> > Fixes unexpected scroll issue when dragging file from connections view (issue #1073)\n> \n> > [!NOTE]- v3.0.10\n> > Fixed Google Gemini integration in the new Smart Chat\n> \n> > [!NOTE]- v3.0.9\n> > - Reworked the context builder UX in Smart Chat to prevent confusion\n> > 	- Context is now added to the chat regardless of how the context selector modal is closed\n> > 	- Removed "Back" button in favor of "Back" suggestion item\n> > - Fixed using `@` to open context selector in Smart Chat\n> > 	- "Done" button now appears in the context selector modal when it is opened from the keyboard\n> \n> > [!NOTE]- v3.0.8\n> > - Improved bases integration UX\n> > 	- prevent throwing error on erroroneous input in `cos_sim` base function\n> > 	- gracefully handle when smart_env is not loaded yet\n> > - Reduced max size of markdown file that will be imported from 1MB to 300KB (prevent long initial import)\n> > 	- advanced configuration available via `smart_sources.obsidian_markdown_source_content_adapter.max_import_size` in `smart_env.json`\n> > - Removed deprecated Smart Search API registered to window since `smart_env` object is now globally accessible\n> > - Fixed bug causing expanded connections results to render twice\n> \n> > [!NOTE]- v3.0.7\n> > Added "current/dynamic" option in bases connection score modal to add score based on current file. Fixed issue causing Ollama to seemingly embed at 0 tokens/sec. Fixed bases integration modal failing on new bases.\n> \n> > [!NOTE]- v3.0.6\n> > Fixed release notes should only show once after update.\n> \n> > [!NOTE]- v3.0.5\n> > Fixes Ollama Embedding model loading issue in the settings.\n> \n> > [!NOTE]- v3.0.4\n> > Prevented frontmatter blocks from being included in connections results. Fixed toggle-fold-all logic.\n> \n> > [!NOTE]- v3.0.3\n> > Fixed issue where connections results would not render if expand-all results was toggled on.\n> \n> > [!NOTE]- v3.0.1\n> > Improved Mobile UX and cleaned up extraneous code.\n> \n> \n# Smart Connections `v3`\r\n## New Features\r\n\r\n### Smart Chat v1\r\n- Effectively utilizes the Smart Environment architecture to facilitate deeper integration and new features.\r\n#### Improved Smart Chat UI\r\n- New context builder\r\n	- makes managing conversation context easier\r\n- Drag images and notes into the chat window to add as context\r\n- Separate settings tab specifically for chat features\r\n#### *Improved Smart Chat compatibility with Local Models*\r\n- Note lookup (RAG) now compatible with models that don\'t support tool calling\r\n	- Disable tool calling in the settings\r\n### Ollama embedding adapter\r\n- use Ollama to create embeddings\r\n\r\n## Fixed\r\n- renders content in connections results when all result items are expanded by default\r\n## Housekeeping\r\n- Updated README\r\n	- Improved Getting Started section\r\n	- Removed extraneous details\r\n- Improved version release process\r\n- Smart Chat `v0` (legacy)\r\n	- Smart Chat `v0` will continue to be available for a short time and will be removed in `v3.1` unless unforeseen issues arise in which case it will be removed sooner.\r\n	- Smart Chat `v0` code was moved from `brianpetro/jsbrains` to the Smart Connections repo\n';
+var latest_release_default = '> [!NOTE] Patch v3.0.80\n> - Added: LM Studio embedding model adapter\n> 	- requires LM Studio to be running\n> 	- requires CORS to be enabled in LM Studio settings\n> - Fixed: Smart Chat: should work when experimental Smart Editor plugin is enabled\n> - Fixed: Smart Chat: Deepseek adapter model request should return models\n> - Fixed: Smart Chat: Prevented multiple instances of pasted text\n\n> [!NOTE]- Previous patches\n> > [!NOTE]- v3.0.79\n> > - Added: built-in local model: EmbeddingGemma-300M\n> > - Added: Export data: Status bar context menu can export Smart Env data\n> > - Added: Source inspector: toggle showing exact text used in embeddings (embed input)\n> > - Fixed: Smart Chat: re-opening thread should not create additional completions (appearing as additional context components)\n> \n> > [!NOTE]- v3.0.78\n> > - Fixed: Smart Chat: threads should save when renamed before the first message is sent\n> \n> > [!NOTE]- v3.0.77\n> > - Improved: Reduced/removed embedding progress notifications during real-time processing\n> > 	- Only shows if more than 100 items were embedded\n> > - Fixed: Lookup view: toggle expand/collapse all should work to collapse all results\n> \n> > [!NOTE]- v3.0.76\n> > - Fixed: Connections view: should update number of connections when setting is changed and refresh button is clicked\n> \n> > [!NOTE]- v3.0.75\n> > - Fixed: Connections codeblock: Exclude filter should work as expected\n> \n> > [!NOTE]- v3.0.74\n> > - Fix: Smart Chat: Ollama API endpoint\n> \n> > [!NOTE]- v3.0.73\n> > - Fixed: Smart Chat: LM Studio model loading in settings\n> \n> > [!NOTE]- v3.0.71\n> > - Added: Command: `Insert connections codeblock`\n> > - Added: Smart Chat: Ollama settings now includes host configuration\n> > - Added: Smart Chat: Deepseek API models\n> > - Added: Smart Chat: Enriched model data via models.dev\n> > - Improved: removed redundant command for opening connections views\n> >   - updated command names for clarity and adjust display text\n> > - Fixed: Lookup should include blocks in results when blocks are enabled\n> \n> > [!NOTE]- v3.0.70\n> > - Improved: Random connection logic to better handle when no connections are available\n> > - Fixed: Lookup should work with Gemini embeddings\n> \n> > [!NOTE]- v3.0.69\n> > - Improved: Smart Chat: Streaming UX should not prevent scrolling while streaming\n> > - Improved: Smart Random Note command weights selection by connection score\n> > - Improved: Simplified commands for connections view\n> \n> > [!NOTE]- v3.0.68\n> > - Added: Context selector: Folder support\n> > 	- folders included in suggestions\n> > 	- select all files in a folder using `\u2318/Ctrl + Click`\n> > 	- use `Enter` or `ArrowRight` scopes suggestions to files within a folder\n> > - Added: Context selector: Block-level scoping\n> > 	- allows selecting a specific block within a note\n> > 	- use `ArrowRight` to view blocks within a note\n> > - Added: Context selector: Tag support\n> > 	- tags included in suggestions\n> > 	- select all files with a tag using `\u2318/Ctrl + Click`\n> > 	- use `Enter` or `ArrowRight` scopes suggestions to files within a tag\n> > - Added: Google Gemini API as embedding model\n> > - Added: Smart Chat: Anthropic Claude Opus 4.1 model now available\n> > - Added: control display of ribbon icons in the settings\n> > - Added: "Open random connection" ribbon icon\n> > - Added: "Open connections view" command to replace two deprecated commands\n> > 	- "Removing soon" label added to deprecated commands\n> > - Improved: Context selector: UX more predictable when using `Ctrl/\u2318`\n> > 	- fixes some scenarios when `Ctrl/\u2318` was not being detected correctly\n> > - Fixed: Random note command\n> \n> > [!NOTE]- v3.0.67\n> > - Added: `smart-connections` codeblock: dedicated connections settings stored in codeblock\n> > - Smart Chat:\n> > 	- Improved: prevent redundant inclusion of context in subsequent completions\n> > 		- should only include a context once in the most recent completion\n> > 	- Fixed: Anthropic models failing after messages that utilize tool calling (context)\n> > 	- Fixed: user instruction should always be provided before and after compiled context\n> \n> > [!NOTE]- v3.0.65\n> > - Added: Smart Chat: button to insert variables into user message\n> > - Patched: Smart Chat: should handle chats that were saved with new name prior to improved thread name handling ([commit 542e1706](https://github.com/brianpetro/smart-chat-obsidian/commit/542e17064f5e3ff0fce7d30583ba472e09bd0b43))\n> \n> > [!NOTE]- v3.0.64\n> > - Added: Smart Chat: support for additional variables in messages\n> > 	- more details and UI coming soon\n> > - Fixed: Smart Chat: should not throw error when thread is missing\n> \n> > [!NOTE]- v3.0.63\n> > - Added: Connections view: handle dragging blocks\n> > 	- creates link to most block types\n> > 		- some exceptions including frontmatter blocks and line-specific blocks\n> \n> > [!NOTE]- v3.0.62\n> > - add option to exclude frontmatter blocks from source connections\n> > - move "Hide blocks from connections results" setting implementation into `find_connections` method instead of relying on passing parameters (respects setting across implementations)\n> > - fix: Ollama custom endpoint: should use custom endpoint when retrieving model-specific information ([commit 2a791aa](https://github.com/brianpetro/jsbrains/commit/2a791aa0df9bb8e130ac6246f8a583624c276b8a))\n> \n> > [!NOTE]- v3.0.61\n> > - Added: Status bar: context menu\n> > 	- inspect source and blocks for current note\n> > 	- view Smart Environment stats\n> > - Added: Connections view setting: to only show sources (notes) in connections results\n> \n> > [!NOTE]- v3.0.60\n> > - Smart Chat: bug fixes\n> > 	- improve chat thread name handling\n> > 	- prevent errors when chat is open onload\n> \n> > [!NOTE]- v3.0.59\n> > - Added: Smart Chat: xAI Grok adapter\n> > 	- allows using xAI Grok models in Smart Chat\n> > 	- requires xAI Grok API key to be set in the settings\n> > - Added: Excalidraw source adapter\n> > 	- allows Excalidraw files to be used as sources in Smart Connections\n> > 	- supports Excalidraw files with `.excalidraw.md` extension\n> > - Added: Source inspector: source-level information\n> > 	- shows whether the source should be embedded based on the settings and current content\n> > 	- shows whether the source has been embedded (vectorized)\n> > 	- added button to show the full surce data object\n> > - Improved: Connections view: improved messaging when connections results cannot be returned\n> > 	- added more detailed error messages for different failure scenarios\n> \n> > [!NOTE]- v3.0.58\n> > - Improved: Smart Connections dynamic codeblock:  filter options passed to connections and lookup components; adjust styles for better layout\n> > - Fixed: Smart Chat: should always have a `current_completion` instance (prevent failing to send subsequent messages)\n> \n> > [!NOTE]- v3.0.57\n> > - Improved: Smart Chat: date format in default thread name\n> > - Fixed: Smart Chat: message copy button should copy message to the clipboard\n> \n> > [!NOTE]- v3.0.56\n> > - Added: Smart Chat: Improved message link interactions\n> >   - hover-preview: hold cmd/ctrl while hovering to preview the link\n> > 	- drag: click and hold the link, dragging it to create a link in the active note, or dragging to the chat window to add as context\n> > 	- click: hold cmd/ctrl while clicking to open the link in a new tab, cmd/ctrl+alt click to open in split view\n> > - Fixed: Smart Chat: new threads should save after the first message\n> \n> > [!NOTE]- v3.0.55\n> > - Fixed: Smart Chat `@` should open context selector modal on subsequent messages\n> \n> > [!NOTE]- v3.0.54\n> > - Fixed: Smart Chat: Context selector: "Done" button should not cause crash\n> > - Added discussion template for Smart Connections workflows and button to open it\n> > 	- encourages users to share their workflows with the community\n> > 	- button opens the discussion template in a new tab\n> > 	- discussion template includes instructions for sharing workflows\n> \n> > [!NOTE]- v3.0.53\n> > - Improved: Smart Chat: opening logic (prevent splitting sidebar)\n> > 	- now opens in new tab in main workspace by default\n> > 	- tab may still be dragged to the sidebar\n> > - Fixed: Smart Chat: Context selector should open when Smart Context plugin is not installed\n> > 	- should now open the context selector modal instead of throwing an error\n> \n> > [!NOTE]- v3.0.52\n> > - Fixed: Initial import should not embed blocks where `should_embed` is false\n> >   - see #1077 for details\n> > 	- improves performance and decreases embedding time by reducing total number of blocks\n> > 	- may require "Clear sources data" and "Reload sources" to be run in the settings to take effect\n> \n> > [!NOTE]- v3.0.51\n> > - Fixed: Connections view: Include/Exclude filters should allow multiple comma-separated values\n> \n> > [!NOTE]- v3.0.50\n> > - Added: Smart Chat: Latest OpenAI chat models (removed incompatible models)\n> > 	- o3 and o4 class models now available in the settingsa\n> \n> > [!NOTE]- v3.0.47\n> > - Added: Hide connections in connections view\n> > 	- Right-click on a connection result to open the new context menu\n> > 	- Select "Hide" to hide the connection result\n> > 	- Select "Unhide All" to unhide all hidden connections for the current item\n> > - Updated: Smart Contexts to use new ContextItem architecture\n> > 	- The new architecture allows for more flexibility and better performance\n> \n> > [!NOTE]- v3.0.46\n> > - Added: Smart Chat: Include relevance score for item in context tree if retrieved from a lookup\n> > 	- allows users to see how relevant the item is to the current chat context\n> > - Added: Snowflake Arctic Embed models to the built-in embedding adapter (transformers)\n> > 	- Snowflake/snowflake-arctic-embed-xs\n> > 	- Snowflake/snowflake-arctic-embed-s\n> > 	- Snowflake/snowflake-arctic-embed-m\n> > - Added: Report a bug and Request a feature buttons to the settings\n> > - Fixed: Smart Context: Tree should not split paths with slashes or hashtags within wikilinks\n> > 	- ex. `[[some/path.md#subpath]]` should not be split into `some/path.md` and `subpath`\n> > - Improved: Smart Chat: Prevent trying to use folder scope in lookup when the folder provided by the AI does not exist\n> \n> > [!NOTE]- v3.0.45\n> > - Added: Status element for indicating embedding queue for changed notes\n> > 	- click to begin embedding otherwise waits until `re_import_wait_time` has passed\n> > - Fixed: Smart Environment: only changed blocks should re-embed when the note is modified\n> > 	- Adds block has check to parse_blocks to prevent `queue_embed` from being called on blocks that haven\'t changed\n> > - Fixed: Release notes should open in a new tab instead of relpacing the current tab\n> > - Moved: Smart Plugins access to the obsidian-smart-env module\n> \n> > [!NOTE]- v3.0.44\n> > - Improved: Settings descriptions for the Connections view\n> > - Changed: Moved "muted notices" settings to the obsidian-smart-env module\n> \n> > [!NOTE]- v3.0.43\n> > - Fixed: Smart Chat: Context tree connections icon should show connections in the suggestions when clicked\n> \n> > [!NOTE]- v3.0.42\n> > - Added: `re_import_wait_time` setting to Smart Environment settings\n> > 	- allows setting the time to wait before re-importing and embedding a note after it has been modified\n> > 	- WHY: improves real-time nature of the connections\n> > - Improved: Connections view: Handling when current note hasn\'t been imported\n> > 	- removed notification\n> > 	- added refresh instructions to the connections view\n> > - Improved: Connections view when no results are found\n> >  - added "No connections found" message\n> >  - added instructions for reloading sources from the settings\n> > - Reduced size of bundled plugin from ~6.5MB to ~1MB (>80% reduction)\n> >  - removed tokenizer that\'s only used by OpenAI embedding models\n> >  - removed sourcemap since it\'s removed by Obsidian anyway\n> >  - WHY: make the code easier to read (trust through transparency)\n> > - Fixed: Embeddings should update when file is changed\n> \n> > [!NOTE]- v3.0.41\n> > - Fix: Bug in outlinks parsing was preventing embedding processing in some cases\n> \n> > [!NOTE]- v3.0.40\n> > - Added: Smart Chat: Support for PDFs as context in compatible models\n> > 	- Currently works with Anthropic, Google Gemini, and OpenAI models\n> > 	- PDFs must be manually added to the chat context. The context lookup action will not surface the PDFs because they are not embedded.\n> > - Improved: Smart Chat: LM Studio settings\n> > 	- Added: Instructions for setting up LM Studio (CORS)\n> > 	- Removed: Unecessary API key setting\n> \n> > [!NOTE]- v3.0.39\n> > - Improved: Release notes user experience to use the same as the native Obsidian release notes\n> > 	- Now uses new tab instead of modal to display the release notes\n> > - Fixed: Reduced vector length OpenAI embedding models should be selectable in the settings\n> \n> > [!NOTE]- v3.0.38\n> > - Fixed: Smart Chat LM Studio models handling of `tool_choice` parameter\n> \n> > [!NOTE]- v3.0.37\n> > - Fixed: Ollama `max_tokens` parameter should accurately reflect the model\'s max tokens\n> > - Fixed: Getting Started slideshow should only show automatically for new users\n> \n> > [!NOTE]- v3.0.34\n> > - Added: Multi-modal support (images as context) using Ollama models\n> > 	- requires Ollama models that support multi-modal input like `gemma3:4b`\n> \n> > [!NOTE]- v3.0.33\n> > - Improved: Context Tree styles improved by samhiatt (PR #1091)\n> > - Improved: Smart Chat message should be full width if container is less than 600px\n> > - Fixed: Smart Chat model selection should handle when Ollama is available but no models are installed\n> \n> > [!NOTE]- v3.0.32\n> > - Added: Anthropic Claude Sonnet 4 & Opus 4 to Smart Chat\n> > - Improved: Smart Chat new note button no longer automatically addes open notes as context \n> > 	- Added: "Add visible" and "Add open" notes options to Smart Context selector \n> > 	- Added: "Add context" button above chat input on new chat for quick access to context selector\n> > - Fixed: Removing an item in the context selector updates the stats\n> > - Fixed: Smart Chat system message should render no more than once per turn\n> \n> > [!NOTE]- v3.0.31\n> > - Added: Smart Chat: "Retrieve more" button in lookup results\n> > 	- allows retrieving more results from the lookup\n> > 	- includes retrieved context in subsequent lookup to provide more context to the model\n> > - Improved: Smart Chat: prior message handling in subsequent completions\n> \n> > [!NOTE]- v3.0.30\n> > - Added: Drag multiple files into the Smart Chat window to add as context\n> > - Fixed: Smart Connections results remain stable when dragging connection from bottom of the list\n> \n> > [!NOTE]- v3.0.29\n> > - Fixed: prevented regex special characters from throwing error when excluded file/folder contains them\n> > - Fixed: Smart Chat should return lookup context results when Smart Blocks are disabled\n> \n> > [!NOTE]- v3.0.28\n> > Fixed: Getting Started slideshow UX on mobile.\n> \n> > [!NOTE]- v3.0.27\n> > - Added: Smart Chat lookup now supports folder-based filtering\n> > 	- mention a folder when requesting a lookup using self-referential pronoun (no special folder syntax required)\n> > 		- ex. "Summarize my thoughts on this topic based on notes in my Content folder"\n> > - Added: Smart Chat system prompt now allows `{{folder_tree}}` variable\n> > 	- this variable will be replaced with the folder tree of the current vault\n> > 	- useful for providing context about the vault structure to the model\n> > - Improved: Smart Chat system message UI\n> > 	- now collapses when longer than 10 lines\n> \n> > [!NOTE]- v3.0.26\n> > Temp disable bases integration since Obsidian changed how the integration works and there is currently no clear path to updating.\n> \n> > [!NOTE]- v3.0.25\n> > Fixed connections view help button failing to open\n> \n> > [!NOTE]- v3.0.24\n> > Fix Lookup tab not displaying.\n> \n> > [!NOTE]- v3.0.23\n> > - Added Getting Started guide\n> > 	- opens automatically for new users\n> > 	- can be opened manually via command `Show getting started`\n> > 	- can be opened from the connections view "Help" icon\n> > 	- can be opened from the main settings "Open getting started guide" button\n> \n> > [!NOTE]- v3.0.22\n> > - Improved connections view event handling\n> > 	- prevent throwing error when no view container is present on iOS\n> \n> > [!NOTE]- v3.0.21\n> > - Implemented Smart Completions fallback to Smart Chat configuration\n> > 	- WHY: enables use via global `smart_env` instance without requiring `chat_model` parameters in every request\n> \n> > [!NOTE]- v3.0.20\n> > - Fixed: Smart Environment settings tab should be visible during "loading" and "loaded" states\n> > - Fixed: Open URL externally should use window.open with "_external" if webviewer plugin is installed\n> \n> > [!NOTE]- v3.0.19\n> > - Added: model info to Smart Chat view\n> > 	- shows before the first message and anytime the model changes since the last message\n> > - Fixed: ChatGPT sign-in with Google account\n> > 	- should now work as expected\n> > 	- will require re-signing in to ChatGPT after update\n> > - Fixed: Smart Chat thread adapter should better handle past completions to prevent unexpected behavior\n> > 	- prevented `build_request` from outputting certain request content unless the completion is the current completion\n> > 		- logic is specific to completion adapters (actions, actions_xml, thread)\n> \n> > [!NOTE]- v3.0.18\n> > - Fixed: Smart Connections view rendering on mobile\n> > 	- should render when opening the view from the sidebar\n> > 	- should update the results to the currently active file\n> \n> > [!NOTE]- v3.0.17\n> > - Improved embedding processing UX\n> > 	- show notification immediately to allow pausing sooner\n> > 	- show notification every 30 seconds in addition to every 100 embeddings\n> > - Fixed: Smart Environment settings tab should be visible during "loading" state\n> > 	- prevents "Loading Obsidian Smart Environment..." message from appearing indefinitely in instances where the environment fails to load from errors related to specific embedding models\n> \n> > [!NOTE]- v3.0.16\n> > - Fixed: no models available in Ollama should no longer cause issues in the settings\n> \n> > [!NOTE]- v3.0.15\n> > - Fixed: some Ollama embedding models triggering re-embedding every restart\n> \n> > [!NOTE]- v3.0.14\n> > - Improved hover popover for blocks in connections results and context builder\n> > - Refactored `context_builder` component to extract `context_tree` component and prevent passing UI components\n> >   - these components are frequently re-used, the updated architecture should make it easier to maintain and extend\n> > - Fixed: should not embed blocks with size less than `min_chars`\n> > - Fixed: Smart Chat completion requests should have a properly ordered `messages` array\n> \n> > [!NOTE]- v3.0.13\n> > - Prevents trying to process embed queue if embed model is not loaded\n> > 	- Particularly for Ollama which may not be turned on when Obsidian starts\n> > 	- Re-checks for Ollama server in intervals of a minute\n> > 	- Embed queue can be restarted by clicking "Reload sources" in the Smart Environment settings\n> \n> > [!NOTE]- v3.0.12\n> > Fixes pasted text: should paste lines in correct order (no longer reversed)\n> \n> > [!NOTE]- v3.0.11\n> > Fixes unexpected scroll issue when dragging file from connections view (issue #1073)\n> \n> > [!NOTE]- v3.0.10\n> > Fixed Google Gemini integration in the new Smart Chat\n> \n> > [!NOTE]- v3.0.9\n> > - Reworked the context builder UX in Smart Chat to prevent confusion\n> > 	- Context is now added to the chat regardless of how the context selector modal is closed\n> > 	- Removed "Back" button in favor of "Back" suggestion item\n> > - Fixed using `@` to open context selector in Smart Chat\n> > 	- "Done" button now appears in the context selector modal when it is opened from the keyboard\n> \n> > [!NOTE]- v3.0.8\n> > - Improved bases integration UX\n> > 	- prevent throwing error on erroroneous input in `cos_sim` base function\n> > 	- gracefully handle when smart_env is not loaded yet\n> > - Reduced max size of markdown file that will be imported from 1MB to 300KB (prevent long initial import)\n> > 	- advanced configuration available via `smart_sources.obsidian_markdown_source_content_adapter.max_import_size` in `smart_env.json`\n> > - Removed deprecated Smart Search API registered to window since `smart_env` object is now globally accessible\n> > - Fixed bug causing expanded connections results to render twice\n> \n> > [!NOTE]- v3.0.7\n> > Added "current/dynamic" option in bases connection score modal to add score based on current file. Fixed issue causing Ollama to seemingly embed at 0 tokens/sec. Fixed bases integration modal failing on new bases.\n> \n> > [!NOTE]- v3.0.6\n> > Fixed release notes should only show once after update.\n> \n> > [!NOTE]- v3.0.5\n> > Fixes Ollama Embedding model loading issue in the settings.\n> \n> > [!NOTE]- v3.0.4\n> > Prevented frontmatter blocks from being included in connections results. Fixed toggle-fold-all logic.\n> \n> > [!NOTE]- v3.0.3\n> > Fixed issue where connections results would not render if expand-all results was toggled on.\n> \n> > [!NOTE]- v3.0.1\n> > Improved Mobile UX and cleaned up extraneous code.\n> \n> \n# Smart Connections `v3`\r\n## New Features\r\n\r\n### Smart Chat v1\r\n- Effectively utilizes the Smart Environment architecture to facilitate deeper integration and new features.\r\n#### Improved Smart Chat UI\r\n- New context builder\r\n	- makes managing conversation context easier\r\n- Drag images and notes into the chat window to add as context\r\n- Separate settings tab specifically for chat features\r\n#### *Improved Smart Chat compatibility with Local Models*\r\n- Note lookup (RAG) now compatible with models that don\'t support tool calling\r\n	- Disable tool calling in the settings\r\n### Ollama embedding adapter\r\n- use Ollama to create embeddings\r\n\r\n## Fixed\r\n- renders content in connections results when all result items are expanded by default\r\n## Housekeeping\r\n- Updated README\r\n	- Improved Getting Started section\r\n	- Removed extraneous details\r\n- Improved version release process\r\n- Smart Chat `v0` (legacy)\r\n	- Smart Chat `v0` will continue to be available for a short time and will be removed in `v3.1` unless unforeseen issues arise in which case it will be removed sooner.\r\n	- Smart Chat `v0` code was moved from `brianpetro/jsbrains` to the Smart Connections repo\n';
 
 // src/views/release_notes_view.js
 var ReleaseNotesView = class _ReleaseNotesView extends import_obsidian58.ItemView {
@@ -40210,7 +40500,13 @@ var ReleaseNotesView = class _ReleaseNotesView extends import_obsidian58.ItemVie
     this.render();
   }
   get container() {
-    return this.containerEl?.querySelector(".view-content");
+    const content = this.containerEl?.querySelector(".view-content");
+    let preview = content?.querySelector(".markdown-preview-view");
+    if (!preview) {
+      const main = content?.createDiv("cm-scroller is-readable-line-width");
+      preview = main?.createDiv("markdown-preview-view markdown-rendered");
+    }
+    return preview;
   }
   async render() {
     while (!this.container) {
@@ -40493,6 +40789,7 @@ var SmartConnectionsPlugin = class extends Plugin {
       });
       const latest_release = response.tag_name;
       if (latest_release !== this.manifest.version) {
+        this.env?.events?.emit("plugin:new_version_available", { version: latest_release });
         this.notices?.show("new_version_available", { version: latest_release });
         this.update_available = true;
       }

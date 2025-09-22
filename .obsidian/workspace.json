@@ -11,14 +11,10 @@
             "id": "4aa236e12874e5cf",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Fauna y Flora/Bestia/Alaini.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Alaini"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Vista gráfica"
             }
           }
         ]
@@ -537,10 +533,10 @@
             "id": "e894439fce665cad",
             "type": "leaf",
             "state": {
-              "type": "graph-analysis",
+              "type": "empty",
               "state": {},
-              "icon": "GA-ICON",
-              "title": "Graph Analysis"
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           },
           {
@@ -582,9 +578,19 @@
               "icon": "d20",
               "title": "RPG Manager"
             }
+          },
+          {
+            "id": "94b5c63cbc966947",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "GA-ICON",
+              "title": "Graph Analysis"
+            }
           }
         ],
-        "currentTab": 47
+        "currentTab": 48
       }
     ],
     "direction": "horizontal",
@@ -614,6 +620,8 @@
   },
   "active": "4aa236e12874e5cf",
   "lastOpenFiles": [
+    "Razas Inteligentes/Las 11 Originales/Las 11 Originales.md",
+    "Fauna y Flora/Bestia/Alaini.md",
     "Fauna y Flora/Bestia/Bestia.md",
     "Astronomía/Los Soles/Los Soles.md",
     "Aedhyr/Aedhyr.md",
@@ -640,8 +648,6 @@
     "Historia y Mitología/Los Dioses/Los Dioses.md",
     "Historia y Mitología/Los Dominios/Vida.md",
     "Historia y Mitología/Los Dominios/Los Dominios.md",
-    "Historia y Mitología/Historia y Mitología.md",
-    "Razas Inteligentes/Las 11 Originales/Qirathi.md",
     "Objetos Mágicos",
     "Razas Inteligentes/Qirathi",
     "Razas Inteligentes/Las 11 Originales",

@@ -11,10 +11,14 @@
             "id": "4aa236e12874e5cf",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "type": "markdown",
+              "state": {
+                "file": "Fauna y Flora/Bestia/Alaini.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Alaini"
             }
           }
         ]
@@ -473,10 +477,10 @@
             "id": "25334b87f1bdc6d4",
             "type": "leaf",
             "state": {
-              "type": "graph-analysis",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "graph-analysis"
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           },
           {
@@ -503,20 +507,10 @@
             "id": "21f831146058bbb6",
             "type": "leaf",
             "state": {
-              "type": "graph-analysis",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "graph-analysis"
-            }
-          },
-          {
-            "id": "4997825e18ff30da",
-            "type": "leaf",
-            "state": {
-              "type": "rpg-manager-options",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "rpg-manager-options"
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           },
           {
@@ -558,9 +552,39 @@
               "icon": "dices",
               "title": "Dice Tray"
             }
+          },
+          {
+            "id": "7ba116162d75b4b8",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "GA-ICON",
+              "title": "Graph Analysis"
+            }
+          },
+          {
+            "id": "cdbc2bcabc8f8fcd",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "GA-ICON",
+              "title": "Graph Analysis"
+            }
+          },
+          {
+            "id": "e41fffe03ee93ab5",
+            "type": "leaf",
+            "state": {
+              "type": "rpg-manager-options",
+              "state": {},
+              "icon": "d20",
+              "title": "RPG Manager"
+            }
           }
         ],
-        "currentTab": 44
+        "currentTab": 47
       }
     ],
     "direction": "horizontal",
@@ -577,7 +601,6 @@
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
-      "media-extended:Open media": false,
       "templater-obsidian:Templater": false,
       "smart-connections:Open: Smart Chat": false,
       "smart-connections:Smart Connections: Open connections view": false,
@@ -585,18 +608,20 @@
       "rpg-manager:RPG Manager": false,
       "juggl:Juggl global graph": false,
       "fantasy-content-generator:Fantasy Generators": false,
-      "calendarium:Open Calendarium": false,
-      "media-extended:Open external media": false
+      "media-extended:Open external media": false,
+      "calendarium:Open Calendarium": false
     }
   },
   "active": "4aa236e12874e5cf",
   "lastOpenFiles": [
+    "Fauna y Flora/Bestia/Bestia.md",
+    "Astronomía/Los Soles/Los Soles.md",
+    "Aedhyr/Aedhyr.md",
     "Astronomía/Las Lunas/Las Lunas.md",
     "Campaña/Campaña.md",
     "Campaña",
     "Imágenes/Qirathi.png",
     "Astronomía/Calendario Aedhyrio/Calendario Aedhyrio.md",
-    "Astronomía/Los Soles/Los Soles.md",
     "Objetos Mágicos/Objetos Mágicos.md",
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Zailyn.md",
     "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Malvior.md",
@@ -617,8 +642,6 @@
     "Historia y Mitología/Los Dominios/Los Dominios.md",
     "Historia y Mitología/Historia y Mitología.md",
     "Razas Inteligentes/Las 11 Originales/Qirathi.md",
-    "Objetos Mágicos/Cristales de Memoria.md",
-    "Razas Inteligentes/Las 11 Originales/Las 11 Originales.md",
     "Objetos Mágicos",
     "Razas Inteligentes/Qirathi",
     "Razas Inteligentes/Las 11 Originales",

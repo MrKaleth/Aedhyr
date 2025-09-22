@@ -28,7 +28,7 @@ _Bestia mediana, no alineada_
 ###### **Agilidad de riscos.**
 El Alaini tiene ventaja en pruebas de **Atletismo** o **Acrobacias** realizadas para trepar o mantener el equilibrio en terreno rocoso o inclinado.
 ###### **Pies firmes.**
-El Alaini tiene ventaja en tiradas de salvación contra efectos que lo harían **derribado** si está tocando el suelo.
+El Alaini tiene ventaja en tiradas de salvación contra efectos que lo harían estar **derribado** si está tocando el suelo.
 
 ##### Acciones
 **Cornada.** _Ataque de arma cuerpo a cuerpo:_ +4 al ataque, alcance 5 pies, un objetivo.  **Impacto:** 9 (2d6 + 2) puntos de daño contundente.

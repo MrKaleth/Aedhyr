@@ -17,7 +17,7 @@
     },
     "excluded_headings": "",
     "file_exclusions": "Untitled",
-    "folder_exclusions": "smart-chats"
+    "folder_exclusions": ""
   },
   "ribbon_icons": {
     "connections": true,
@@ -28,7 +28,8 @@
     "show_full_path": false,
     "exclude_blocks_from_source_connections": false,
     "exclude_frontmatter_blocks": true,
-    "expanded_view": false
+    "expanded_view": false,
+    "results_limit": "20"
   },
   "language": "en",
   "new_user": true,
@@ -36,9 +37,12 @@
   "smart_chat_threads": {
     "chat_model": {
       "adapter": "ollama",
-      "ollama": {}
+      "ollama": {
+        "model_key": "undefined",
+        "host": "http://localhost:11434"
+      }
     },
-    "active_thread_key": "Untitled Chat 2025-09-11 22-09-53",
+    "active_thread_key": "",
     "system_prompt": "",
     "detect_self_referential": true,
     "review_context": true,
@@ -50,16 +54,5 @@
   "smart_notices": {
     "muted": {}
   },
-  "version": "",
-  "smart_threads": {
-    "chat_model": {
-      "adapter": "openai",
-      "openai": {
-        "model_key": "gpt-4o"
-      }
-    },
-    "embed_model": {
-      "model_key": "None"
-    }
-  }
+  "version": ""
 }

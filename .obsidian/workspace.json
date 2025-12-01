@@ -1,18 +1,42 @@
 {
   "main": {
-    "id": "c3c9214067b03652",
+    "id": "5a4f82277b127224",
     "type": "split",
     "children": [
       {
-        "id": "cfb1453a450aadcc",
+        "id": "e96b797c84a0f9de",
         "type": "tabs",
+        "dimension": 65.96701649175412,
         "children": [
           {
-            "id": "4aa236e12874e5cf",
+            "id": "eff8a57f20b2ace0",
             "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Astronomía/Calendario/Calendario.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Calendario"
+            }
+          }
+        ]
+      },
+      {
+        "id": "1743185130c071b0",
+        "type": "tabs",
+        "dimension": 34.03298350824588,
+        "children": [
+          {
+            "id": "416962af49587e3d",
+            "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "graph",
               "state": {},
+              "pinned": true,
               "icon": "lucide-git-fork",
               "title": "Vista gráfica"
             }
@@ -23,15 +47,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "45d8f05b0b061b41",
+    "id": "ff1ee9f968c63118",
     "type": "split",
     "children": [
       {
-        "id": "4382288f8ae47aee",
+        "id": "5311d7eab95e9cc6",
         "type": "tabs",
         "children": [
           {
-            "id": "8736c5ab168b4ab9",
+            "id": "efa2223e748c7f5a",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,12 +68,12 @@
             }
           },
           {
-            "id": "ad935f86b1a07e5f",
+            "id": "00b9f3c09a16cfbf",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "campa",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +85,7 @@
             }
           },
           {
-            "id": "96c6ee00b5119ea5",
+            "id": "ef682ac257a73a03",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -74,23 +98,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 261.5
+    "width": 300
   },
   "right": {
-    "id": "1c1c71481194654c",
+    "id": "93949edb0df070bf",
     "type": "split",
     "children": [
       {
-        "id": "b4a6a7b6cd422fda",
+        "id": "ed9ce17e14447212",
         "type": "tabs",
         "children": [
           {
-            "id": "3fcbb049d02971ac",
+            "id": "9e449ba11b2e41e7",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Astronomía/Las Lunas/Las Lunas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,11 +123,11 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de Las Lunas"
+              "title": "Enlaces entrantes"
             }
           },
           {
-            "id": "00db465c22e7ddc1",
+            "id": "1e08301b58238922",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -117,430 +140,60 @@
             }
           },
           {
-            "id": "a69d358475576758",
+            "id": "7b82d201c92f0db7",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Etiquetas"
             }
           },
           {
-            "id": "087e84cf23499460",
+            "id": "118cc0da457b83d7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "edcf562a3a5b2470",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
               "icon": "lucide-list",
               "title": "Esquema"
             }
           },
           {
-            "id": "0b7a65f4bc316741",
+            "id": "650d3c7798ba4b40",
             "type": "leaf",
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           },
           {
-            "id": "155015a5b95a7b49",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "smart-connections-view"
-            }
-          },
-          {
-            "id": "d789bfd993631669",
-            "type": "leaf",
-            "state": {
-              "type": "smart-chat-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "smart-chat-view"
-            }
-          },
-          {
-            "id": "5837996c50581a08",
-            "type": "leaf",
-            "state": {
-              "type": "juggl_nodes",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "juggl_nodes"
-            }
-          },
-          {
-            "id": "f3be6fe92eafcb6c",
-            "type": "leaf",
-            "state": {
-              "type": "juggl_style",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "juggl_style"
-            }
-          },
-          {
-            "id": "23158918d3dc7002",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "b92d50a3b163daf2",
-            "type": "leaf",
-            "state": {
-              "type": "BC-matrix",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "BC-matrix"
-            }
-          },
-          {
-            "id": "274f7555eaccf5f0",
-            "type": "leaf",
-            "state": {
-              "type": "BC-tree",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "BC-tree"
-            }
-          },
-          {
-            "id": "d5961fa2573692a2",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "d44f9632a1c56a28",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "d189dbfe25550ff3",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "b3130e27154ccdc8",
-            "type": "leaf",
-            "state": {
-              "type": "juggl_nodes",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "juggl_nodes"
-            }
-          },
-          {
-            "id": "b63f41ab28a47e8e",
-            "type": "leaf",
-            "state": {
-              "type": "juggl_style",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "juggl_style"
-            }
-          },
-          {
-            "id": "257fbe1a2319eea1",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "80f6c632d615d50a",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "a450c27dc7ab362a",
-            "type": "leaf",
-            "state": {
-              "type": "CALENDARIUM",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "CALENDARIUM"
-            }
-          },
-          {
-            "id": "386f4037f1342af9",
-            "type": "leaf",
-            "state": {
-              "type": "CALENDARIUM",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "CALENDARIUM"
-            }
-          },
-          {
-            "id": "1566cc2567e97751",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "f9620b1130bb857e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "b6731626c2466893",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "6f23171985ce62a4",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "8d119bb19ea31dbe",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "290677617869c0e0",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "7c1fc2cdb9ac63c8",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "f518adafc16faa2c",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "8945a0a120c79ba5",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "24e537ccef357e88",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "8d08577b1327e246",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "35b988393757ce4e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "2bfbc7dedfa09bcd",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "f7389ca88b5217ed",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "d60088b324890d72",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "864cfef496cde24d",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "25334b87f1bdc6d4",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "bbb6154fdabfd4df",
-            "type": "leaf",
-            "state": {
-              "type": "DICE_ROLLER_VIEW",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "DICE_ROLLER_VIEW"
-            }
-          },
-          {
-            "id": "4177c2e668fa8706",
-            "type": "leaf",
-            "state": {
-              "type": "CALENDARIUM",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "CALENDARIUM"
-            }
-          },
-          {
-            "id": "21f831146058bbb6",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "8aa4738b64f2c2af",
-            "type": "leaf",
-            "state": {
-              "type": "juggl_nodes",
-              "state": {},
-              "icon": "ag-node-list",
-              "title": "Juggl nodes"
-            }
-          },
-          {
-            "id": "9b757f8bb4b4a187",
-            "type": "leaf",
-            "state": {
-              "type": "juggl_style",
-              "state": {},
-              "icon": "ag-style",
-              "title": "Juggl style"
-            }
-          },
-          {
-            "id": "e894439fce665cad",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "18a1ed5f01dc3a52",
+            "id": "47b2a5d40dba4882",
             "type": "leaf",
             "state": {
               "type": "DICE_ROLLER_VIEW",
@@ -550,7 +203,7 @@
             }
           },
           {
-            "id": "7ba116162d75b4b8",
+            "id": "f119e35ccd4d255f",
             "type": "leaf",
             "state": {
               "type": "graph-analysis",
@@ -560,37 +213,37 @@
             }
           },
           {
-            "id": "cdbc2bcabc8f8fcd",
+            "id": "70f2d4f7124b63a0",
             "type": "leaf",
             "state": {
-              "type": "graph-analysis",
+              "type": "juggl_nodes",
               "state": {},
-              "icon": "GA-ICON",
-              "title": "Graph Analysis"
+              "icon": "ag-node-list",
+              "title": "Juggl nodes"
             }
           },
           {
-            "id": "e41fffe03ee93ab5",
+            "id": "2ca885b182aa0463",
             "type": "leaf",
             "state": {
-              "type": "rpg-manager-options",
+              "type": "juggl_style",
               "state": {},
-              "icon": "d20",
-              "title": "RPG Manager"
+              "icon": "ag-style",
+              "title": "Juggl style"
             }
           },
           {
-            "id": "94b5c63cbc966947",
+            "id": "d14e2b51b28e43a9",
             "type": "leaf",
             "state": {
-              "type": "graph-analysis",
+              "type": "smart-connections-view",
               "state": {},
-              "icon": "GA-ICON",
-              "title": "Graph Analysis"
+              "icon": "smart-connections",
+              "title": "Connections"
             }
           }
         ],
-        "currentTab": 48
+        "currentTab": 10
       }
     ],
     "direction": "horizontal",
@@ -599,64 +252,62 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Crear nueva base": false,
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
       "canvas:Crear nuevo lienzo": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
-      "templater-obsidian:Templater": false,
+      "bases:Crear nueva base": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "calendarium:Open Calendarium": false,
+      "fantasy-content-generator:Fantasy Generators": false,
+      "obsidian-5e-statblocks:Open Creature pane": false,
+      "juggl:Juggl global graph": false,
+      "obsidian-kanban:Create new board": false,
+      "media-extended:Open external media": false,
+      "meld-encrypt:New encrypted note": false,
+      "meld-encrypt:Lock and Close all open encrypted notes": false,
+      "meld-encrypt:Convert to or from an Encrypted note": false,
+      "meld-encrypt:Encrypt Selection": false,
+      "meld-encrypt:Decrypt at Cursor": false,
       "smart-connections:Open: Smart Chat": false,
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Connections: Open random connection": true,
-      "rpg-manager:RPG Manager": false,
-      "juggl:Juggl global graph": false,
-      "fantasy-content-generator:Fantasy Generators": false,
-      "media-extended:Open external media": false,
-      "calendarium:Open Calendarium": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "4aa236e12874e5cf",
+  "active": "416962af49587e3d",
   "lastOpenFiles": [
-    "Razas Inteligentes/Las 11 Originales/Las 11 Originales.md",
-    "Fauna y Flora/Bestia/Alaini.md",
-    "Fauna y Flora/Bestia/Bestia.md",
-    "Astronomía/Los Soles/Los Soles.md",
-    "Aedhyr/Aedhyr.md",
-    "Astronomía/Las Lunas/Las Lunas.md",
-    "Campaña/Campaña.md",
-    "Campaña",
-    "Imágenes/Qirathi.png",
-    "Astronomía/Calendario Aedhyrio/Calendario Aedhyrio.md",
+    "Astronomía/Calendario/Calendario.md",
+    "Astronomía/Las Lunas/Naëthra, la Luna Mayor.md",
+    "Astronomía/Las Lunas/Lysuun, la Luna Mediana.md",
+    "Astronomía/Las Lunas/Ezkira, la Luna Menor.md",
+    "Astronomía/Las Estrellas/Las Estrellas.md",
+    "Terminología/Terminología.md",
+    "Religión/Religión.md",
+    "Razas Inteligentes/Razas Inteligentes.md",
+    "Personajes Célebres/Personajes Célebres.md",
     "Objetos Mágicos/Objetos Mágicos.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Zailyn.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Malvior.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Dovharen.md",
-    "Astronomía/Los Soles/Oren.md",
-    "Cronología/Cronología.md",
-    "Cuentos y Leyendas/Cuentos y Leyendas.md",
-    "Cultura, Usos y Costumbres/Cultura, Usos y Costumbres.md",
-    "Fauna y Flora/Fauna y Flora.md",
+    "Mitología/Mitología.md",
+    "Literatura/Literatura.md",
+    "Historia/Historia.md",
     "Geografía/Geografía.md",
-    "Historia y Mitología/El Origen del Mundo/El Origen del Mundo.md",
-    "Historia y Mitología/Las Edades de Aedhyr/Las Edades de Aedhyr.md",
-    "Historia y Mitología/Los Dioses/Primera Generación de Dioses/La Tríada.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Corvion.md",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses/Segunda Generación de Dioses.md",
-    "Historia y Mitología/Los Dioses/Los Dioses.md",
-    "Historia y Mitología/Los Dominios/Vida.md",
-    "Historia y Mitología/Los Dominios/Los Dominios.md",
-    "Objetos Mágicos",
-    "Razas Inteligentes/Qirathi",
-    "Razas Inteligentes/Las 11 Originales",
-    "Fauna y Flora/Planta",
-    "Imágenes",
-    "Imágenes/Alaini.png",
-    "Fauna y Flora/Bestia",
-    "Historia y Mitología/Los Dominios",
-    "Historia y Mitología/Los Dioses/Segunda Generación de Dioses",
-    "Historia y Mitología/Las Edades de Aedhyr/(5) Quinta Edad"
+    "Fauna y Flora/Fauna y Flora.md",
+    "Cultura, Usos y Costumbres/Cultura, Usos y Costumbres.md",
+    "Cronología/Cronología.md",
+    "Historia",
+    "Astronomía/Los Soles/Los Soles.md",
+    "Astronomía/Las Lunas/Las Lunas.md",
+    "Astronomía/Astronomía.md",
+    "Astronomía/Las Estrellas",
+    "Astronomía/Los Soles",
+    "Astronomía/Las Lunas",
+    "Astronomía/Calendario",
+    "Terminología",
+    "Religión",
+    "Razas Inteligentes",
+    "Personajes Célebres",
+    "Objetos Mágicos"
   ]
 }

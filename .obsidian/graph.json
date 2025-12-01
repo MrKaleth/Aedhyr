@@ -11,104 +11,104 @@
       "query": "path:Astronomía  ",
       "color": {
         "a": 1,
-        "rgb": 8070180
+        "rgb": 5598950
       }
     },
     {
-      "query": "path:\"Cronología\"  ",
+      "query": "path:Cronología  ",
       "color": {
         "a": 1,
-        "rgb": 11657298
-      }
-    },
-    {
-      "query": "path:\"Cuentos y Leyendas\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 5431378
+        "rgb": 13150800
       }
     },
     {
       "query": "path:\"Cultura, Usos y Costumbres\"  ",
       "color": {
         "a": 1,
-        "rgb": 5431473
+        "rgb": 16750165
       }
     },
     {
       "query": "path:\"Fauna y Flora\"  ",
       "color": {
         "a": 1,
-        "rgb": 3888739
+        "rgb": 3969355
       }
     },
     {
       "query": "path:Geografía  ",
       "color": {
         "a": 1,
-        "rgb": 5395168
+        "rgb": 4619680
       }
     },
     {
-      "query": "path:\"Historia y Mitología\"  ",
+      "query": "path:Historia  ",
       "color": {
         "a": 1,
-        "rgb": 11621088
+        "rgb": 9196865
       }
     },
     {
-      "query": "path:\"Personajes Célebres\"  ",
+      "query": "path:Mitología  ",
       "color": {
         "a": 1,
-        "rgb": 14701233
+        "rgb": 10828945
       }
     },
     {
-      "query": "path:\"Razas Inteligentes\"  ",
+      "query": "path:Literatura  ",
       "color": {
         "a": 1,
-        "rgb": 15245729
-      }
-    },
-    {
-      "query": "path:Religión  ",
-      "color": {
-        "a": 1,
-        "rgb": 7496518
-      }
-    },
-    {
-      "query": "path:Terminología  ",
-      "color": {
-        "a": 1,
-        "rgb": 5905210
-      }
-    },
-    {
-      "query": "path:Aedhyr  ",
-      "color": {
-        "a": 1,
-        "rgb": 16777215
+        "rgb": 9856180
       }
     },
     {
       "query": "path:\"Objetos Mágicos\"  ",
       "color": {
         "a": 1,
-        "rgb": 3999348
+        "rgb": 16737450
+      }
+    },
+    {
+      "query": "path:\"Personajes Célebres\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 15104090
+      }
+    },
+    {
+      "query": "path:\"Razas Inteligentes\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 6269595
+      }
+    },
+    {
+      "query": "path:Religión  ",
+      "color": {
+        "a": 1,
+        "rgb": 11832530
+      }
+    },
+    {
+      "query": "path:Terminología  ",
+      "color": {
+        "a": 1,
+        "rgb": 7566240
       }
     }
   ],
   "collapse-display": true,
   "showArrow": false,
-  "textFadeMultiplier": -0.2,
-  "nodeSizeMultiplier": 1.00085910652921,
-  "lineSizeMultiplier": 0.579896907216495,
-  "collapse-forces": false,
-  "centerStrength": 0.515463917525773,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
   "repelStrength": 10,
-  "linkStrength": 0.503436426116839,
-  "linkDistance": 500,
-  "scale": 0.5359795996225969,
-  "close": false
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.7132754626224435,
+  "close": true
 }

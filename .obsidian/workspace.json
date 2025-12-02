@@ -6,7 +6,7 @@
       {
         "id": "e96b797c84a0f9de",
         "type": "tabs",
-        "dimension": 65.96701649175412,
+        "dimension": 28.7856071964018,
         "children": [
           {
             "id": "eff8a57f20b2ace0",
@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Astronomía/Calendario/Calendario.md",
-                "mode": "preview",
+                "file": "Astronomía/Las Lunas/Ezkira, la Luna Menor.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Calendario"
+              "title": "Ezkira, la Luna Menor"
             }
           }
         ]
@@ -27,7 +27,7 @@
       {
         "id": "1743185130c071b0",
         "type": "tabs",
-        "dimension": 34.03298350824588,
+        "dimension": 71.2143928035982,
         "children": [
           {
             "id": "416962af49587e3d",
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Los 12 Patrones",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -206,10 +206,10 @@
             "id": "f119e35ccd4d255f",
             "type": "leaf",
             "state": {
-              "type": "graph-analysis",
+              "type": "empty",
               "state": {},
-              "icon": "GA-ICON",
-              "title": "Graph Analysis"
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           },
           {
@@ -241,9 +241,29 @@
               "icon": "smart-connections",
               "title": "Connections"
             }
+          },
+          {
+            "id": "0d2d1d06f9112d89",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "cb584b00e936ba85",
+            "type": "leaf",
+            "state": {
+              "type": "graph-analysis",
+              "state": {},
+              "icon": "GA-ICON",
+              "title": "Graph Analysis"
+            }
           }
         ],
-        "currentTab": 10
+        "currentTab": 12
       }
     ],
     "direction": "horizontal",
@@ -260,7 +280,6 @@
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "calendarium:Open Calendarium": false,
       "fantasy-content-generator:Fantasy Generators": false,
       "obsidian-5e-statblocks:Open Creature pane": false,
       "juggl:Juggl global graph": false,
@@ -274,40 +293,47 @@
       "smart-connections:Open: Smart Chat": false,
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Connections: Open random connection": true,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "calendarium:Open Calendarium": false
     }
   },
-  "active": "416962af49587e3d",
+  "active": "eff8a57f20b2ace0",
   "lastOpenFiles": [
-    "Astronomía/Calendario/Calendario.md",
     "Astronomía/Las Lunas/Naëthra, la Luna Mayor.md",
     "Astronomía/Las Lunas/Lysuun, la Luna Mediana.md",
-    "Astronomía/Las Lunas/Ezkira, la Luna Menor.md",
-    "Astronomía/Las Estrellas/Las Estrellas.md",
-    "Terminología/Terminología.md",
-    "Religión/Religión.md",
-    "Razas Inteligentes/Razas Inteligentes.md",
-    "Personajes Célebres/Personajes Célebres.md",
-    "Objetos Mágicos/Objetos Mágicos.md",
-    "Mitología/Mitología.md",
-    "Literatura/Literatura.md",
-    "Historia/Historia.md",
-    "Geografía/Geografía.md",
-    "Fauna y Flora/Fauna y Flora.md",
-    "Cultura, Usos y Costumbres/Cultura, Usos y Costumbres.md",
-    "Cronología/Cronología.md",
-    "Historia",
-    "Astronomía/Los Soles/Los Soles.md",
+    "Astronomía/Los Soles/Riah.md",
+    "Astronomía/Los Soles/Oren.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Zailyn.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Ysvarel.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Vaëlor.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Thyria.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Malvior.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Lethari.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Kaëlion.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Haldris.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Eshari.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Eiran.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Dovharen.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Corvion.md",
+    "Los Dominios.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses/Los 12 Patrones.md",
+    "Mitología/Divinidades/Primera Generación de Dioses/La Tríada.md",
+    "Mitología/Divinidades/Primera Generación de Dioses/Naëmer.md",
+    "Mitología/Divinidades/Segunda Generación de Dioses",
+    "Mitología/Divinidades/Primera Generación de Dioses/Lyssba.md",
+    "Mitología/Divinidades/Primera Generación de Dioses/Ezkadra.md",
+    "Mitología/Divinidades/Primera Generación de Dioses/Primera Generación de Dioses.md",
     "Astronomía/Las Lunas/Las Lunas.md",
-    "Astronomía/Astronomía.md",
-    "Astronomía/Las Estrellas",
-    "Astronomía/Los Soles",
-    "Astronomía/Las Lunas",
-    "Astronomía/Calendario",
-    "Terminología",
-    "Religión",
-    "Razas Inteligentes",
-    "Personajes Célebres",
-    "Objetos Mágicos"
+    "Mitología/Divinidades/Primera Generación de Dioses",
+    "Mitología/Divinidades/Las Tres Entidades/Ori.md",
+    "Mitología/Divinidades/Las Tres Entidades/Ridah.md",
+    "Mitología/Divinidades/Las Tres Entidades",
+    "Mitología/Divinidades",
+    "Literatura/Leyendas",
+    "Literatura/Poemas",
+    "Literatura/Los Libros de Lin-Tan",
+    "Mitología/El Origen",
+    "Historia",
+    "Astronomía/Las Estrellas"
   ]
 }

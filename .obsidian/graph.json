@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:Astronomía  ",
@@ -15,7 +15,7 @@
       }
     },
     {
-      "query": "path:Cronología  ",
+      "query": "path:Historia  ",
       "color": {
         "a": 1,
         "rgb": 13150800
@@ -43,7 +43,7 @@
       }
     },
     {
-      "query": "path:Historia  ",
+      "query": "",
       "color": {
         "a": 1,
         "rgb": 9196865
@@ -109,6 +109,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1.000000000000012,
-  "close": true
+  "scale": 0.25883865621816504,
+  "close": false
 }

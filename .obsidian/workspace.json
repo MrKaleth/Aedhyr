@@ -4,22 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e96b797c84a0f9de",
+        "id": "4965d90ef7b02f3b",
         "type": "tabs",
-        "dimension": 28.7856071964018,
         "children": [
           {
-            "id": "eff8a57f20b2ace0",
+            "id": "afe55a2351704f64",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Astronomía/Las Lunas/Ezkira, la Luna Menor.md",
+                "file": "Razas Inteligentes/Razas_Originales/Qirathi/Idioma Qirathi.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ezkira, la Luna Menor"
+              "title": "Idioma Qirathi"
             }
           }
         ]
@@ -27,7 +26,6 @@
       {
         "id": "1743185130c071b0",
         "type": "tabs",
-        "dimension": 71.2143928035982,
         "children": [
           {
             "id": "416962af49587e3d",
@@ -92,6 +90,15 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "Marcadores"
+            }
+          },
+          {
+            "id": "4fca20459d2dd9c0",
+            "type": "leaf",
+            "state": {
+              "type": "CALENDARIUM",
+              "icon": "CALENDARIUM",
+              "title": "Calendarium"
             }
           }
         ]
@@ -169,6 +176,16 @@
             }
           },
           {
+            "id": "650d3c7798ba4b40",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
             "id": "edcf562a3a5b2470",
             "type": "leaf",
             "state": {
@@ -180,16 +197,6 @@
               },
               "icon": "lucide-list",
               "title": "Esquema"
-            }
-          },
-          {
-            "id": "650d3c7798ba4b40",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
             }
           },
           {
@@ -243,17 +250,7 @@
             }
           },
           {
-            "id": "0d2d1d06f9112d89",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
-            }
-          },
-          {
-            "id": "cb584b00e936ba85",
+            "id": "c631c823f61264f4",
             "type": "leaf",
             "state": {
               "type": "graph-analysis",
@@ -263,11 +260,27 @@
             }
           }
         ],
-        "currentTab": 12
+        "currentTab": 11
+      },
+      {
+        "id": "c93243af4dd1ae10",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "44c39c8c870df5bb",
+            "type": "leaf",
+            "state": {
+              "type": "fantasy-statblocks-creature-pane",
+              "state": {},
+              "icon": "skull",
+              "title": "Combatant"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 842.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -297,43 +310,43 @@
       "calendarium:Open Calendarium": false
     }
   },
-  "active": "eff8a57f20b2ace0",
+  "active": "efa2223e748c7f5a",
   "lastOpenFiles": [
-    "Astronomía/Las Lunas/Naëthra, la Luna Mayor.md",
+    "Cultura, Usos y Costumbres/Gastronomía",
+    "Cultura, Usos y Costumbres/Sistemas Monetarios",
+    "Cultura, Usos y Costumbres/Idiomas del Mundo",
+    "Razas Inteligentes/Razas_Originales/Qirathi/Idioma Qirathi.md",
+    "Razas Inteligentes/Razas_Originales/Qirathi/Costumbres Qirathi.md",
+    "Razas Inteligentes/Razas_Originales/Qirathi/Sociedad Qirathi.md",
+    "Historia/Cronología/Cronología.md",
+    "Literatura/Los Libros de Lin-Tan/La Leyenda de Ori.md",
+    "Mitología/El Origen/El Origen.md",
     "Astronomía/Las Lunas/Lysuun, la Luna Mediana.md",
+    "Razas Inteligentes/Razas_Originales/Qirathi/Qirathi.md",
+    "Razas Inteligentes/Razas_Originales/Qirathi/Subrazas/Qirathi Abisales.md",
+    "Razas Inteligentes/Razas_Originales/Qirathi/Subrazas/Qirathi de Agua Dulce.md",
+    "Razas Inteligentes/Razas_Originales/Qirathi/Subrazas/Qirathi Oceánicos.md",
+    "Razas Inteligentes/Razas_Originales/Qirathi/Subrazas",
+    "Razas Inteligentes/Razas_Extra/Razas Extra.md",
+    "Razas Inteligentes/Razas_Originales/Qirathi",
+    "Razas Inteligentes/Razas_Originales/Razas Originales.md",
+    "Astronomía/Las Lunas/Las Lunas.md",
+    "Razas Inteligentes/Originales/Sin nombre",
+    "Razas Inteligentes/Razas_Originales",
+    "Razas Inteligentes/Razas_Extra",
+    "Astronomía/Calendario/Calendario.md",
+    "Astronomía/Las Estrellas/Las Estrellas.md",
+    "Astronomía/Las Lunas/Ezkira, la Luna Menor.md",
+    "Mitología/Divinidades/Las Tres Entidades/Omhyr.md",
+    "Mitología/Divinidades/Primera Generación de Dioses/Naëmer.md",
+    "Astronomía/Las Lunas/Naëthra, la Luna Mayor.md",
     "Astronomía/Los Soles/Riah.md",
     "Astronomía/Los Soles/Oren.md",
     "Mitología/Divinidades/Segunda Generación de Dioses/Zailyn.md",
     "Mitología/Divinidades/Segunda Generación de Dioses/Ysvarel.md",
     "Mitología/Divinidades/Segunda Generación de Dioses/Vaëlor.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Thyria.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Malvior.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Lethari.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Kaëlion.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Haldris.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Eshari.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Eiran.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Dovharen.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Corvion.md",
-    "Los Dominios.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Los 12 Patrones.md",
-    "Mitología/Divinidades/Primera Generación de Dioses/La Tríada.md",
-    "Mitología/Divinidades/Primera Generación de Dioses/Naëmer.md",
     "Mitología/Divinidades/Segunda Generación de Dioses",
-    "Mitología/Divinidades/Primera Generación de Dioses/Lyssba.md",
-    "Mitología/Divinidades/Primera Generación de Dioses/Ezkadra.md",
-    "Mitología/Divinidades/Primera Generación de Dioses/Primera Generación de Dioses.md",
-    "Astronomía/Las Lunas/Las Lunas.md",
     "Mitología/Divinidades/Primera Generación de Dioses",
-    "Mitología/Divinidades/Las Tres Entidades/Ori.md",
-    "Mitología/Divinidades/Las Tres Entidades/Ridah.md",
-    "Mitología/Divinidades/Las Tres Entidades",
-    "Mitología/Divinidades",
-    "Literatura/Leyendas",
-    "Literatura/Poemas",
-    "Literatura/Los Libros de Lin-Tan",
-    "Mitología/El Origen",
-    "Historia",
-    "Astronomía/Las Estrellas"
+    "Mitología/Divinidades/Las Tres Entidades"
   ]
 }

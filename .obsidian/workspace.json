@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "4965d90ef7b02f3b",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "afe55a2351704f64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Razas Inteligentes/Razas_Originales/Qirathi/Idioma Qirathi.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Idioma Qirathi"
-            }
-          }
-        ]
-      },
-      {
         "id": "1743185130c071b0",
         "type": "tabs",
         "children": [
@@ -38,8 +18,23 @@
               "icon": "lucide-git-fork",
               "title": "Vista gráfica"
             }
+          },
+          {
+            "id": "9756a9eb703d477a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Razas Inteligentes/Razas_Originales/Qirathi/Qirathi.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Qirathi"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,6 +92,7 @@
             "type": "leaf",
             "state": {
               "type": "CALENDARIUM",
+              "state": {},
               "icon": "CALENDARIUM",
               "title": "Calendarium"
             }
@@ -105,7 +101,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 283.5
   },
   "right": {
     "id": "93949edb0df070bf",
@@ -253,6 +249,16 @@
             "id": "c631c823f61264f4",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "6600d99169701a55",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -260,7 +266,7 @@
             }
           }
         ],
-        "currentTab": 11
+        "currentTab": 12
       },
       {
         "id": "c93243af4dd1ae10",
@@ -310,12 +316,13 @@
       "calendarium:Open Calendarium": false
     }
   },
-  "active": "efa2223e748c7f5a",
+  "active": "9756a9eb703d477a",
   "lastOpenFiles": [
+    "Imagenes",
+    "Razas Inteligentes/Razas_Originales/Qirathi/Idioma Qirathi.md",
     "Cultura, Usos y Costumbres/Gastronomía",
     "Cultura, Usos y Costumbres/Sistemas Monetarios",
     "Cultura, Usos y Costumbres/Idiomas del Mundo",
-    "Razas Inteligentes/Razas_Originales/Qirathi/Idioma Qirathi.md",
     "Razas Inteligentes/Razas_Originales/Qirathi/Costumbres Qirathi.md",
     "Razas Inteligentes/Razas_Originales/Qirathi/Sociedad Qirathi.md",
     "Historia/Cronología/Cronología.md",
@@ -327,13 +334,13 @@
     "Razas Inteligentes/Razas_Originales/Qirathi/Subrazas/Qirathi de Agua Dulce.md",
     "Razas Inteligentes/Razas_Originales/Qirathi/Subrazas/Qirathi Oceánicos.md",
     "Razas Inteligentes/Razas_Originales/Qirathi/Subrazas",
-    "Razas Inteligentes/Razas_Extra/Razas Extra.md",
+    "Razas Inteligentes/Razas_Foráneas/Razas Foráneas.md",
     "Razas Inteligentes/Razas_Originales/Qirathi",
     "Razas Inteligentes/Razas_Originales/Razas Originales.md",
     "Astronomía/Las Lunas/Las Lunas.md",
     "Razas Inteligentes/Originales/Sin nombre",
     "Razas Inteligentes/Razas_Originales",
-    "Razas Inteligentes/Razas_Extra",
+    "Razas Inteligentes/Razas_Foráneas",
     "Astronomía/Calendario/Calendario.md",
     "Astronomía/Las Estrellas/Las Estrellas.md",
     "Astronomía/Las Lunas/Ezkira, la Luna Menor.md",
@@ -346,7 +353,6 @@
     "Mitología/Divinidades/Segunda Generación de Dioses/Ysvarel.md",
     "Mitología/Divinidades/Segunda Generación de Dioses/Vaëlor.md",
     "Mitología/Divinidades/Segunda Generación de Dioses",
-    "Mitología/Divinidades/Primera Generación de Dioses",
-    "Mitología/Divinidades/Las Tres Entidades"
+    "Mitología/Divinidades/Primera Generación de Dioses"
   ]
 }

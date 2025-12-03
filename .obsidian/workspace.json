@@ -20,21 +20,20 @@
             }
           },
           {
-            "id": "9756a9eb703d477a",
+            "id": "3d70c339e045eacd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Razas Inteligentes/Razas_Originales/Qirathi/Qirathi.md",
+                "file": "Magia/Conjuros/Nivel 11/Nivel 11.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Qirathi"
+              "title": "Nivel 11"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -66,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Los 12 Patrones",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -316,43 +315,44 @@
       "calendarium:Open Calendarium": false
     }
   },
-  "active": "9756a9eb703d477a",
+  "active": "416962af49587e3d",
   "lastOpenFiles": [
-    "Imagenes",
-    "Razas Inteligentes/Razas_Originales/Qirathi/Idioma Qirathi.md",
-    "Cultura, Usos y Costumbres/Gastronomía",
-    "Cultura, Usos y Costumbres/Sistemas Monetarios",
-    "Cultura, Usos y Costumbres/Idiomas del Mundo",
-    "Razas Inteligentes/Razas_Originales/Qirathi/Costumbres Qirathi.md",
-    "Razas Inteligentes/Razas_Originales/Qirathi/Sociedad Qirathi.md",
-    "Historia/Cronología/Cronología.md",
-    "Literatura/Los Libros de Lin-Tan/La Leyenda de Ori.md",
-    "Mitología/El Origen/El Origen.md",
-    "Astronomía/Las Lunas/Lysuun, la Luna Mediana.md",
-    "Razas Inteligentes/Razas_Originales/Qirathi/Qirathi.md",
-    "Razas Inteligentes/Razas_Originales/Qirathi/Subrazas/Qirathi Abisales.md",
-    "Razas Inteligentes/Razas_Originales/Qirathi/Subrazas/Qirathi de Agua Dulce.md",
-    "Razas Inteligentes/Razas_Originales/Qirathi/Subrazas/Qirathi Oceánicos.md",
-    "Razas Inteligentes/Razas_Originales/Qirathi/Subrazas",
-    "Razas Inteligentes/Razas_Foráneas/Razas Foráneas.md",
-    "Razas Inteligentes/Razas_Originales/Qirathi",
-    "Razas Inteligentes/Razas_Originales/Razas Originales.md",
-    "Astronomía/Las Lunas/Las Lunas.md",
-    "Razas Inteligentes/Originales/Sin nombre",
-    "Razas Inteligentes/Razas_Originales",
-    "Razas Inteligentes/Razas_Foráneas",
-    "Astronomía/Calendario/Calendario.md",
-    "Astronomía/Las Estrellas/Las Estrellas.md",
-    "Astronomía/Las Lunas/Ezkira, la Luna Menor.md",
-    "Mitología/Divinidades/Las Tres Entidades/Omhyr.md",
-    "Mitología/Divinidades/Primera Generación de Dioses/Naëmer.md",
-    "Astronomía/Las Lunas/Naëthra, la Luna Mayor.md",
-    "Astronomía/Los Soles/Riah.md",
-    "Astronomía/Los Soles/Oren.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Zailyn.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Ysvarel.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses/Vaëlor.md",
-    "Mitología/Divinidades/Segunda Generación de Dioses",
-    "Mitología/Divinidades/Primera Generación de Dioses"
+    "Magia/Conjuros/Nivel 11/Nivel 11.md",
+    "Magia/Conjuros/Nivel 12/Nivel 12.md",
+    "Magia/Conjuros/Nivel 10/Nivel 10.md",
+    "Magia/Conjuros/Nivel 9/Nivel 9.md",
+    "Magia/Conjuros/Nivel 8/Nivel 8.md",
+    "Magia/Conjuros/Nivel 7/Nivel 7.md",
+    "Magia/Conjuros/Nivel 6/Nivel 6.md",
+    "Magia/Conjuros/Nivel 5/Nivel 5.md",
+    "Magia/Conjuros/Nivel 4/Nivel 4.md",
+    "Magia/Conjuros/Nivel 3/Nivel 3.md",
+    "Magia/Conjuros/Nivel 2/Nivel 2.md",
+    "Magia/Conjuros/Nivel 1/Nivel 1.md",
+    "Magia/Conjuros/Nivel 12",
+    "Magia/Conjuros/Nivel 11",
+    "Magia/Conjuros/Nivel 10",
+    "Magia/Conjuros/Nivel 9",
+    "Magia/Conjuros/Nivel 8",
+    "Magia/Conjuros/Nivel 7",
+    "Magia/Conjuros/Nivel 6",
+    "Magia/Conjuros/Nivel 5",
+    "Magia/Conjuros/Nivel 4",
+    "Magia/Conjuros/Nivel 3",
+    "Atlas/Asentamientos/Pueblos/Pueblos.md",
+    "Atlas/Asentamientos/Fortalezas/Fortalezas.md",
+    "Atlas/Asentamientos/Ciudades/Ciudades.md",
+    "Atlas/Accidentes Geográficos/Ríos/Ríos.md",
+    "Atlas/Accidentes Geográficos/Océanos/Océanos.md",
+    "Atlas/Accidentes Geográficos/Montañas/Montañas.md",
+    "Atlas/Accidentes Geográficos/Mares/Mares.md",
+    "Atlas/Accidentes Geográficos/Bosques/Bosques.md",
+    "Atlas/Reinos y Naciones/Reinos y Naciones.md",
+    "Atlas/Otros Lugares/Otros Lugares.md",
+    "Atlas/Continentes/Continentes.md",
+    "Atlas/Asentamientos/Asentamientos.md",
+    "Atlas/Accidentes Geográficos/Accidentes Geográficos.md",
+    "Cultura, Usos y Costumbres/Comida/Comida.md",
+    "Imagenes/Qirathi.png"
   ]
 }

@@ -36,14 +36,14 @@
       }
     },
     {
-      "query": "path:Geografía  ",
+      "query": "path:Atlas  ",
       "color": {
         "a": 1,
         "rgb": 4619680
       }
     },
     {
-      "query": "",
+      "query": "path:Facciones  ",
       "color": {
         "a": 1,
         "rgb": 9196865
@@ -64,14 +64,14 @@
       }
     },
     {
-      "query": "path:\"Objetos Mágicos\"  ",
+      "query": "path:Magia",
       "color": {
         "a": 1,
         "rgb": 16737450
       }
     },
     {
-      "query": "path:\"Personajes Célebres\"  ",
+      "query": "path:\"Personajes\"  ",
       "color": {
         "a": 1,
         "rgb": 15104090
@@ -109,6 +109,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.18462326225858272,
+  "scale": 0.25883865621816465,
   "close": true
 }

@@ -1,5 +1,4 @@
 ![[Qirathi.png]]
-
 # Introducción
 
 Los **Qirathi** son una de las razas más antiguas de **Aedhyr**, habitantes de los océanos, lagos profundos y ríos caudalosos. Poseen cuerpos humanoides recubiertos en mayor o menor medida por escamas de tonos diversos —azules, verdes, plateados, turquesa o incluso tonos rojizos en regiones volcánicas submarinas—. Sus ojos, de pupilas dilatadas y brillantes, se adaptan a la oscuridad marina, y en lugar de orejas humanas, presentan aletas o espinas suaves que vibran con las corrientes.

@@ -1,0 +1,4 @@
+# Feéricos
+Criaturas vinculadas a la magia salvaje de la naturaleza y originarias del Plano de las Hadas (Feywild). A menudo se confunden con humanoides o bestias, pero poseen una esencia mágica inestable y una conexión emocional extrema. Su biología es mutable y suelen regirse por leyes extrañas o caprichosas en lugar de por la lógica de supervivencia convencional. Incluye hadas, dríadas, sátiros y espíritus naturales.
+
+[^1]:[[Compendio Natural]]

@@ -6,6 +6,28 @@
       {
         "id": "1743185130c071b0",
         "type": "tabs",
+        "dimension": 57.25925925925925,
+        "children": [
+          {
+            "id": "e3213fae4086adf4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Personajes/Personajes.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Personajes"
+            }
+          }
+        ]
+      },
+      {
+        "id": "592351d06bea756a",
+        "type": "tabs",
+        "dimension": 42.74074074074074,
         "children": [
           {
             "id": "416962af49587e3d",
@@ -51,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Primera edad",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -244,6 +266,16 @@
             "id": "6600d99169701a55",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "3ba65b2bd8f7da99",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -251,7 +283,7 @@
             }
           }
         ],
-        "currentTab": 12
+        "currentTab": 13
       },
       {
         "id": "c93243af4dd1ae10",
@@ -301,44 +333,49 @@
       "calendarium:Open Calendarium": false
     }
   },
-  "active": "efa2223e748c7f5a",
+  "active": "416962af49587e3d",
   "lastOpenFiles": [
-    "Magia/Conjuros/Nivel 11/Nivel 11.md",
-    "Magia/Conjuros/Nivel 12/Nivel 12.md",
-    "Magia/Conjuros/Nivel 10/Nivel 10.md",
-    "Magia/Conjuros/Nivel 9/Nivel 9.md",
-    "Magia/Conjuros/Nivel 8/Nivel 8.md",
-    "Magia/Conjuros/Nivel 7/Nivel 7.md",
-    "Magia/Conjuros/Nivel 6/Nivel 6.md",
-    "Magia/Conjuros/Nivel 5/Nivel 5.md",
-    "Magia/Conjuros/Nivel 4/Nivel 4.md",
-    "Magia/Conjuros/Nivel 3/Nivel 3.md",
-    "Magia/Conjuros/Nivel 2/Nivel 2.md",
-    "Magia/Conjuros/Nivel 1/Nivel 1.md",
-    "Magia/Conjuros/Nivel 12",
-    "Magia/Conjuros/Nivel 11",
-    "Magia/Conjuros/Nivel 10",
-    "Magia/Conjuros/Nivel 9",
-    "Magia/Conjuros/Nivel 8",
-    "Magia/Conjuros/Nivel 7",
-    "Magia/Conjuros/Nivel 6",
-    "Magia/Conjuros/Nivel 5",
-    "Magia/Conjuros/Nivel 4",
-    "Magia/Conjuros/Nivel 3",
-    "Atlas/Asentamientos/Pueblos/Pueblos.md",
-    "Atlas/Asentamientos/Fortalezas/Fortalezas.md",
-    "Atlas/Asentamientos/Ciudades/Ciudades.md",
-    "Atlas/Accidentes Geográficos/Ríos/Ríos.md",
-    "Atlas/Accidentes Geográficos/Océanos/Océanos.md",
-    "Atlas/Accidentes Geográficos/Montañas/Montañas.md",
-    "Atlas/Accidentes Geográficos/Mares/Mares.md",
-    "Atlas/Accidentes Geográficos/Bosques/Bosques.md",
-    "Atlas/Reinos y Naciones/Reinos y Naciones.md",
-    "Atlas/Otros Lugares/Otros Lugares.md",
-    "Atlas/Continentes/Continentes.md",
-    "Atlas/Asentamientos/Asentamientos.md",
-    "Atlas/Accidentes Geográficos/Accidentes Geográficos.md",
-    "Cultura, Usos y Costumbres/Comida/Comida.md",
-    "Imagenes/Qirathi.png"
+    "Personajes/Personajes.md",
+    "Personajes/Figuras_Históricas/Figuras Históricas.md",
+    "Mitología/Mitología.md",
+    "Mitología/Los Dominios/Los Dominios.md",
+    "Mitología/Los Dominios",
+    "Magia/Leyes de la Magia/Leyes de la Magia.md",
+    "Magia/Grimorios y Tomos/Grimorios y Tomos.md",
+    "Magia/Escuelas y Tradiciones/Escuelas y Tradiciones.md",
+    "Magia/Magia.md",
+    "Magia/Conjuros/Conjuros.md",
+    "Magia/Escuelas y Tradiciones",
+    "Magia/Leyes de la Magia",
+    "Magia/Grimorios y Tomos",
+    "Mitología/El Origen/El Origen.md",
+    "Literatura/Mitos y Leyendas/Mitos y Leyendas.md",
+    "Literatura/Mitos y Leyendas",
+    "Literatura/Textos Sagrados/Los Libros de Lin-Tan/Los Libros de Lin-Tan.md",
+    "Literatura/Textos Sagrados/Textos Sagrados.md",
+    "Literatura/Crónicas y Tratados/Crónicas y Tratados.md",
+    "Literatura/Textos Sagrados",
+    "Literatura/Literatura.md",
+    "Literatura/Crónicas y Tratados",
+    "Literatura/Poesía y Teatro/Poesía y Teatro.md",
+    "Historia/Historia.md",
+    "Historia/Eras de Aedhyr/Era Prehistórica.md",
+    "Historia/Eras de Aedhyr/Quinta Era/Quinta Era.md",
+    "Historia/Eras de Aedhyr/Cuarta Era/Cuarta Era.md",
+    "Historia/Eras de Aedhyr/Tercera Era/Tercera Era.md",
+    "Historia/Eras de Aedhyr/Segunda Era/Segunda Era.md",
+    "Historia/Eras de Aedhyr/Primera Era/Primera Era.md",
+    "Historia/Eras de Aedhyr/Quinta Era",
+    "Historia/Eras de Aedhyr/Cuarta Era",
+    "Historia/Eras de Aedhyr/Tercera Era",
+    "Historia/Edades de Aedhyr/Sin título.md",
+    "Historia/Grandes Eventos/Grandes Eventos.md",
+    "Historia/Eras de Aedhyr/Eras de Aedhyr.md",
+    "Imágenes/Qirathi.png",
+    "Imágenes/Alaini.png",
+    "Imagenes/Alaini.png",
+    "Imagenes/Qirathi.png",
+    "Imagenes/Alaini.jpg",
+    "Fauna y Flora/Sin título.canvas"
   ]
 }

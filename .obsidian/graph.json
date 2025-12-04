@@ -29,7 +29,7 @@
       }
     },
     {
-      "query": "path:\"Fauna y Flora\"  ",
+      "query": "path:\"Compendio Natural\"  ",
       "color": {
         "a": 1,
         "rgb": 3969355
@@ -74,7 +74,7 @@
       "query": "path:\"Personajes\"  ",
       "color": {
         "a": 1,
-        "rgb": 15104090
+        "rgb": 2578706
       }
     },
     {
@@ -104,11 +104,11 @@
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
+  "collapse-forces": false,
+  "centerStrength": 0.496539792387543,
   "repelStrength": 10,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.25883865621816465,
-  "close": true
+  "linkDistance": 200,
+  "scale": 0.508761885579268,
+  "close": false
 }

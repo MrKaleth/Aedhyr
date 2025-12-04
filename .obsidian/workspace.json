@@ -6,7 +6,7 @@
       {
         "id": "1743185130c071b0",
         "type": "tabs",
-        "dimension": 57.25925925925925,
+        "dimension": 67.98975672215109,
         "children": [
           {
             "id": "e3213fae4086adf4",
@@ -14,20 +14,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personajes/Personajes.md",
+                "file": "Facciones/Facciones.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Personajes"
+              "title": "Facciones"
             }
           }
         ]
       },
       {
-        "id": "592351d06bea756a",
+        "id": "cc420a796d86f483",
         "type": "tabs",
-        "dimension": 42.74074074074074,
+        "dimension": 32.01024327784891,
         "children": [
           {
             "id": "416962af49587e3d",
@@ -276,6 +276,16 @@
             "id": "3ba65b2bd8f7da99",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "627cc191e9773156",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -283,7 +293,7 @@
             }
           }
         ],
-        "currentTab": 13
+        "currentTab": 14
       },
       {
         "id": "c93243af4dd1ae10",
@@ -333,8 +343,27 @@
       "calendarium:Open Calendarium": false
     }
   },
-  "active": "416962af49587e3d",
+  "active": "e3213fae4086adf4",
   "lastOpenFiles": [
+    "Terminología/Sin título.md",
+    "Terminología/Unidades de Medida",
+    "Terminología/Títulos y Rangos",
+    "Terminología/Conceptos Clave/Conceptos Clave.md",
+    "Terminología/Jerga y Expresiones",
+    "Terminología/Conceptos Clave",
+    "Terminología/Terminología.md",
+    "Terminología/Jerga y Expresiones/Jerga y Expresiones.md",
+    "Terminología/Unidades de Medida/Unidades de Medida.md",
+    "Terminología/Títulos y Rangos/Títulos y Rangos.md",
+    "Religión/Religión.md",
+    "Religión/Cultos y Sectas/Cultos y Sectas.md",
+    "Religión/Iglesias y Órdenes Mayores/Iglesias y Órdenes Mayores.md",
+    "Religión/Ritos y Liturgia/Ritos y Liturgia.md",
+    "Religión/Teología y Dogma/Teología y Dogma.md",
+    "Religión/Teología y Dogma",
+    "Religión/Ritos y Liturgia",
+    "Religión/Cultos y Sectas",
+    "Religión/Iglesias y Órdenes Mayores",
     "Personajes/Personajes.md",
     "Personajes/Figuras_Históricas/Figuras Históricas.md",
     "Mitología/Mitología.md",
@@ -346,31 +375,11 @@
     "Magia/Magia.md",
     "Magia/Conjuros/Conjuros.md",
     "Magia/Escuelas y Tradiciones",
-    "Magia/Leyes de la Magia",
-    "Magia/Grimorios y Tomos",
     "Mitología/El Origen/El Origen.md",
     "Literatura/Mitos y Leyendas/Mitos y Leyendas.md",
-    "Literatura/Mitos y Leyendas",
     "Literatura/Textos Sagrados/Los Libros de Lin-Tan/Los Libros de Lin-Tan.md",
     "Literatura/Textos Sagrados/Textos Sagrados.md",
     "Literatura/Crónicas y Tratados/Crónicas y Tratados.md",
-    "Literatura/Textos Sagrados",
-    "Literatura/Literatura.md",
-    "Literatura/Crónicas y Tratados",
-    "Literatura/Poesía y Teatro/Poesía y Teatro.md",
-    "Historia/Historia.md",
-    "Historia/Eras de Aedhyr/Era Prehistórica.md",
-    "Historia/Eras de Aedhyr/Quinta Era/Quinta Era.md",
-    "Historia/Eras de Aedhyr/Cuarta Era/Cuarta Era.md",
-    "Historia/Eras de Aedhyr/Tercera Era/Tercera Era.md",
-    "Historia/Eras de Aedhyr/Segunda Era/Segunda Era.md",
-    "Historia/Eras de Aedhyr/Primera Era/Primera Era.md",
-    "Historia/Eras de Aedhyr/Quinta Era",
-    "Historia/Eras de Aedhyr/Cuarta Era",
-    "Historia/Eras de Aedhyr/Tercera Era",
-    "Historia/Edades de Aedhyr/Sin título.md",
-    "Historia/Grandes Eventos/Grandes Eventos.md",
-    "Historia/Eras de Aedhyr/Eras de Aedhyr.md",
     "Imágenes/Qirathi.png",
     "Imágenes/Alaini.png",
     "Imagenes/Alaini.png",

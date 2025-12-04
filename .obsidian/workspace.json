@@ -264,6 +264,16 @@
             "id": "627cc191e9773156",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "1b56604ca4bf95f7",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -271,7 +281,7 @@
             }
           }
         ],
-        "currentTab": 14
+        "currentTab": 15
       },
       {
         "id": "c93243af4dd1ae10",

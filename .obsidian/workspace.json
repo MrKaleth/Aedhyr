@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Facciones/Facciones.md",
+                "file": "Astronomía/Las Estaciones/Las Estaciones.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Facciones"
+              "title": "Las Estaciones"
             }
           }
         ]
@@ -345,13 +345,18 @@
   },
   "active": "e3213fae4086adf4",
   "lastOpenFiles": [
+    "Astronomía/Calendario/Calendario.md",
+    "Astronomía/Las Estaciones/Las Estaciones.md",
+    "Astronomía/Los Soles/Riah.md",
+    "Astronomía/Las Estaciones",
+    "Terminología/Terminología.md",
+    "Facciones/Facciones.md",
     "Terminología/Sin título.md",
     "Terminología/Unidades de Medida",
     "Terminología/Títulos y Rangos",
     "Terminología/Conceptos Clave/Conceptos Clave.md",
     "Terminología/Jerga y Expresiones",
     "Terminología/Conceptos Clave",
-    "Terminología/Terminología.md",
     "Terminología/Jerga y Expresiones/Jerga y Expresiones.md",
     "Terminología/Unidades de Medida/Unidades de Medida.md",
     "Terminología/Títulos y Rangos/Títulos y Rangos.md",
@@ -374,12 +379,8 @@
     "Magia/Escuelas y Tradiciones/Escuelas y Tradiciones.md",
     "Magia/Magia.md",
     "Magia/Conjuros/Conjuros.md",
-    "Magia/Escuelas y Tradiciones",
     "Mitología/El Origen/El Origen.md",
     "Literatura/Mitos y Leyendas/Mitos y Leyendas.md",
-    "Literatura/Textos Sagrados/Los Libros de Lin-Tan/Los Libros de Lin-Tan.md",
-    "Literatura/Textos Sagrados/Textos Sagrados.md",
-    "Literatura/Crónicas y Tratados/Crónicas y Tratados.md",
     "Imágenes/Qirathi.png",
     "Imágenes/Alaini.png",
     "Imagenes/Alaini.png",

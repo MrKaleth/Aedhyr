@@ -39,7 +39,7 @@
       "query": "path:Atlas  ",
       "color": {
         "a": 1,
-        "rgb": 4619680
+        "rgb": 4373892
       }
     },
     {
@@ -74,7 +74,7 @@
       "query": "path:\"Personajes\"  ",
       "color": {
         "a": 1,
-        "rgb": 2578706
+        "rgb": 13546913
       }
     },
     {
@@ -109,6 +109,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.1846232622585834,
-  "close": true
+  "scale": 0.2588386562181657,
+  "close": false
 }

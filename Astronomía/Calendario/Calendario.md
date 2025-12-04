@@ -1,49 +1,325 @@
-En **Aedhyr**, los ciclos lunares marcan el ritmo del tiempo. Así, el año dura 231 días, que es el tiempo que tardan [[Las Lunas]] en mostrarse llenas al mismo tiempo. El año Aedhyrio consta de 11 meses, señalados por los plenilunios de [[Ezkira, la Luna Menor]].
+En **Aedhyr**, los ciclos lunares marcan el ritmo del tiempo. El año dura **231 días**, que es el periodo exacto que tardan [[Las Lunas]] en sincronizar sus fases llenas.
 
-Cada mes está dividido en 3 semanas de siete días cada una, una división lógica una vez que nos damos cuenta que dichos plenilunios de Ezkira ocurren exactamente cada 21 días.
+El sistema se basa en la interacción matemática de los tres satélites, cuyo ciclo conjunto se cierra sin dejar días sueltos. El año consta de 11 meses, señalados por los plenilunios de [[Ezkira, la Luna Menor]].
 
-Los meses en Aedhyr no tienen nombre. Parece ser que, en tiempos remotos, en cada región los llamaban de maneras diferentes, por lo que, para simplificar, terminaron por utilizar únicamente una denominación numérica: Primer mes, Segundo mes, Tercer mes, etc. En todas partes, sin embargo, se toma como referencia el Triple Plenilunio para señalar el final de un año y el comienzo del siguiente. El Triple Novilunio se produce siempre el décimo día del sexto mes.
+### Estructura del Mes
 
-# Fases Lunares Principales
-| Día del Año | Mes del Año | Evento |
-| : --- : | : --- : |: --- :|
-| 10 | 1 | Novilunio de Ezkira |
-| 16 | 1 | Novilunio de Lysuun |
-| 21 | 1 | Plenilunio de Ezkira |
-| 10 | 2 | Novilunio de Ezkira |
-| 12 | 2 | Plenilunio de Lysuun |
-| 17 | 2 | Novilunio de Naëthra |
-| 21 | 2 | Plenilunio de Ezkira |
-| 7 | 3 | Novilunio de Lysuun |
-| 10 | 3 | Novilunio de Ezkira |
-| 21 | 3 | Plenilunio de Ezkira |
-| 3 | 4 | Plenilunio de Lysuun |
-| 10 | 4 | Novilunio de Ezkira |
-| 14 | 4 | Plenilunio de Naëthra |
-| 19 | 4 | Novilunio de Lysuun |
-| 21 | 4 | Plenilunio de Ezkira |
-| 10 | 5 | Novilunio de Ezkira |
-| 15 | 5 | Plenilunio de Lysuun |
-| 21 | 5 | Plenilunio de Ezkira |
-| 10 | 6 | **Triple Novilunio** |
-| 21 | 6 | Plenilunio de Ezkira |
-| 6 | 7 | Plenilunio de Lysuun |
-| 10 | 7 | Novilunio de Ezkira |
-| 21 | 7 | Plenilunio de Ezkira |
-| 1 | 8 | Novilunio de Lysuun |
-| 7 | 8 | Plenilunio de Naëthra |
-| 10 | 8 | Novilunio de Ezkira |
-| 18 | 8 | Plenilunio de Lysuun |
-| 21 | 8 | Plenilunio de Ezkira |
-| 10 | 9 | Novilunio de Ezkira |
-| 14 | 9 | Novilunio de Lysuun |
-| 21 | 9 | Plenilunio de Ezkira |
-| 4 | 10 | Novilunio de Naëthra |
-| 9 | 10 | Plenilunio de Lysuun |
-| 10 | 10 | Novilunio de Ezkira |
-| 21 | 10 | Plenilunio de Ezkira |
-| 4 | 11 | Novilunio de Lysuun |
-| 10 | 11 | Novilunio de Ezkira |
-| 21 | 11 | **Triple Plenilunio** |
+Cada mes tiene una duración idéntica de 21 días. Esta duración se debe al ciclo de Ezkira, que es el más rápido y constante de los tres.
+
+- **Semanas:** Cada mes se divide en 3 semanas de 7 días.
+    
+- **El Ciclo:** Ezkira entra en novilunio (Luna Nueva) el día 10 y alcanza el plenilunio (Luna Llena) el día 21, marcando el final del mes.
+    
+
+### Nombres de los Meses
+
+Los meses en Aedhyr no tienen nombre propio. Aunque en tiempos remotos cada región utilizaba denominaciones locales, esto generaba confusión. Para simplificar, se estableció una denominación numérica universal: Primer mes, Segundo mes, Tercer mes, etc.
+
+### Eventos Principales
+
+El calendario se define por dos hitos astronómicos que marcan la mitad y el final del ciclo anual:
+
+1. **Triple Novilunio (Día 10 del 6º Mes):** Las tres lunas entran en fase nueva simultáneamente. Es el momento de mayor oscuridad nocturna del año.
+    
+2. **Triple Plenilunio (Día 21 del 11º Mes):** Las tres lunas se muestran llenas a la vez. Este evento señala el final del año y el comienzo del siguiente.
+    
+
+---
+
+# Tabla de Fases Lunares
+
+Esta tabla detalla la configuración del cielo en las fechas clave.
+
+(Leyenda: 🌑 = Novilunio/Nueva | 🌕 = Plenilunio/Llena | -- = Fase Intermedia)
+
+### Primer Mes
+
+| **Día** | **Ezkira**   | **Lysuun**   | **Naëthra** | **Notas**           |
+| ------- | ------------ | ------------ | ----------- | ------------------- |
+| 1       | --           | --           | --          |                     |
+| 2       | --           | --           | --          |                     |
+| 3       | --           | --           | --          |                     |
+| 4       | --           | --           | --          |                     |
+| 5       | --           | --           | --          |                     |
+| 6       | --           | --           | --          |                     |
+| 7       | --           | --           | --          |                     |
+| 8       | --           | --           | --          |                     |
+| 9       | --           | --           | --          |                     |
+| **10**  | 🌑 **Nueva** | --           | --          | Oscuridad de Ezkira |
+| 11      | --           | --           | --          |                     |
+| 12      | --           | --           | --          |                     |
+| 13      | --           | --           | --          |                     |
+| 14      | --           | --           | --          |                     |
+| 15      | --           | --           | --          |                     |
+| **16**  | --           | 🌑 **Nueva** | --          |                     |
+| 17      | --           | --           | --          |                     |
+| 18      | --           | --           | --          |                     |
+| 19      | --           | --           | --          |                     |
+| 20      | --           | --           | --          |                     |
+| **21**  | 🌕 **Llena** | --           | --          | **Fin de Mes**      |
+
+### Segundo Mes
+
+| **Día** | **Ezkira**   | **Lysuun**   | **Naëthra**  | **Notas**            |
+| ------- | ------------ | ------------ | ------------ | -------------------- |
+| 1       | --           | --           | --           |                      |
+| 2       | --           | --           | --           |                      |
+| 3       | --           | --           | --           |                      |
+| 4       | --           | --           | --           |                      |
+| 5       | --           | --           | --           |                      |
+| 6       | --           | --           | --           |                      |
+| 7       | --           | --           | --           |                      |
+| 8       | --           | --           | --           |                      |
+| 9       | --           | --           | --           |                      |
+| **10**  | 🌑 **Nueva** | --           | --           |                      |
+| 11      | --           | --           | --           |                      |
+| **12**  | --           | 🌕 **Llena** | --           |                      |
+| 13      | --           | --           | --           |                      |
+| 14      | --           | --           | --           |                      |
+| 15      | --           | --           | --           |                      |
+| 16      | --           | --           | --           |                      |
+| **17**  | --           | --           | 🌑 **Nueva** | Inicio Ciclo Naëthra |
+| 18      | --           | --           | --           |                      |
+| 19      | --           | --           | --           |                      |
+| 20      | --           | --           | --           |                      |
+| **21**  | 🌕 **Llena** | --           | --           | **Fin de Mes**       |
+
+### Tercer Mes
+
+| **Día** | **Ezkira**   | **Lysuun**   | **Naëthra** | **Notas**      |
+| ------- | ------------ | ------------ | ----------- | -------------- |
+| 1       | --           | --           | --          |                |
+| 2       | --           | --           | --          |                |
+| 3       | --           | --           | --          |                |
+| 4       | --           | --           | --          |                |
+| 5       | --           | --           | --          |                |
+| 6       | --           | --           | --          |                |
+| **7**   | --           | 🌑 **Nueva** | --          |                |
+| 8       | --           | --           | --          |                |
+| 9       | --           | --           | --          |                |
+| **10**  | 🌑 **Nueva** | --           | --          |                |
+| 11      | --           | --           | --          |                |
+| 12      | --           | --           | --          |                |
+| 13      | --           | --           | --          |                |
+| 14      | --           | --           | --          |                |
+| 15      | --           | --           | --          |                |
+| 16      | --           | --           | --          |                |
+| 17      | --           | --           | --          |                |
+| 18      | --           | --           | --          |                |
+| 19      | --           | --           | --          |                |
+| 20      | --           | --           | --          |                |
+| **21**  | 🌕 **Llena** | --           | --          | **Fin de Mes** |
+
+### Cuarto Mes
+
+| **Día** | **Ezkira**   | **Lysuun**   | **Naëthra**  | **Notas**            |
+| ------- | ------------ | ------------ | ------------ | -------------------- |
+| 1       | --           | --           | --           |                      |
+| 2       | --           | --           | --           |                      |
+| **3**   | --           | 🌕 **Llena** | --           |                      |
+| 4       | --           | --           | --           |                      |
+| 5       | --           | --           | --           |                      |
+| 6       | --           | --           | --           |                      |
+| 7       | --           | --           | --           |                      |
+| 8       | --           | --           | --           |                      |
+| 9       | --           | --           | --           |                      |
+| **10**  | 🌑 **Nueva** | --           | --           |                      |
+| 11      | --           | --           | --           |                      |
+| 12      | --           | --           | --           |                      |
+| 13      | --           | --           | --           |                      |
+| **14**  | --           | --           | 🌕 **Llena** | **Plenilunio Mayor** |
+| 15      | --           | --           | --           |                      |
+| 16      | --           | --           | --           |                      |
+| 17      | --           | --           | --           |                      |
+| 18      | --           | --           | --           |                      |
+| **19**  | --           | 🌑 **Nueva** | --           |                      |
+| 20      | --           | --           | --           |                      |
+| **21**  | 🌕 **Llena** | --           | --           | **Fin de Mes**       |
+
+### Quinto Mes
+
+| **Día** | **Ezkira**   | **Lysuun**   | **Naëthra** | **Notas**      |
+| ------- | ------------ | ------------ | ----------- | -------------- |
+| 1       | --           | --           | --          |                |
+| 2       | --           | --           | --          |                |
+| 3       | --           | --           | --          |                |
+| 4       | --           | --           | --          |                |
+| 5       | --           | --           | --          |                |
+| 6       | --           | --           | --          |                |
+| 7       | --           | --           | --          |                |
+| 8       | --           | --           | --          |                |
+| 9       | --           | --           | --          |                |
+| **10**  | 🌑 **Nueva** | --           | --          |                |
+| 11      | --           | --           | --          |                |
+| 12      | --           | --           | --          |                |
+| 13      | --           | --           | --          |                |
+| 14      | --           | --           | --          |                |
+| **15**  | --           | 🌕 **Llena** | --          |                |
+| 16      | --           | --           | --          |                |
+| 17      | --           | --           | --          |                |
+| 18      | --           | --           | --          |                |
+| 19      | --           | --           | --          |                |
+| 20      | --           | --           | --          |                |
+| **21**  | 🌕 **Llena** | --           | --          | **Fin de Mes** |
+
+### Sexto Mes
+
+| **Día** | **Ezkira**   | **Lysuun**   | **Naëthra**  | **Notas**            |
+| ------- | ------------ | ------------ | ------------ | -------------------- |
+| 1       | --           | --           | --           |                      |
+| 2       | --           | --           | --           |                      |
+| 3       | --           | --           | --           |                      |
+| 4       | --           | --           | --           |                      |
+| 5       | --           | --           | --           |                      |
+| 6       | --           | --           | --           |                      |
+| 7       | --           | --           | --           |                      |
+| 8       | --           | --           | --           |                      |
+| 9       | --           | --           | --           |                      |
+| **10**  | 🌑 **Nueva** | 🌑 **Nueva** | 🌑 **Nueva** | **TRIPLE NOVILUNIO** |
+| 11      | --           | --           | --           |                      |
+| 12      | --           | --           | --           |                      |
+| 13      | --           | --           | --           |                      |
+| 14      | --           | --           | --           |                      |
+| 15      | --           | --           | --           |                      |
+| 16      | --           | --           | --           |                      |
+| 17      | --           | --           | --           |                      |
+| 18      | --           | --           | --           |                      |
+| 19      | --           | --           | --           |                      |
+| 20      | --           | --           | --           |                      |
+| **21**  | 🌕 **Llena** | --           | --           | **Fin de Mes**       |
+
+### Séptimo Mes
+
+| **Día** | **Ezkira**   | **Lysuun**   | **Naëthra** | **Notas**      |
+| ------- | ------------ | ------------ | ----------- | -------------- |
+| 1       | --           | --           | --          |                |
+| 2       | --           | --           | --          |                |
+| 3       | --           | --           | --          |                |
+| 4       | --           | --           | --          |                |
+| 5       | --           | --           | --          |                |
+| **6**   | --           | 🌕 **Llena** | --          |                |
+| 7       | --           | --           | --          |                |
+| 8       | --           | --           | --          |                |
+| 9       | --           | --           | --          |                |
+| **10**  | 🌑 **Nueva** | --           | --          |                |
+| 11      | --           | --           | --          |                |
+| 12      | --           | --           | --          |                |
+| 13      | --           | --           | --          |                |
+| 14      | --           | --           | --          |                |
+| 15      | --           | --           | --          |                |
+| 16      | --           | --           | --          |                |
+| 17      | --           | --           | --          |                |
+| 18      | --           | --           | --          |                |
+| 19      | --           | --           | --          |                |
+| 20      | --           | --           | --          |                |
+| **21**  | 🌕 **Llena** | --           | --          | **Fin de Mes** |
+
+### Octavo Mes
+
+| **Día** | **Ezkira**   | **Lysuun**   | **Naëthra**  | **Notas**            |
+| ------- | ------------ | ------------ | ------------ | -------------------- |
+| **1**   | --           | 🌑 **Nueva** | --           |                      |
+| 2       | --           | --           | --           |                      |
+| 3       | --           | --           | --           |                      |
+| 4       | --           | --           | --           |                      |
+| 5       | --           | --           | --           |                      |
+| 6       | --           | --           | --           |                      |
+| **7**   | --           | --           | 🌕 **Llena** | **Plenilunio Mayor** |
+| 8       | --           | --           | --           |                      |
+| 9       | --           | --           | --           |                      |
+| **10**  | 🌑 **Nueva** | --           | --           |                      |
+| 11      | --           | --           | --           |                      |
+| 12      | --           | --           | --           |                      |
+| 13      | --           | --           | --           |                      |
+| 14      | --           | --           | --           |                      |
+| 15      | --           | --           | --           |                      |
+| 16      | --           | --           | --           |                      |
+| 17      | --           | --           | --           |                      |
+| **18**  | --           | 🌕 **Llena** | --           |                      |
+| 19      | --           | --           | --           |                      |
+| 20      | --           | --           | --           |                      |
+| **21**  | 🌕 **Llena** | --           | --           | **Fin de Mes**       |
+
+### Noveno Mes
+
+| **Día** | **Ezkira**   | **Lysuun**   | **Naëthra** | **Notas**      |
+| ------- | ------------ | ------------ | ----------- | -------------- |
+| 1       | --           | --           | --          |                |
+| 2       | --           | --           | --          |                |
+| 3       | --           | --           | --          |                |
+| 4       | --           | --           | --          |                |
+| 5       | --           | --           | --          |                |
+| 6       | --           | --           | --          |                |
+| 7       | --           | --           | --          |                |
+| 8       | --           | --           | --          |                |
+| 9       | --           | --           | --          |                |
+| **10**  | 🌑 **Nueva** | --           | --          |                |
+| 11      | --           | --           | --          |                |
+| 12      | --           | --           | --          |                |
+| 13      | --           | --           | --          |                |
+| **14**  | --           | 🌑 **Nueva** | --          |                |
+| 15      | --           | --           | --          |                |
+| 16      | --           | --           | --          |                |
+| 17      | --           | --           | --          |                |
+| 18      | --           | --           | --          |                |
+| 19      | --           | --           | --          |                |
+| 20      | --           | --           | --          |                |
+| **21**  | 🌕 **Llena** | --           | --          | **Fin de Mes** |
+
+### Décimo Mes
+
+| **Día** | **Ezkira**   | **Lysuun**   | **Naëthra**  | **Notas**            |
+| ------- | ------------ | ------------ | ------------ | -------------------- |
+| 1       | --           | --           | --           |                      |
+| 2       | --           | --           | --           |                      |
+| 3       | --           | --           | --           |                      |
+| **4**   | --           | --           | 🌑 **Nueva** | Oscuridad de Naëthra |
+| 5       | --           | --           | --           |                      |
+| 6       | --           | --           | --           |                      |
+| 7       | --           | --           | --           |                      |
+| 8       | --           | --           | --           |                      |
+| **9**   | --           | 🌕 **Llena** | --           |                      |
+| **10**  | 🌑 **Nueva** | --           | --           |                      |
+| 11      | --           | --           | --           |                      |
+| 12      | --           | --           | --           |                      |
+| 13      | --           | --           | --           |                      |
+| 14      | --           | --           | --           |                      |
+| 15      | --           | --           | --           |                      |
+| 16      | --           | --           | --           |                      |
+| 17      | --           | --           | --           |                      |
+| 18      | --           | --           | --           |                      |
+| 19      | --           | --           | --           |                      |
+| 20      | --           | --           | --           |                      |
+| **21**  | 🌕 **Llena** | --           | --           | **Fin de Mes**       |
+
+### Undécimo Mes
+
+| **Día** | **Ezkira**   | **Lysuun**   | **Naëthra**  | **Notas**             |
+| ------- | ------------ | ------------ | ------------ | --------------------- |
+| 1       | --           | --           | --           |                       |
+| 2       | --           | --           | --           |                       |
+| 3       | --           | --           | --           |                       |
+| **4**   | --           | 🌑 **Nueva** | --           |                       |
+| 5       | --           | --           | --           |                       |
+| 6       | --           | --           | --           |                       |
+| 7       | --           | --           | --           |                       |
+| 8       | --           | --           | --           |                       |
+| 9       | --           | --           | --           |                       |
+| **10**  | 🌑 **Nueva** | --           | --           |                       |
+| 11      | --           | --           | --           |                       |
+| 12      | --           | --           | --           |                       |
+| 13      | --           | --           | --           |                       |
+| 14      | --           | --           | --           |                       |
+| 15      | --           | --           | --           |                       |
+| 16      | --           | --           | --           |                       |
+| 17      | --           | --           | --           |                       |
+| 18      | --           | --           | --           |                       |
+| 19      | --           | --           | --           |                       |
+| 20      | --           | --           | --           |                       |
+| **21**  | 🌕 **Llena** | 🌕 **Llena** | 🌕 **Llena** | **TRIPLE PLENILUNIO** |
+
+>[!info] El Clima y las Estaciones
+> El año de 231 días es demasiado corto para albergar las cuatro estaciones tradicionales. Por ello, en Aedhyr el clima sigue un ciclo de **dos años**.
+> Para saber si es invierno o verano, consulta: **[[Las Estaciones]]**.
 
 [^1]: [[Astronomía]]

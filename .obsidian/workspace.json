@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Astronomía/Las Estaciones/Las Estaciones.md",
+                "file": "Astronomía/Los Soles/Riah.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Las Estaciones"
+              "title": "Riah"
             }
           }
         ]
@@ -343,11 +343,23 @@
       "calendarium:Open Calendarium": false
     }
   },
-  "active": "e3213fae4086adf4",
+  "active": "416962af49587e3d",
   "lastOpenFiles": [
-    "Astronomía/Calendario/Calendario.md",
-    "Astronomía/Las Estaciones/Las Estaciones.md",
     "Astronomía/Los Soles/Riah.md",
+    "Astronomía/Los Soles/Oren.md",
+    "Astronomía/Los Soles/Los Soles.md",
+    "Astronomía/Las Lunas/Ezkira, la Luna Menor.md",
+    "Astronomía/Las Lunas/Las Lunas.md",
+    "Astronomía/Las Lunas/Lysuun, la Luna Mediana.md",
+    "Astronomía/Las Lunas/Naëthra, la Luna Mayor.md",
+    "Astronomía/Las Estaciones/Las Estaciones.md",
+    "Astronomía/Calendario/Calendario.md",
+    "Astronomía/Las Estaciones/Ventoseco.md",
+    "Astronomía/Las Estaciones/Nebluvia.md",
+    "Astronomía/Las Estaciones/Invierno.md",
+    "Astronomía/Las Estaciones/Otoño.md",
+    "Astronomía/Las Estaciones/Primavera.md",
+    "Astronomía/Las Estaciones/Verano.md",
     "Astronomía/Las Estaciones",
     "Terminología/Terminología.md",
     "Facciones/Facciones.md",
@@ -364,23 +376,11 @@
     "Religión/Cultos y Sectas/Cultos y Sectas.md",
     "Religión/Iglesias y Órdenes Mayores/Iglesias y Órdenes Mayores.md",
     "Religión/Ritos y Liturgia/Ritos y Liturgia.md",
-    "Religión/Teología y Dogma/Teología y Dogma.md",
     "Religión/Teología y Dogma",
     "Religión/Ritos y Liturgia",
     "Religión/Cultos y Sectas",
     "Religión/Iglesias y Órdenes Mayores",
-    "Personajes/Personajes.md",
-    "Personajes/Figuras_Históricas/Figuras Históricas.md",
-    "Mitología/Mitología.md",
-    "Mitología/Los Dominios/Los Dominios.md",
     "Mitología/Los Dominios",
-    "Magia/Leyes de la Magia/Leyes de la Magia.md",
-    "Magia/Grimorios y Tomos/Grimorios y Tomos.md",
-    "Magia/Escuelas y Tradiciones/Escuelas y Tradiciones.md",
-    "Magia/Magia.md",
-    "Magia/Conjuros/Conjuros.md",
-    "Mitología/El Origen/El Origen.md",
-    "Literatura/Mitos y Leyendas/Mitos y Leyendas.md",
     "Imágenes/Qirathi.png",
     "Imágenes/Alaini.png",
     "Imagenes/Alaini.png",

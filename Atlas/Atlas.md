@@ -50,14 +50,14 @@ La masa continental de Aedhyr se organiza en una formación conocida por los car
 
 ### La Corona (Continentes)
 
-1. **El Continente Central:** El corazón de la civilización. Protegido de las peores mareas por las masas de tierra que lo rodean, goza de un clima relativamente estable y es el hogar de las naciones más antiguas.
+1. **El [[Continente Central]]:** El corazón de la civilización. Protegido de las peores mareas por las masas de tierra que lo rodean, goza de un clima relativamente estable y es el hogar de las naciones más antiguas.
     
 2. **El Anillo Exterior:** Cuatro continentes masivos que rodean al central, actuando como escudos naturales contra los océanos abiertos.
     
-    - **[Continente Norte]:** Una tierra de cordilleras verticales y fiordos profundos. Sufre los inviernos más duros y un **Deshielo** torrencial.
-    - **[Continente Sur]:** Expuesto directamente a la trayectoria cenital de [[Oren]] y [[Riah]]. Es una tierra de sabanas doradas, desiertos de cristal y actividad volcánica.
-    - **[Continente Oeste]:** Dominado por la influencia de [[Lysuun, la Luna Mediana|Lysuun]]. Sus costas occidentales son marismas kilométricas que desaparecen con la marea alta. Es un continente verde y anfibio.
-    - **[Continente Este]:** Una masa de tierra fracturada y mística, conocida por sus bosques de coral terrestre y formaciones rocosas que desafían la gravedad.
+    - **[[Continente Norte]]:** Una tierra de cordilleras verticales y fiordos profundos. Sufre los inviernos más duros y un **Deshielo** torrencial.
+    - **[[Continente Sur]]:** Expuesto directamente a la trayectoria cenital de [[Oren]] y [[Riah]]. Es una tierra de sabanas doradas, desiertos de cristal y actividad volcánica.
+    - **[[Continente Oeste]]:** Dominado por la influencia de [[Lysuun, la Luna Mediana|Lysuun]]. Sus costas occidentales son marismas kilométricas que desaparecen con la marea alta. Es un continente verde y anfibio.
+    - **[[Continente Este]]:** Una masa de tierra fracturada y mística, conocida por sus bosques de coral terrestre y formaciones rocosas que desafían la gravedad.
         
 
 ### Los Fragmentos (Archipiélagos Mayores)

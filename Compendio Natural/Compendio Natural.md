@@ -6,13 +6,13 @@ El propósito de este archivo no es meramente taxonómico, sino vital. En estas 
 
 La organización de este compendio trasciende la biología tradicional para adaptarse a la realidad mágica de nuestro entorno. Las entradas se dividen según su origen cosmológico y su naturaleza esencial:
 
-- **El Orden Material:** Criaturas nacidas de la tierra y la evolución natural (_Bestias, Plantas, Humanoides_).
+- **El Orden Material:** Criaturas nacidas de la tierra y la evolución natural (_[[Bestias]], [[Plantas]], [[Humanoides]]_).
     
-- **Las Manifestaciones Mágicas:** Entidades alteradas o creadas por el flujo de la magia (_Dragones, Monstruosidades, Constructos_).
+- **Las Manifestaciones Mágicas:** Entidades alteradas o creadas por el flujo de la magia (_[[Dragones]], [[Monstruosidades]], [[Constructos]]_).
     
-- **Las Incursiones Planares:** Seres cuya existencia se origina en otras realidades y que imponen sus propias leyes físicas (_Celestiales, Infernales, Elementales, Aberraciones, Feéricos_).
+- **Las Incursiones Planares:** Seres cuya existencia se origina en otras realidades y que imponen sus propias leyes físicas (_[[Celestiales]], [[Infernales]], [[Elementales]], [[Aberraciones]], [[Feéricos]]_).
     
-- **La Antivida:** Aquellos que existen en desafío al ciclo natural (_No Muertos_).
+- **La Antivida:** Aquellos que existen en desafío al ciclo natural (_[[No Muertos]]_).
     
 
 > [!warning] Advertencia al Lector El conocimiento contenido en estas entradas ha sido obtenido a menudo a un alto precio. Se insta a los estudiosos y exploradores a tratar cada criatura desconocida con extrema precaución. En la naturaleza salvaje, la ignorancia es la muerte más rápida.

@@ -4,6 +4,26 @@
     "type": "split",
     "children": [
       {
+        "id": "c14991fe65e64970",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "73022d92cf8cf687",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Razas Inteligentes/Razas Inteligentes.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Razas Inteligentes"
+            }
+          }
+        ]
+      },
+      {
         "id": "cc420a796d86f483",
         "type": "tabs",
         "children": [
@@ -86,7 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 541.5
+    "width": 289.5
   },
   "right": {
     "id": "93949edb0df070bf",
@@ -274,6 +294,16 @@
             "id": "1b56604ca4bf95f7",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "984a33e4a88955c8",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -281,7 +311,7 @@
             }
           }
         ],
-        "currentTab": 15
+        "currentTab": 16
       },
       {
         "id": "c93243af4dd1ae10",
@@ -331,10 +361,13 @@
       "calendarium:Open Calendarium": false
     }
   },
-  "active": "efa2223e748c7f5a",
+  "active": "416962af49587e3d",
   "lastOpenFiles": [
-    "Astronomía/Las Lunas/Ezkira, la Luna Menor.md",
+    "Razas Inteligentes/Razas Inteligentes.md",
+    "Compendio Natural/Compendio Natural.md",
+    "Compendio Natural/No Muertos/No Muertos.md",
     "Atlas/Atlas.md",
+    "Astronomía/Las Lunas/Ezkira, la Luna Menor.md",
     "Astronomía/Los Soles/Riah.md",
     "Astronomía/Los Soles/Oren.md",
     "Astronomía/Los Soles/Los Soles.md",
@@ -361,9 +394,6 @@
     "Terminología/Jerga y Expresiones/Jerga y Expresiones.md",
     "Terminología/Unidades de Medida/Unidades de Medida.md",
     "Terminología/Títulos y Rangos/Títulos y Rangos.md",
-    "Religión/Religión.md",
-    "Religión/Cultos y Sectas/Cultos y Sectas.md",
-    "Religión/Iglesias y Órdenes Mayores/Iglesias y Órdenes Mayores.md",
     "Religión/Teología y Dogma",
     "Religión/Ritos y Liturgia",
     "Religión/Cultos y Sectas",

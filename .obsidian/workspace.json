@@ -304,6 +304,16 @@
             "id": "984a33e4a88955c8",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "8e39ea5d3c0562a4",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -311,7 +321,7 @@
             }
           }
         ],
-        "currentTab": 16
+        "currentTab": 17
       },
       {
         "id": "c93243af4dd1ae10",
@@ -361,7 +371,7 @@
       "calendarium:Open Calendarium": false
     }
   },
-  "active": "416962af49587e3d",
+  "active": "8e39ea5d3c0562a4",
   "lastOpenFiles": [
     "Razas Inteligentes/Razas Inteligentes.md",
     "Compendio Natural/Compendio Natural.md",

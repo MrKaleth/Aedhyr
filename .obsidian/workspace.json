@@ -4,27 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "c14991fe65e64970",
+        "id": "cc420a796d86f483",
         "type": "tabs",
         "children": [
           {
-            "id": "73022d92cf8cf687",
+            "id": "d747a948cabcc5bd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Razas Inteligentes/Razas Inteligentes.md",
+                "file": "Compendio Natural/Bestias/Noctarra.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Noctarra"
+            }
+          },
+          {
+            "id": "35ab811c375d537a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Compendio Natural/Bestias/Alaini.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Razas Inteligentes"
+              "title": "Alaini"
             }
           }
         ]
       },
       {
-        "id": "cc420a796d86f483",
+        "id": "cc84555111f40ce0",
         "type": "tabs",
         "children": [
           {
@@ -71,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Primera edad",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -314,6 +328,16 @@
             "id": "8e39ea5d3c0562a4",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "eb0efa96db84455a",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -321,7 +345,7 @@
             }
           }
         ],
-        "currentTab": 17
+        "currentTab": 18
       },
       {
         "id": "c93243af4dd1ae10",
@@ -371,12 +395,22 @@
       "calendarium:Open Calendarium": false
     }
   },
-  "active": "8e39ea5d3c0562a4",
+  "active": "d747a948cabcc5bd",
   "lastOpenFiles": [
+    "Compendio Natural/Bestias/Alaini.md",
+    "Compendio Natural/Bestias/Noctarra.md",
+    "Astronomía/Las Estaciones/Las Estaciones.md",
+    "Atlas/Continentes/Continente Norte.md",
+    "Atlas/Continentes/Continente Central.md",
+    "Atlas/Continentes/Continente Sur.md",
+    "Atlas/Continentes/Continente Este.md",
+    "Atlas/Continentes/Continente Oeste.md",
+    "Atlas/Continentes/Continentes.md",
+    "Atlas/Atlas.md",
+    "Astronomía/Calendario/Calendario.md",
     "Razas Inteligentes/Razas Inteligentes.md",
     "Compendio Natural/Compendio Natural.md",
     "Compendio Natural/No Muertos/No Muertos.md",
-    "Atlas/Atlas.md",
     "Astronomía/Las Lunas/Ezkira, la Luna Menor.md",
     "Astronomía/Los Soles/Riah.md",
     "Astronomía/Los Soles/Oren.md",
@@ -384,26 +418,16 @@
     "Astronomía/Las Lunas/Las Lunas.md",
     "Astronomía/Las Lunas/Lysuun, la Luna Mediana.md",
     "Astronomía/Las Lunas/Naëthra, la Luna Mayor.md",
-    "Astronomía/Las Estaciones/Las Estaciones.md",
-    "Astronomía/Calendario/Calendario.md",
     "Astronomía/Las Estaciones/Ventoseco.md",
     "Astronomía/Las Estaciones/Nebluvia.md",
     "Astronomía/Las Estaciones/Invierno.md",
     "Astronomía/Las Estaciones/Otoño.md",
     "Astronomía/Las Estaciones/Primavera.md",
-    "Astronomía/Las Estaciones/Verano.md",
     "Astronomía/Las Estaciones",
-    "Terminología/Terminología.md",
-    "Facciones/Facciones.md",
-    "Terminología/Sin título.md",
     "Terminología/Unidades de Medida",
     "Terminología/Títulos y Rangos",
-    "Terminología/Conceptos Clave/Conceptos Clave.md",
     "Terminología/Jerga y Expresiones",
     "Terminología/Conceptos Clave",
-    "Terminología/Jerga y Expresiones/Jerga y Expresiones.md",
-    "Terminología/Unidades de Medida/Unidades de Medida.md",
-    "Terminología/Títulos y Rangos/Títulos y Rangos.md",
     "Religión/Teología y Dogma",
     "Religión/Ritos y Liturgia",
     "Religión/Cultos y Sectas",

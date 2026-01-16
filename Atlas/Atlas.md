@@ -48,7 +48,7 @@ El clima obedece al **Gran Ciclo Solar** de dos años (ver [[Las Estaciones]]).
 
 La masa continental de Aedhyr se organiza en una formación conocida por los cartógrafos como **"La Corona"**. Cinco grandes continentes emergen de los océanos, separados por canales de navegación peligrosos y mares interiores.
 
-### La Corona (Continentes)
+### La Corona ([[Continentes]])
 
 1. **El [[Continente Central]]:** El corazón de la civilización. Protegido de las peores mareas por las masas de tierra que lo rodean, goza de un clima relativamente estable y es el hogar de las naciones más antiguas.
     

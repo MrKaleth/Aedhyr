@@ -20,17 +20,15 @@
             }
           },
           {
-            "id": "ac5dc669bfe6565b",
+            "id": "aeff9a4e9c921806",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "Atlas/Atlas.md",
-                "mode": "preview",
-                "source": true
+                "currentVersion": "1.11.5"
               },
-              "icon": "lucide-file",
-              "title": "Atlas"
+              "icon": "lucide-book-up",
+              "title": "Registro de cambios 1.11.5"
             }
           }
         ],
@@ -339,6 +337,26 @@
             "id": "1806d3b294b4202d",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "ea0f76f82f1eb313",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "859d8d0e9982e9d2",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -346,7 +364,7 @@
             }
           }
         ],
-        "currentTab": 20
+        "currentTab": 22
       },
       {
         "id": "c93243af4dd1ae10",
@@ -389,17 +407,22 @@
       "meld-encrypt:Convert to or from an Encrypted note": false,
       "meld-encrypt:Encrypt Selection": false,
       "meld-encrypt:Decrypt at Cursor": false,
-      "smart-connections:Open: Smart Chat": false,
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Connections: Open random connection": true,
       "templater-obsidian:Templater": false,
-      "calendarium:Open Calendarium": false,
-      "smart-connections:Smart Lookup: Open lookup view": false
+      "smart-connections:Smart Lookup: Open lookup view": false,
+      "calendarium:Open Calendarium": false
     }
   },
-  "active": "ac5dc669bfe6565b",
+  "active": "859d8d0e9982e9d2",
   "lastOpenFiles": [
+    "Facciones/Los Vaelirr/Renata/Organización de Renata.md",
+    "Facciones/Los Vaelirr/Los Vhal'Shai/Los Vhal'Shai.md",
+    "Facciones/Los Vaelirr/Los Vhal'Shai/Maelvyr Shai-Leth.md",
+    "Facciones/Los Vaelirr/Renata/Renata.md",
     "Atlas/Atlas.md",
+    "Facciones/Los Vaelirr/Renata/Organización de Renata",
+    "Facciones/Los Vaelirr/Renata",
     "Astronomía/Los Soles/Riah.md",
     "Astronomía/Los Soles/Oren.md",
     "Astronomía/Los Soles/Los Soles.md",
@@ -426,15 +449,9 @@
     "Facciones/Los Vaelirr/Los Orum-Hein",
     "Facciones/Los Vaelirr/Los Runaforjados",
     "Facciones/Los Vaelirr/Los Argentarios/Teryn Volsharr.md",
-    "Facciones/Los Vaelirr/Los Argentarios/Los Argentarios.md",
-    "Facciones/Los Vaelirr/Los Vhal'Shai/Maelvyr Shai-Leth.md",
-    "Facciones/Los Vaelirr/Los Vhal'Shai/Los Vhal'Shai.md",
     "Facciones/Los Vaelirr/Los Argentarios",
     "Facciones/Los Vaelirr/Los Vhal'Shai",
-    "Facciones/Los Vaelirr/Los Karn-Dur/Vhyrn Durn-Vael.md",
     "Facciones/Los Vaelirr/Los Karn-Dur",
-    "Facciones/Los Vaelirr/Los Vaelendir",
-    "Facciones/Los Vaelirr",
     "Imágenes/Qirathi.png",
     "Imágenes/Alaini.png",
     "Imagenes/Alaini.png",

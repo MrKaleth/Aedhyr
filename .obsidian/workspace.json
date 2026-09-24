@@ -20,15 +20,17 @@
             }
           },
           {
-            "id": "aeff9a4e9c921806",
+            "id": "efa557ec7f15fcfb",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.11.5"
+                "file": "01_Astronomía y Tiempo/Astronomía/Las Lunas/Las Lunas.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "lucide-book-up",
-              "title": "Registro de cambios 1.11.5"
+              "icon": "lucide-file",
+              "title": "Las Lunas"
             }
           }
         ],
@@ -52,7 +54,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -99,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 289.5
+    "width": 374.16668701171875
   },
   "right": {
     "id": "93949edb0df070bf",
@@ -357,6 +361,86 @@
             "id": "859d8d0e9982e9d2",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "3e675bfab953bbd9",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "b22cb75cdd6e7ea7",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "1b9675d801920a01",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "b4edb0fc6a627d8a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "0c1d4ad9279aa11a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "d82a53b9292e64ba",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "3c9e7cdc11d45de9",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          },
+          {
+            "id": "900d697ecdd35beb",
+            "type": "leaf",
+            "state": {
               "type": "graph-analysis",
               "state": {},
               "icon": "GA-ICON",
@@ -364,23 +448,7 @@
             }
           }
         ],
-        "currentTab": 22
-      },
-      {
-        "id": "c93243af4dd1ae10",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "44c39c8c870df5bb",
-            "type": "leaf",
-            "state": {
-              "type": "fantasy-statblocks-creature-pane",
-              "state": {},
-              "icon": "skull",
-              "title": "Combatant"
-            }
-          }
-        ]
+        "currentTab": 30
       }
     ],
     "direction": "horizontal",
@@ -401,7 +469,6 @@
       "obsidian-5e-statblocks:Open Creature pane": false,
       "juggl:Juggl global graph": false,
       "obsidian-kanban:Create new board": false,
-      "media-extended:Open external media": false,
       "meld-encrypt:New encrypted note": false,
       "meld-encrypt:Lock and Close all open encrypted notes": false,
       "meld-encrypt:Convert to or from an Encrypted note": false,
@@ -410,50 +477,50 @@
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Smart Connections: Open random connection": true,
       "templater-obsidian:Templater": false,
-      "smart-connections:Smart Lookup: Open lookup view": false,
+      "smart-connections:Toggle Footer Connections": false,
       "calendarium:Open Calendarium": false
     }
   },
-  "active": "859d8d0e9982e9d2",
+  "active": "efa557ec7f15fcfb",
   "lastOpenFiles": [
-    "Facciones/Los Vaelirr/Renata/Organización de Renata.md",
-    "Facciones/Los Vaelirr/Los Vhal'Shai/Los Vhal'Shai.md",
-    "Facciones/Los Vaelirr/Los Vhal'Shai/Maelvyr Shai-Leth.md",
-    "Facciones/Los Vaelirr/Renata/Renata.md",
-    "Atlas/Atlas.md",
-    "Facciones/Los Vaelirr/Renata/Organización de Renata",
-    "Facciones/Los Vaelirr/Renata",
-    "Astronomía/Los Soles/Riah.md",
-    "Astronomía/Los Soles/Oren.md",
-    "Astronomía/Los Soles/Los Soles.md",
-    "Astronomía/Las Estaciones/Las Estaciones.md",
-    "Facciones/Facciones.md",
-    "Facciones/Los Vaelirr/Khadresh Vol-Arim.md",
-    "Facciones/Los Vaelirr/Los Cantos de Plata/Los Cantos de Plata.md",
-    "Facciones/Los Vaelirr/Los Cantos de Plata/Elowen Vaer-Tal.md",
-    "Facciones/Los Vaelirr/Los Nyr’vossai/Los Nyr’vossai.md",
-    "Facciones/Los Vaelirr/Los Nyr’vossai/Shaetha Nyr’voss.md",
-    "Facciones/Los Vaelirr/El Velo de Alabastro/Zyn’Kai Leth-Sael.md",
-    "Facciones/Los Vaelirr/Los Cantos de Plata",
-    "Facciones/Los Vaelirr/El Velo de Alabastro/El Velo de Alabastro.md",
-    "Facciones/Los Vaelirr/El Velo de Alabastro",
-    "Facciones/Los Vaelirr/Los Vaelendir/Los Vaelendir.md",
-    "Facciones/Los Vaelirr/Los Vaelendir/Aren Vaelendir.md",
-    "Facciones/Los Vaelirr/Los Orum-Hein/Los Orum-Hein.md",
-    "Facciones/Los Vaelirr/Los Nyr’vossai",
-    "Facciones/Los Vaelirr/Los Karn-Dur/Los Karn-Dur.md",
-    "Facciones/Los Vaelirr/Los Orum-Hein/Valeth Orus-Haedir.md",
-    "Facciones/Los Vaelirr/Los Runaforjados/D.A.R.O.V.md",
-    "Facciones/Los Vaelirr/Los Runaforjados/Khurvann Steelmire.md",
-    "Facciones/Los Vaelirr/Los Runaforjados/Los Runaforjados.md",
-    "Facciones/Los Vaelirr/Los Orum-Hein",
-    "Facciones/Los Vaelirr/Los Runaforjados",
-    "Facciones/Los Vaelirr/Los Argentarios/Teryn Volsharr.md",
-    "Facciones/Los Vaelirr/Los Argentarios",
-    "Facciones/Los Vaelirr/Los Vhal'Shai",
-    "Facciones/Los Vaelirr/Los Karn-Dur",
-    "Imágenes/Qirathi.png",
-    "Imágenes/Alaini.png",
+    "01_Astronomía y Tiempo/Astronomía/Astronomía.md",
+    "01_Astronomía y Tiempo/Calendario/Las Estaciones/Las Estaciones.md",
+    "01_Astronomía y Tiempo/Calendario/Calendario.md",
+    "01_Astronomía y Tiempo/Astronomía y Tiempo.md",
+    "02_Atlas/Atlas.md",
+    "03_Historia/Historia.md",
+    "04_Mitología y Religión/Mitología/Divinidades/Primera Generación de Dioses/La Tríada.md",
+    "04_Mitología y Religión/Mitología/Divinidades/Primera Generación de Dioses/Primera Generación de Dioses.md",
+    "04_Mitología y Religión/Mitología/Divinidades/Segunda Generación de Dioses/Los 12 Patrones.md",
+    "04_Mitología y Religión/Mitología/Mitología.md",
+    "04_Mitología y Religión/Religión/Religión.md",
+    "05_Cultura y Sociedad/Arte y Saber/Literatura.md",
+    "05_Cultura y Sociedad/Razas Inteligentes/Razas/Qirathi/Qirathi.md",
+    "05_Cultura y Sociedad/Lenguas y Terminología/Lenguas y Terminología.md",
+    "05_Cultura y Sociedad/Razas Inteligentes/Razas Inteligentes.md",
+    "05_Cultura y Sociedad/Cultura y Sociedad.md",
+    "06_Magia/Magia.md",
+    "07_Bestiario/Ecología y Flora/Ecología y Flora.md",
+    "07_Bestiario/Bestiario.md",
+    "07_Bestiario/Tipos de Criaturas/Bestias/Bestias.md",
+    "08_Facciones y Organizaciones/Facciones y Organizaciones.md",
+    "09_Personajes y Npcs/Personajes y Npcs.md",
+    "00_Inicio/Plantillas/Guia_de_construccion_de_Aedhyr.md",
+    "07_Bestiario/Tipos de Criaturas/Bestias/Noctarra.md",
+    "04_Mitología y Religión/Mitología/Mitos y Leyendas/El Origen.md",
+    "01_Astronomía y Tiempo/Calendario/Las Estaciones/Ventoseco.md",
+    "03_Historia/Cronología/Eras de Aedhyr/Era Prehistórica",
+    "05_Cultura y Sociedad/Pueblos y Culturas",
+    "09_Personajes y Npcs/Npcs",
+    "09_Personajes y Npcs/Personajes",
+    "10_Campañas",
+    "00_Inicio/Plantillas",
+    "01_Astronomía y Tiempo/Calendario/Las Estaciones",
+    "01_Astronomía y Tiempo/Astronomía",
+    "04_Mitología y Religión/Mitología",
+    "06_Magia/Objetos Mágicos/Legendario",
+    "99_Archivos/Qirathi.png",
+    "99_Archivos/Alaini.png",
     "Imagenes/Alaini.png",
     "Imagenes/Qirathi.png",
     "Imagenes/Alaini.jpg",
